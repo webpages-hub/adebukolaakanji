@@ -49,46 +49,77 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Work</h2>
             
-            <Link to="/projects" className="block group">
-              <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth">
-                <div className="p-8 md:p-12">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="p-3 rounded-xl bg-accent/10">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Link to="/projects" className="block group">
+                <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
+                  <div className="p-8">
+                    <div className="p-3 rounded-xl bg-accent/10 w-fit mb-4">
                       <Briefcase className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-sm text-muted-foreground">Case Study</span>
-                        <span className="text-sm text-muted-foreground">•</span>
-                        <span className="text-sm text-muted-foreground">6 weeks</span>
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-accent transition-base">
-                        Building a Local Payments MVP in 6 Weeks
-                      </h3>
-                      <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                        Leading product strategy and execution for a fintech solution in the Democratic Republic of Congo. 
-                        From user research to MVP launch, managing cross-functional teams to deliver a payment platform 
-                        that onboarded 1,000+ agents and processed millions in transactions.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["Product Management", "User Research", "MVP Launch", "Fintech"].map((tag) => (
-                          <span 
-                            key={tag} 
-                            className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-sm text-muted-foreground">Case Study</span>
+                      <span className="text-sm text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">6 weeks</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-accent transition-base">
+                      Building a Local Payments MVP in 6 Weeks
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Leading product strategy for a fintech solution in the DRC. From research to MVP launch, 
+                      onboarding 1,000+ agents and processing millions in transactions.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {["Product Management", "User Research", "MVP Launch"].map((tag) => (
+                        <span 
+                          key={tag} 
+                          className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
+                      Read Case Study <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>
-                  
-                  <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
-                    Read Case Study <ArrowRight className="w-5 h-5" />
+                </div>
+              </Link>
+
+              <Link to="/global-transfers" className="block group">
+                <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
+                  <div className="p-8">
+                    <div className="p-3 rounded-xl bg-primary/10 w-fit mb-4">
+                      <Lightbulb className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-sm text-muted-foreground">Case Study</span>
+                      <span className="text-sm text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">2 months</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-primary transition-base">
+                      Building Fast, Affordable Global Transfers from Africa
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Enabling cross-border payments that generated $200K+ revenue in 3 months 
+                      with under 1-hour delivery times across multiple currency corridors.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {["Global Payments", "FX Strategy", "API Integration"].map((tag) => (
+                        <span 
+                          key={tag} 
+                          className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-4 transition-base">
+                      Read Case Study <ArrowRight className="w-5 h-5" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
