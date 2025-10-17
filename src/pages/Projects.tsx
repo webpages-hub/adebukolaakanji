@@ -1,12 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp } from "lucide-react";
+import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles } from "lucide-react";
 import heroImage from "@/assets/drc-payments-hero.jpg";
-import researchBoard from "@/assets/research-board.jpg";
-import userJourney from "@/assets/user-journey.jpg";
-import sprintBoard from "@/assets/sprint-board.jpg";
-import dashboardGrowth from "@/assets/dashboard-growth.jpg";
-import reflectionNotes from "@/assets/reflection-notes.jpg";
 
 const Projects = () => {
   return (
@@ -175,15 +170,25 @@ const Projects = () => {
                 </p>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={researchBoard} 
-                  alt="Research summary board with sticky notes and persona cards" 
-                  className="w-full h-auto"
-                />
-                <p className="text-sm text-muted-foreground text-center py-4 bg-card">
-                  A Figma research summary board: sticky notes, pain points, and persona cards
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
+                  <Brain className="w-12 h-12 text-accent mb-4" />
+                  <h3 className="text-xl font-bold mb-3">Research Artifacts</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Persona development</li>
+                    <li>• Journey mapping</li>
+                    <li>• Pain point analysis</li>
+                    <li>• Competitive insights</li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-border">
+                  <Eye className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-3">Key Discovery</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Trust and speed were the critical factors. Agents needed a solution that felt reliable from day one, 
+                    with instant settlement and zero downtime.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -220,15 +225,31 @@ const Projects = () => {
                 </div>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={userJourney} 
-                  alt="Simplified agent journey flow" 
-                  className="w-full h-auto"
-                />
-                <p className="text-sm text-muted-foreground text-center py-4 bg-card">
-                  Simplified agent journey for MVP: Sign Up → Verify → Accept Payment → Track Transactions
-                </p>
+              <div className="bg-card rounded-2xl p-8 shadow-elegant border-l-4 border-accent mt-8">
+                <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                  Simplified Agent Journey for MVP
+                </h3>
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                  {[
+                    { label: "Sign Up", icon: Users },
+                    { label: "Verify", icon: CheckCircle2 },
+                    { label: "Accept Payment", icon: Target },
+                    { label: "Track Transactions", icon: BarChart3 }
+                  ].map((step, index, array) => (
+                    <div key={index} className="flex items-center gap-4 w-full md:w-auto">
+                      <div className="flex-1 md:flex-initial">
+                        <div className="bg-accent/10 rounded-xl p-4 text-center">
+                          <step.icon className="w-8 h-8 text-accent mx-auto mb-2" />
+                          <p className="font-semibold">{step.label}</p>
+                        </div>
+                      </div>
+                      {index < array.length - 1 && (
+                        <div className="hidden md:block text-accent text-2xl">→</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -255,15 +276,28 @@ const Projects = () => {
                 </p>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={sprintBoard} 
-                  alt="Sprint planning board" 
-                  className="w-full h-auto"
-                />
-                <p className="text-sm text-muted-foreground text-center py-4 bg-card">
-                  Our six-week sprint plan — from design to deployment
-                </p>
+              <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-8 mt-8 border border-accent/20">
+                <h3 className="text-xl font-bold mb-6 text-center">Six-Week Sprint Breakdown</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {[
+                    { week: "Weeks 1-2", title: "Foundation", items: ["API specs defined", "Core architecture", "Database design", "Authentication flow"] },
+                    { week: "Weeks 3-4", title: "Development", items: ["Frontend development", "Backend integration", "Payment processing", "Agent dashboard"] },
+                    { week: "Weeks 5-6", title: "Refinement", items: ["Testing & QA", "Bug fixes", "Performance tuning", "Soft launch prep"] }
+                  ].map((phase, index) => (
+                    <div key={index} className="bg-card rounded-xl p-6 shadow-md">
+                      <div className="text-sm text-accent font-semibold mb-2">{phase.week}</div>
+                      <h4 className="text-lg font-bold mb-4">{phase.title}</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        {phase.items.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <Code className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -290,15 +324,22 @@ const Projects = () => {
                 </div>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={dashboardGrowth} 
-                  alt="Dashboard showing growth metrics" 
-                  className="w-full h-auto"
-                />
-                <p className="text-sm text-muted-foreground text-center py-4 bg-card">
-                  Early traction from agents validating product-market fit
-                </p>
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
+                  <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-accent mb-2">1,000+</div>
+                  <p className="text-muted-foreground">Agents Onboarded</p>
+                </div>
+                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
+                  <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-accent mb-2">Millions</div>
+                  <p className="text-muted-foreground">Transactions Processed</p>
+                </div>
+                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
+                  <Users className="w-12 h-12 text-accent mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-accent mb-2">Organic</div>
+                  <p className="text-muted-foreground">Agent Referrals</p>
+                </div>
               </div>
             </div>
 
@@ -330,15 +371,55 @@ const Projects = () => {
                 </p>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={reflectionNotes} 
-                  alt="Reflection notes on sticky board" 
-                  className="w-full h-auto"
-                />
-                <p className="text-sm text-muted-foreground text-center py-4 bg-card">
-                  Key takeaways from launching a fintech MVP in six weeks
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                    What Worked
+                  </h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent">✓</span>
+                      <span>Prioritized user feedback early and often</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent">✓</span>
+                      <span>Daily standups kept momentum high</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent">✓</span>
+                      <span>MVP scope was ruthlessly focused</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent">✓</span>
+                      <span>Local partnerships accelerated adoption</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-primary" />
+                    What I'd Improve
+                  </h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">→</span>
+                      <span>Involve agents in usability testing earlier</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">→</span>
+                      <span>Integrate analytics from day one</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">→</span>
+                      <span>Plan for scalability sooner</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">→</span>
+                      <span>Document decisions in real-time</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
