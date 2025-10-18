@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield } from "lucide-react";
+import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const GlobalTransfers = () => {
@@ -369,14 +369,37 @@ const GlobalTransfers = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className="mb-16">
+          <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-accent/30 text-center">
+            <p className="text-xl md:text-2xl leading-relaxed mb-6">
+              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" variant="accent" className="text-lg">
+                Let's talk
+              </Button>
+            </Link>
+          </div>
+        </section>
+
         {/* Navigation */}
-        <div className="flex justify-center">
-          <Link to="/">
-            <Button variant="outline" className="gap-2">
-              ← Back to Home
-            </Button>
-          </Link>
-        </div>
+        <section>
+          <div className="flex justify-between items-center pt-8 border-t border-border">
+            <Link to="/projects">
+              <Button variant="ghost" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Previous: DRC Payments
+              </Button>
+            </Link>
+            <Link to="/gamification">
+              <Button variant="ghost" className="gap-2">
+                Next: Gamification
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

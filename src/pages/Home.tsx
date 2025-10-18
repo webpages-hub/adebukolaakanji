@@ -49,7 +49,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Work</h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <Link to="/projects" className="block group">
                 <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
                   <div className="p-8">
@@ -114,6 +114,41 @@ const Home = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-4 transition-base">
+                      Read Case Study <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to="/gamification" className="block group">
+                <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
+                  <div className="p-8">
+                    <div className="p-3 rounded-xl bg-accent/10 w-fit mb-4">
+                      <Rocket className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-sm text-muted-foreground">Case Study</span>
+                      <span className="text-sm text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">1 month</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-accent transition-base">
+                      Making Payments Fun
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Launched a gamification system for a BNPL product that boosted user retention by 10% 
+                      through progress-based rewards and level progression.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {["Gamification", "User Engagement", "BNPL"].map((tag) => (
+                        <span 
+                          key={tag} 
+                          className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
                       Read Case Study <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles } from "lucide-react";
+import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/drc-payments-hero.jpg";
 
 const Projects = () => {
@@ -423,11 +424,32 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="text-center py-12">
-              <Button size="lg" variant="accent" asChild>
-                <a href="/">Back to Home</a>
-              </Button>
+            {/* CTA Section */}
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-accent/30 text-center">
+              <p className="text-xl md:text-2xl leading-relaxed mb-6">
+                If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
+              </p>
+              <Link to="/contact">
+                <Button size="lg" variant="accent" className="text-lg">
+                  Let's talk
+                </Button>
+              </Link>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex justify-between items-center pt-8 border-t border-border">
+              <Link to="/gamification">
+                <Button variant="ghost" className="gap-2">
+                  <ArrowLeft className="w-4 h-4" />
+                  Previous: Gamification
+                </Button>
+              </Link>
+              <Link to="/global-transfers">
+                <Button variant="ghost" className="gap-2">
+                  Next: Global Transfers
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
