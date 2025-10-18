@@ -9,6 +9,7 @@ import GlobalTransfers from "./pages/GlobalTransfers";
 import Gamification from "./pages/Gamification";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/global-transfers" element={<GlobalTransfers />} />
           <Route path="/gamification" element={<Gamification />} />
           <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
