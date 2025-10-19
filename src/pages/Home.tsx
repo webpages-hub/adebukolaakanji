@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, Lightbulb, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroPhoto from "@/assets/hero-photo.jpg";
 
 const Home = () => {
   return (
@@ -11,33 +12,37 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-8">
-              <Rocket className="w-4 h-4" />
-              <span className="text-sm font-medium">Product Manager</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Building Products That
-              <span className="block gradient-accent bg-clip-text text-transparent">
-                Make an Impact
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
-              Transforming complex challenges into elegant solutions through research, 
-              design thinking, and rapid execution.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="accent" asChild>
-                <Link to="/projects" className="flex items-center gap-2">
-                  View Projects <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="#about">Learn More</a>
-              </Button>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              {/* Image */}
+              <div className="flex-shrink-0">
+                <img 
+                  src={heroPhoto} 
+                  alt="Adebukola Akanji - Product Manager" 
+                  className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shadow-elegant"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+                  Product manager.
+                  <span className="block gradient-accent bg-clip-text text-transparent">
+                    Driving business growth through global expansion and customer-centric innovation.
+                  </span>
+                </h1>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
+                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+                    <Link to="/contact" className="flex items-center gap-2">
+                      Contact Me <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <Link to="/resume">My Resume</Link>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
