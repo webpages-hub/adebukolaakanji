@@ -438,10 +438,10 @@ const Projects = () => {
 
             {/* Navigation */}
             <div className="flex justify-between items-center pt-8 border-t border-border">
-              <Link to="/gamification">
+              <Link to="/multi-currency-wallet">
                 <Button variant="ghost" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
-                  Previous: Gamification
+                  Previous: Multi-Currency Wallet
                 </Button>
               </Link>
               <Link to="/global-transfers">

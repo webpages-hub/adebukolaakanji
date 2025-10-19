@@ -49,7 +49,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Work</h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <Link to="/projects" className="block group">
                 <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
                   <div className="p-8">
@@ -154,6 +154,41 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
+
+              <Link to="/multi-currency-wallet" className="block group">
+                <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full">
+                  <div className="p-8">
+                    <div className="p-3 rounded-xl bg-accent/10 w-fit mb-4">
+                      <Rocket className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-sm text-muted-foreground">Case Study</span>
+                      <span className="text-sm text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">1 month</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-accent transition-base">
+                      Multi-Currency Wallet
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Built a seamless multi-currency wallet system that increased daily active usage by 20% 
+                      and cross-currency transactions by 10%.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {["Multi-Currency", "Compliance", "UX Design"].map((tag) => (
+                        <span 
+                          key={tag} 
+                          className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
+                      Read Case Study <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -198,6 +233,52 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Explore my Articles</h2>
+            
+            <div className="grid gap-6">
+              {[
+                {
+                  title: "Beyond Borders: Secrets to Launching a Product in Africa",
+                  url: "https://medium.com/@adebukolaakanji/beyond-borders-secrets-to-launching-a-product-in-africa-f4ff7f9ea411"
+                },
+                {
+                  title: "How do you know if you are building the right product?",
+                  url: "https://www.linkedin.com/posts/adebukola-a-204611191_creating-a-good-product-strategy-activity-7284871891184480256-Sd-c/?utm_source=share&utm_medium=member_desktop"
+                },
+                {
+                  title: "Data is a Product's Love Language",
+                  url: "https://medium.com/@adebukolaakanji/the-day-i-realized-data-is-a-products-love-language-09062c2ba067"
+                },
+                {
+                  title: "You Don't Break Into a New Market. You Learn How to Belong.",
+                  url: "https://medium.com/@adebukolaakanji/you-dont-break-into-a-new-market-you-learn-how-to-belong-8683ce6ad782"
+                }
+              ].map((article, index) => (
+                <a 
+                  key={index}
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-base border-l-4 border-accent group"
+                >
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-accent transition-base">
+                    {article.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-muted-foreground group-hover:text-accent transition-base">
+                    <span className="text-sm">Read article</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </a>
               ))}
             </div>
           </div>

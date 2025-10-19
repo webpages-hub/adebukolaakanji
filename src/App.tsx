@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import GlobalTransfers from "./pages/GlobalTransfers";
 import Gamification from "./pages/Gamification";
+import MultiCurrencyWallet from "./pages/MultiCurrencyWallet";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/global-transfers" element={<GlobalTransfers />} />
           <Route path="/gamification" element={<Gamification />} />
+          <Route path="/multi-currency-wallet" element={<MultiCurrencyWallet />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />

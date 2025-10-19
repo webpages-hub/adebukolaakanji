@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -19,7 +19,7 @@ const Contact = () => {
 
             <div className="grid gap-6 mb-12">
               <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:adebukolaakanji@gmail.com" 
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
               >
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
@@ -27,12 +27,25 @@ const Contact = () => {
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">Email</div>
-                  <div className="text-muted-foreground">your.email@example.com</div>
+                  <div className="text-muted-foreground">adebukolaakanji@gmail.com</div>
                 </div>
               </a>
 
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="tel:+2347065197102" 
+                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
+              >
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-accent" />
+                </div>
+                <div className="text-left flex-1">
+                  <div className="font-semibold mb-1">Phone</div>
+                  <div className="text-muted-foreground">+234 706 519 7102</div>
+                </div>
+              </a>
+
+              <a 
+                href="https://www.linkedin.com/in/aadebukola/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
@@ -42,37 +55,7 @@ const Contact = () => {
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">LinkedIn</div>
-                  <div className="text-muted-foreground">Connect with me</div>
-                </div>
-              </a>
-
-              <a 
-                href="https://github.com/yourusername" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
-              >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Github className="w-6 h-6 text-accent" />
-                </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold mb-1">GitHub</div>
-                  <div className="text-muted-foreground">Check out my work</div>
-                </div>
-              </a>
-
-              <a 
-                href="https://twitter.com/yourusername" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
-              >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Twitter className="w-6 h-6 text-accent" />
-                </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold mb-1">Twitter</div>
-                  <div className="text-muted-foreground">Follow my journey</div>
+                  <div className="text-muted-foreground">Connect with me professionally</div>
                 </div>
               </a>
             </div>

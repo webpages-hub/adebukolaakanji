@@ -292,9 +292,9 @@ const Gamification = () => {
                   Previous: Global Transfers
                 </Button>
               </Link>
-              <Link to="/projects">
+              <Link to="/multi-currency-wallet">
                 <Button variant="ghost" className="gap-2">
-                  Next: DRC Payments
+                  Next: Multi-Currency Wallet
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
