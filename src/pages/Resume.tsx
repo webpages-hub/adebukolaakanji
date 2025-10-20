@@ -1,14 +1,25 @@
 import Navigation from "@/components/Navigation";
-import { Mail, Phone, Linkedin, Globe, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Resume = () => {
+  const handleDownloadPDF = () => {
+    window.print();
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="container mx-auto px-6 pt-24 pb-16">
+        {/* Download Button */}
+        <div className="flex justify-end mb-6 print:hidden">
+          <Button onClick={handleDownloadPDF} className="gap-2">
+            <Download className="w-4 h-4" />
+            Save as PDF
+          </Button>
+        </div>
         {/* Header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
@@ -35,12 +46,6 @@ const Resume = () => {
                 LinkedIn
               </a>
             </div>
-            <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4" />
-              <Link to="/" className="hover:text-accent transition-base">
-                My Portfolio
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -66,7 +71,7 @@ const Resume = () => {
                 <p className="text-sm text-muted-foreground">Lagos State, Nigeria</p>
               </div>
               <div className="text-sm text-muted-foreground md:text-right mt-2 md:mt-0">
-                <p className="font-medium text-foreground">Product Manager</p>
+                <p className="font-bold text-foreground md:text-left">Product Manager</p>
                 <p>April 2023 – Present</p>
               </div>
             </div>

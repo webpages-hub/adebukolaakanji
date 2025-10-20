@@ -47,7 +47,7 @@ const Projects = () => {
                 </div>
                 <div>
                   <p className="text-muted-foreground mb-2">Team</p>
-                  <p className="text-lg font-semibold mb-6">Engineering, Design, Partnerships, Operations</p>
+                  <p className="text-lg font-semibold mb-6">Engineering, Design, Partnerships, Operations, Legal and Compliance</p>
                   
                   <p className="text-muted-foreground mb-2">Location</p>
                   <p className="text-lg font-semibold mb-6">Democratic Republic of Congo (DRC)</p>
@@ -56,8 +56,7 @@ const Projects = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  Build and launch a local payments product that enabled agents to serve customers within their 
-                  communities and reduce dependence on cash transactions.
+                  Build and launch a local payments product that promotes interoperability, and enable agents to serve customers better.
                 </p>
               </div>
             </div>
@@ -70,20 +69,10 @@ const Projects = () => {
                   It started with one big question: <span className="font-semibold text-accent">"Can we make everyday payments simpler for people in the DRC?"</span>
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  At the time, Nomba had built a solid fintech product in Nigeria, but we wanted to test something new — 
-                  a local payments solution that could help agents and merchants serve customers faster and more reliably.
+                  At the time, Nomba had built a solid fintech product in Nigeria, but we wanted to take on new challenges in a new market. A local payments solution that could help agents and merchants serve customers faster and more reliably in the DRC.
                 </p>
-                <div className="bg-muted rounded-xl p-6 my-8">
-                  <p className="font-semibold mb-4">The challenge?</p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• A completely new market.</li>
-                    <li>• Limited data.</li>
-                    <li>• Tight timelines.</li>
-                    <li>• And the goal to launch an MVP in just six weeks.</li>
-                  </ul>
-                </div>
                 <p className="text-lg leading-relaxed">
-                  I was the product manager on the project. And from day one, I knew this wasn't going to be about 
+                  I was the product manager leading this expansion. And from day one, I knew this wasn't going to be about 
                   building fast, it was about building smart.
                 </p>
               </div>
@@ -167,7 +156,7 @@ const Projects = () => {
                   </ul>
                 </div>
                 <p className="text-lg leading-relaxed">
-                  I summarized these insights into personas and core use cases — and that became our blueprint.
+                  I summarized these insights into personas and core use cases, and that became our blueprint.
                 </p>
               </div>
               
@@ -262,7 +251,7 @@ const Projects = () => {
                   With design ready, execution became everything.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  I held two weeks sprints and daily check-ins with engineers — mostly to unblock decisions quickly.
+                  I held two-week sprints and daily check-ins with engineers, mostly to unblock decisions quickly.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   I simplified specs, clarified API dependencies, and made sure we didn't overbuild.
@@ -307,7 +296,7 @@ const Projects = () => {
               <h2 className="text-4xl font-bold mb-6">Step 4: Launching the MVP</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  We rolled out the MVP quietly — onboarding a small batch of agents to test the system in real conditions.
+                  We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   Within two months, it was clear: It worked.
@@ -317,10 +306,6 @@ const Projects = () => {
                     We onboarded over <span className="font-bold text-accent text-2xl">1,000 agents</span>, processed 
                     millions in local currency transactions, and got consistent feedback that the product was easier 
                     and faster than what they were used to.
-                  </p>
-                  <p className="text-lg leading-relaxed font-semibold mt-6">
-                    The best part? Agents started referring other agents — organic growth from people who genuinely 
-                    found it useful.
                   </p>
                 </div>
               </div>
@@ -367,57 +352,57 @@ const Projects = () => {
                 </p>
                 <p className="text-lg leading-relaxed">
                   If I were to do it again, I'd involve agents even earlier in usability testing and integrate 
-                  analytics from day one. But I wouldn't change the pace — the energy of those six weeks built 
+                  analytics from day one. But I wouldn't change the pace. The energy of those six weeks built 
                   momentum that carried the product long after MVP.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <CheckCircle2 className="w-6 h-6 text-accent" />
+              <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl p-8 border-2 border-accent/40 shadow-lg">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-accent">
+                    <CheckCircle2 className="w-7 h-7 text-accent" />
                     What Worked
                   </h3>
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-accent">✓</span>
-                      <span>Prioritized user feedback early and often</span>
+                      <span className="text-accent text-lg">✓</span>
+                      <span className="text-lg">Prioritized user feedback early and often</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent">✓</span>
-                      <span>Daily standups kept momentum high</span>
+                      <span className="text-accent text-lg">✓</span>
+                      <span className="text-lg">Daily standups kept momentum high</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent">✓</span>
-                      <span>MVP scope was ruthlessly focused</span>
+                      <span className="text-accent text-lg">✓</span>
+                      <span className="text-lg">MVP scope was ruthlessly focused</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-accent">✓</span>
-                      <span>Local partnerships accelerated adoption</span>
+                      <span className="text-accent text-lg">✓</span>
+                      <span className="text-lg">Local partnerships accelerated adoption</span>
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-border">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Lightbulb className="w-6 h-6 text-primary" />
+                <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl p-8 border-2 border-primary/40 shadow-lg">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-primary">
+                    <Lightbulb className="w-7 h-7 text-primary" />
                     What I'd Improve
                   </h3>
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-primary">→</span>
-                      <span>Involve agents in usability testing earlier</span>
+                      <span className="text-primary text-lg">→</span>
+                      <span className="text-lg">Involve agents in usability testing earlier</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary">→</span>
-                      <span>Integrate analytics from day one</span>
+                      <span className="text-primary text-lg">→</span>
+                      <span className="text-lg">Integrate analytics from day one</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary">→</span>
-                      <span>Plan for scalability sooner</span>
+                      <span className="text-primary text-lg">→</span>
+                      <span className="text-lg">Plan for scalability sooner</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary">→</span>
-                      <span>Document decisions in real-time</span>
+                      <span className="text-primary text-lg">→</span>
+                      <span className="text-lg">Document decisions in real-time</span>
                     </li>
                   </ul>
                 </div>
@@ -425,28 +410,30 @@ const Projects = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-accent/30 text-center">
-              <p className="text-xl md:text-2xl leading-relaxed mb-6">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+              <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>
               <Link to="/contact">
-                <Button size="lg" variant="accent" className="text-lg">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
                   Let's talk
                 </Button>
               </Link>
             </div>
 
             {/* Navigation */}
-            <div className="flex justify-between items-center pt-8 border-t border-border">
-              <Link to="/multi-currency-wallet">
-                <Button variant="ghost" className="gap-2">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+              <Link to="/multi-currency-wallet" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                   <ArrowLeft className="w-4 h-4" />
-                  Previous: Multi-Currency Wallet
+                  <span className="hidden sm:inline">Previous: Multi-Currency Wallet</span>
+                  <span className="sm:hidden">Previous</span>
                 </Button>
               </Link>
-              <Link to="/global-transfers">
-                <Button variant="ghost" className="gap-2">
-                  Next: Global Transfers
+              <Link to="/global-transfers" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
+                  <span className="hidden sm:inline">Next: Global Transfers</span>
+                  <span className="sm:hidden">Next</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>

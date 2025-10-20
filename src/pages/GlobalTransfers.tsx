@@ -10,66 +10,43 @@ const GlobalTransfers = () => {
       
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Hero Section */}
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+        <div className="mb-16 pt-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1A1A1A" }}>
             Building Fast, Affordable Global Transfers from Africa
           </h1>
           
           {/* Project Meta Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            <div className="p-4 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="text-sm text-muted-foreground mb-1">Timeline</div>
-              <div className="font-semibold">Two Months</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
-              <div className="text-sm text-muted-foreground mb-1">Role</div>
-              <div className="font-semibold">Product Manager</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="text-sm text-muted-foreground mb-1">Location</div>
-              <div className="font-semibold">DRC</div>
-            </div>
-          </div>
-
-          {/* Goal Banner */}
-          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-primary/30">
-            <div className="flex items-start gap-3">
-              <Target className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-8">
+            <h2 className="text-3xl font-bold mb-8 text-accent">Project Overview</h2>
+            <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <div className="text-sm font-medium text-muted-foreground mb-1">Goal</div>
-                <div className="text-lg font-semibold">Enable fast, affordable cross-border payments worldwide</div>
+                <p className="text-muted-foreground mb-2">Timeline</p>
+                <p className="text-lg font-semibold mb-6">Two Months</p>
+                
+                <p className="text-muted-foreground mb-2">Role</p>
+                <p className="text-lg font-semibold mb-6">Product Manager</p>
+
+                <p className="text-muted-foreground mb-2">Company</p>
+                <p className="text-lg font-semibold mb-6">Nomba</p>
               </div>
+              <div>
+                <p className="text-muted-foreground mb-2">Team</p>
+                <p className="text-lg font-semibold mb-6">Engineering, Design, Partnerships, Operations, Legal and Compliance</p>
+                
+                <p className="text-muted-foreground mb-2">Location</p>
+                <p className="text-lg font-semibold mb-6">Democratic Republic of Congo (DRC)</p>
+              </div>
+            </div>
+            <div className="pt-6 border-t border-border">
+              <p className="text-muted-foreground mb-2">Goal</p>
+              <p className="text-lg leading-relaxed">
+                Enable fast, affordable cross-border payments worldwide.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Currency Network Visualization */}
-        <div className="mb-16 p-8 rounded-2xl bg-gradient-to-br from-background to-accent/5 border border-accent/20">
-          <div className="flex flex-col items-center">
-            <div className="relative">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-8 shadow-accent-glow">
-                <Globe className="w-16 h-16 text-white" />
-              </div>
-              
-              <div className="grid grid-cols-3 gap-6 mb-6">
-                {['USD', 'EUR', 'GBP', 'NGN', 'CDF', 'CNY'].map((currency) => (
-                  <div key={currency} className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-background border-2 border-primary/30 flex items-center justify-center font-bold text-sm">
-                      {currency}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="text-center space-y-2">
-              <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                $200K+ Revenue in 3 Months
-              </div>
-              <div className="text-muted-foreground">Faster Global Transfers</div>
-            </div>
-          </div>
-        </div>
+        {/* Currency Network Visualization - REMOVED */}
 
         {/* Hook Section */}
         <section className="mb-16">
@@ -113,9 +90,11 @@ const GlobalTransfers = () => {
             International money transfers sound simple until you're the one building them.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            The existing rails were slow and expensive — users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
+            The existing rails were slow and expensive. Users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
           </p>
 
+          <h3 className="text-2xl font-bold mb-4">The Goal</h3>
+          <p className="text-lg leading-relaxed mb-4">We needed to build a product that could:</p>
           <div className="space-y-4">
             <div className="p-5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary">
               <div className="flex items-start gap-3">
@@ -176,7 +155,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed">
-            I dug into currency behaviors, volatility patterns, and average delivery times. Then I benchmarked competitors like Wise, Remitly, and Sendwave — what were they charging, how fast were they delivering, and how could we stand out?
+            I dug into currency behaviors, volatility patterns, and average delivery times. Then I benchmarked competitors like Wise, Remitly, and Sendwave. What were they charging, how fast were they delivering, and how could we stand out?
           </p>
         </section>
 
@@ -225,7 +204,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Global transfers live and die by their rates.
+            Global transfers live and die by their rates. If you set them too high, users leave. Too low, and your business bleeds. To solve this, I collaborated with finance and data teams to build a bid-ask rate model:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -344,24 +323,24 @@ const GlobalTransfers = () => {
           
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              This project taught me that <span className="font-bold">global payments aren't just a financial problem — they're a trust problem.</span>
+              This project taught me that global payments aren't just a financial problem, they're a trust problem.
             </p>
             
             <p className="text-lg leading-relaxed">
               Users don't just want cheaper transfers. They want to know exactly what happens between "Send" and "Received."
             </p>
 
-            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="font-bold text-lg mb-4">I learned how to:</div>
-              <div className="space-y-3">
+            <div className="p-8 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/40 shadow-lg">
+              <div className="font-bold text-2xl mb-4 text-primary">I learned how to:</div>
+              <div className="space-y-4">
                 {[
                   'Balance profitability with user trust through rate setting',
                   'Manage complex integrations without sacrificing speed',
                   'Launch a global-facing product under strict compliance and time pressure'
                 ].map((learning, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <div>{learning}</div>
+                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div className="text-lg">{learning}</div>
                   </div>
                 ))}
               </div>
@@ -371,12 +350,12 @@ const GlobalTransfers = () => {
 
         {/* CTA Section */}
         <section className="mb-16">
-          <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-accent/30 text-center">
-            <p className="text-xl md:text-2xl leading-relaxed mb-6">
+          <div className="p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+            <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
               If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
             </p>
             <Link to="/contact">
-              <Button size="lg" variant="accent" className="text-lg">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
                 Let's talk
               </Button>
             </Link>
@@ -385,16 +364,18 @@ const GlobalTransfers = () => {
 
         {/* Navigation */}
         <section>
-          <div className="flex justify-between items-center pt-8 border-t border-border">
-            <Link to="/projects">
-              <Button variant="ghost" className="gap-2">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+            <Link to="/projects" className="w-full sm:w-auto">
+              <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                 <ArrowLeft className="w-4 h-4" />
-                Previous: DRC Payments
+                <span className="hidden sm:inline">Previous: DRC Payments</span>
+                <span className="sm:hidden">Previous</span>
               </Button>
             </Link>
-            <Link to="/gamification">
-              <Button variant="ghost" className="gap-2">
-                Next: Gamification
+            <Link to="/gamification" className="w-full sm:w-auto">
+              <Button variant="ghost" className="gap-2 w-full sm:w-auto">
+                <span className="hidden sm:inline">Next: Gamification</span>
+                <span className="sm:hidden">Next</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>

@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
+    { href: "/case-studies", label: "Case Studies" },
     { href: "/about", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
@@ -24,7 +24,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-bold font-heading transition-base hover:text-accent">
-            Portfolio
+            Adebukola Akanji
           </Link>
           
           {/* Desktop Navigation */}

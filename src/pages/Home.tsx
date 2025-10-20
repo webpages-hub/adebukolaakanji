@@ -15,7 +15,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-12">
               {/* Image */}
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 animate-fade-in">
                 <img 
                   src={heroPhoto} 
                   alt="Adebukola Akanji - Product Manager" 
@@ -25,20 +25,20 @@ const Home = () => {
               
               {/* Content */}
               <div className="flex-1 text-center md:text-left">
-                <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight animate-fade-in">
                   Product manager.
-                  <span className="block gradient-accent bg-clip-text text-transparent">
-                    Driving business growth through global expansion and customer-centric innovation.
-                  </span>
                 </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in">
+                  Driving business growth through global expansion and customer-centric innovation.
+                </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
-                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-all animate-fade-in" asChild>
                     <Link to="/contact" className="flex items-center gap-2">
                       Contact Me <ArrowRight className="w-5 h-5" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild>
+                  <Button size="lg" variant="outline" className="animate-fade-in" asChild>
                     <Link to="/resume">My Resume</Link>
                   </Button>
                 </div>
@@ -84,7 +84,7 @@ const Home = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
-                      Read Case Study <ArrowRight className="w-5 h-5" />
+                      Read Case Study <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Home = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-4 transition-base">
-                      Read Case Study <ArrowRight className="w-5 h-5" />
+                      Read Case Study <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ const Home = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
-                      Read Case Study <ArrowRight className="w-5 h-5" />
+                      Read Case Study <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const Home = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-4 transition-base">
-                      Read Case Study <ArrowRight className="w-5 h-5" />
+                      Read Case Study <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ const Home = () => {
       <footer className="py-12 border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center text-muted-foreground">
-            <p>© 2025 Portfolio. Building products that matter.</p>
+            <p>© 2025 Adebukola Akanji. Building Products that Matter.</p>
           </div>
         </div>
       </footer>

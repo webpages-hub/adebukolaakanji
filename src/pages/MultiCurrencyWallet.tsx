@@ -72,7 +72,7 @@ const MultiCurrencyWallet = () => {
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30">
                   <p className="text-xl leading-relaxed font-semibold text-accent">
-                    That's when it clicked: What if we could just let users hold and transact in multiple currencies — within one wallet?
+                    That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
                   </p>
                 </div>
               </div>
@@ -229,48 +229,50 @@ const MultiCurrencyWallet = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 border border-accent/30">
-                <p className="text-lg leading-relaxed mb-6">
+              <div className="bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
+                <p className="text-lg md:text-xl leading-relaxed mb-6">
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-lg md:text-xl leading-relaxed mb-6">
                   Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-lg md:text-xl leading-relaxed mb-6">
                   But what users saw was freedom.
                 </p>
-                <p className="text-lg leading-relaxed font-semibold text-accent">
+                <p className="text-lg md:text-xl leading-relaxed font-semibold text-accent mb-6">
                   They didn't see the work. They just saw that it worked.
                 </p>
-                <p className="text-lg leading-relaxed mt-6">
+                <p className="text-lg md:text-xl leading-relaxed">
                   And that's the real magic of product management.
                 </p>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-accent/30 text-center">
-              <p className="text-xl md:text-2xl leading-relaxed mb-6">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+              <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>
               <Link to="/contact">
-                <Button size="lg" variant="accent" className="text-lg">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
                   Let's talk
                 </Button>
               </Link>
             </div>
 
             {/* Navigation */}
-            <div className="flex justify-between items-center pt-8 border-t border-border">
-              <Link to="/gamification">
-                <Button variant="ghost" className="gap-2">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+              <Link to="/gamification" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                   <ArrowLeft className="w-4 h-4" />
-                  Previous: Gamification
+                  <span className="hidden sm:inline">Previous: Gamification</span>
+                  <span className="sm:hidden">Previous</span>
                 </Button>
               </Link>
-              <Link to="/projects">
-                <Button variant="ghost" className="gap-2">
-                  Next: DRC Payments
+              <Link to="/projects" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
+                  <span className="hidden sm:inline">Next: DRC Payments</span>
+                  <span className="sm:hidden">Next</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
