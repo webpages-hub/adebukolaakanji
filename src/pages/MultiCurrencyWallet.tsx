@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import multicurrencyWalletHero from "@/assets/multicurrency-wallet-hero.jpg";
 
 const MultiCurrencyWallet = () => {
   return (
@@ -23,6 +24,15 @@ const MultiCurrencyWallet = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
+            {/* Hero Image */}
+            <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
+              <img 
+                src={multicurrencyWalletHero} 
+                alt="Multi-Currency Wallet User Interface" 
+                className="w-full h-auto"
+              />
+            </div>
+
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
               <h2 className="text-3xl font-bold mb-8 text-accent">Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">

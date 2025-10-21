@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import globalTransfersHero from "@/assets/global-transfers-hero.jpg";
 
 const GlobalTransfers = () => {
   return (
@@ -14,6 +15,15 @@ const GlobalTransfers = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1A1A1A" }}>
             Building Fast, Affordable Global Transfers from Africa
           </h1>
+
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
+            <img 
+              src={globalTransfersHero} 
+              alt="Global Transfers User Interface" 
+              className="w-full h-auto"
+            />
+          </div>
           
           {/* Project Meta Cards */}
           <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-8">
