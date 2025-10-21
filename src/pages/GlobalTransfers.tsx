@@ -27,7 +27,7 @@ const GlobalTransfers = () => {
           
           {/* Project Meta Cards */}
           <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-8">
-            <h2 className="text-3xl font-bold mb-8 text-accent">Project Overview</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="text-muted-foreground mb-2">Timeline</p>
@@ -183,7 +183,7 @@ const GlobalTransfers = () => {
               
               <ArrowRight className="w-6 h-6 text-primary rotate-90 md:rotate-0" />
               
-              <div className="flex-1 p-6 rounded-xl bg-gradient-to-br from-primary to-accent text-center text-white shadow-accent-glow">
+              <div className="flex-1 p-6 rounded-xl text-center text-white shadow-accent-glow" style={{ backgroundColor: "#FFB703" }}>
                 <Zap className="w-8 h-8 mx-auto mb-3" />
                 <div className="font-semibold mb-1">Partner API</div>
                 <div className="text-sm opacity-90">Real-time processing</div>
@@ -217,26 +217,30 @@ const GlobalTransfers = () => {
             Global transfers live and die by their rates. If you set them too high, users leave. Too low, and your business bleeds. To solve this, I collaborated with finance and data teams to build a bid-ask rate model:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-background border border-primary/30">
-              <div className="text-3xl mb-3">⬇️</div>
-              <div className="font-bold text-xl mb-2">Bid Rate</div>
-              <p className="text-muted-foreground">The price users buy foreign currency at</p>
-            </div>
+          <ul className="space-y-4 mb-6">
+            <li className="flex gap-4 p-4 rounded-lg bg-card">
+              <div className="text-3xl">⬇️</div>
+              <div>
+                <div className="font-bold text-xl mb-2">Bid Rate</div>
+                <p className="text-muted-foreground">The price users buy foreign currency at</p>
+              </div>
+            </li>
             
-            <div className="p-6 rounded-xl bg-gradient-to-br from-accent/10 to-background border border-accent/30">
-              <div className="text-3xl mb-3">⬆️</div>
-              <div className="font-bold text-xl mb-2">Ask Rate</div>
-              <p className="text-muted-foreground">The rate we get from our partner or liquidity provider</p>
-            </div>
-          </div>
+            <li className="flex gap-4 p-4 rounded-lg bg-card">
+              <div className="text-3xl">⬆️</div>
+              <div>
+                <div className="font-bold text-xl mb-2">Ask Rate</div>
+                <p className="text-muted-foreground">The rate we get from our partner or liquidity provider</p>
+              </div>
+            </li>
+          </ul>
 
-          <div className="p-6 rounded-xl bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border border-primary/30">
+          <div className="p-6 rounded-xl border border-primary/30" style={{ backgroundColor: "#FFB703" }}>
             <div className="flex items-center gap-3 mb-2">
-              <BarChart3 className="w-6 h-6 text-primary" />
-              <div className="font-bold text-lg">The Spread = Our Margin</div>
+              <BarChart3 className="w-6 h-6 text-white" />
+              <div className="font-bold text-lg text-white">The Spread = Our Margin</div>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-white/90">
               A delicate balance between user value and revenue. We monitored FX movements across key pairs daily and adjusted automatically based on volatility.
             </p>
           </div>
@@ -340,20 +344,22 @@ const GlobalTransfers = () => {
               Users don't just want cheaper transfers. They want to know exactly what happens between "Send" and "Received."
             </p>
 
-            <div className="p-8 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/40 shadow-lg">
+            <div className="p-8 rounded-xl bg-white border-2 border-primary/40 shadow-lg">
               <div className="font-bold text-2xl mb-4 text-primary">I learned how to:</div>
-              <div className="space-y-4">
-                {[
-                  'Balance profitability with user trust through rate setting',
-                  'Manage complex integrations without sacrificing speed',
-                  'Launch a global-facing product under strict compliance and time pressure'
-                ].map((learning, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div className="text-lg">{learning}</div>
-                  </div>
-                ))}
-              </div>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-lg">Balance profitability with user trust through rate setting</div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-lg">Manage complex integrations without sacrificing speed</div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-lg">Launch a global-facing product under strict compliance and time pressure</div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>

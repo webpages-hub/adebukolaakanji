@@ -36,7 +36,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-accent">Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -77,11 +77,13 @@ const Gamification = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   You pay. You leave. End of story.
                 </p>
-                <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30">
-                  <p className="text-xl leading-relaxed font-semibold text-accent">
+                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-8 my-8">
+                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
                     But what if making payments could feel rewarding?
                   </p>
-                  <p className="text-lg leading-relaxed mt-4">
+                </blockquote>
+                <div className="bg-white rounded-xl p-6 my-6">
+                  <p className="text-lg leading-relaxed">
                     That was the question that sparked the idea for a gamified experience inside our app, one that didn't just let users transact but actually made them want to come back.
                   </p>
                 </div>
@@ -252,7 +254,7 @@ const Gamification = () => {
                 </div>
               </div>
 
-              <div className="bg-accent/10 rounded-xl p-8">
+              <div className="bg-white rounded-xl p-8 border border-accent/30">
                 <p className="text-lg leading-relaxed font-semibold">
                   We saw a spike in repeat usage. Proof that people were coming back, not because they had to… but because they wanted to.
                 </p>
@@ -262,11 +264,11 @@ const Gamification = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+              <div className="bg-white rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
+                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   This project reminded me that users don't just engage with functionality; they engage with feelings.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold text-accent">
+                <p className="text-lg md:text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
                   If you can make a product fun, intuitive, and emotionally rewarding, you've already won half the battle.
                 </p>
               </div>

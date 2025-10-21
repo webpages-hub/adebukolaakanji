@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft } from "lucide-react";
+import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import multicurrencyWalletHero from "@/assets/multicurrency-wallet-hero.jpg";
 
@@ -34,7 +34,7 @@ const MultiCurrencyWallet = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-accent">Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -62,26 +62,27 @@ const MultiCurrencyWallet = () => {
               </div>
             </div>
 
-            {/* Hook */}
+            {/* The Idea */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Hook</h2>
+              <h2 className="text-4xl font-bold mb-6">The Idea</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
-                <div className="bg-muted rounded-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed italic">
+                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-8">
+                  <p className="text-lg leading-relaxed">
                     "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   </p>
-                </div>
+                </blockquote>
                 <p className="text-lg leading-relaxed mb-6">
                   It sounded like a one-off issue. But it wasn't.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   By the time I'd spoken to ten more agents, I realized this was a pattern. Users were juggling currencies like a circus act. Every transaction meant friction, delay, and lost value.
                 </p>
-                <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30">
-                  <p className="text-xl leading-relaxed font-semibold text-accent">
+                <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
+                  <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
+                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
                     That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
                   </p>
                 </div>
@@ -223,7 +224,7 @@ const MultiCurrencyWallet = () => {
                 </div>
               </div>
 
-              <div className="bg-accent/10 rounded-xl p-8">
+              <div className="bg-white rounded-xl p-8 border border-accent/30">
                 <p className="text-lg leading-relaxed mb-4">
                   Users finally had the flexibility to transact in the currencies they actually lived and earned in.
                 </p>
@@ -239,20 +240,20 @@ const MultiCurrencyWallet = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+              <div className="bg-white rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
+                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   But what users saw was freedom.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold text-accent mb-6">
+                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6" style={{ color: "#1A1A1A" }}>
                   They didn't see the work. They just saw that it worked.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
                   And that's the real magic of product management.
                 </p>
               </div>
