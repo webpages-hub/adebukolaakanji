@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 
 const Resume = () => {
   const handleDownloadPDF = () => {
-    window.print();
+    const link = document.createElement('a');
+    link.href = '/Adebukola_Akanji_Product_Manager.pdf';
+    link.download = 'Adebukola_Akanji_Product_Manager.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -210,17 +215,28 @@ const Resume = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="glass-card p-8 text-center">
-          <p className="text-lg text-muted-foreground mb-6">
-            If you care about creating products that truly make life easier for users, I'd love to be part of that journey. Let's talk
+        <section className="bg-background border border-border p-8 rounded-2xl">
+          <p className="text-lg text-muted-foreground mb-6 text-center">
+            If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
           </p>
-          <Link to="/contact">
-            <Button variant="accent" size="lg">
-              Let's Talk
-            </Button>
-          </Link>
+          <div className="flex justify-center">
+            <Link to="/contact">
+              <Button variant="accent" size="lg">
+                Let's Talk
+              </Button>
+            </Link>
+          </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-card border-t border-border py-6">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            Adebukola Akanji. Building Products that Matter
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Briefcase, Lightbulb, Rocket, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const CaseStudies = () => {
   const projects = [
@@ -110,15 +111,29 @@ const CaseStudies = () => {
               ))}
             </div>
           </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 bg-background border border-border p-8 rounded-2xl max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 text-center">
+              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
+            </p>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <Button variant="accent" size="lg">
+                  Let's Talk
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
-      
+
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-muted-foreground">
-            <p>© 2025 Adebukola Akanji. Building Products that Matter.</p>
-          </div>
+      <footer className="bg-card border-t border-border py-6">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            Adebukola Akanji. Building Products that Matter
+          </p>
         </div>
       </footer>
     </div>

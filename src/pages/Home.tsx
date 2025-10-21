@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, Lightbulb, Rocket } from "lucide-react";
+import { ArrowRight, Briefcase, Lightbulb, Rocket, Mail, Phone, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroPhoto from "@/assets/hero-photo.jpg";
 
@@ -290,12 +290,63 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-border">
+      {/* Contact Me Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center text-muted-foreground">
-            <p>© 2025 Adebukola Akanji. Building Products that Matter.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-center" style={{ color: "#1A1A1A" }}>
+            Contact Me
+          </h2>
+          <div className="max-w-2xl mx-auto grid gap-6">
+            <a 
+              href="mailto:adebukolaakanji@gmail.com" 
+              className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
+            >
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                <Mail className="w-6 h-6 text-accent" />
+              </div>
+              <div className="text-left flex-1">
+                <div className="font-semibold mb-1">Email</div>
+                <div className="text-muted-foreground">adebukolaakanji@gmail.com</div>
+              </div>
+            </a>
+
+            <a 
+              href="tel:+2347065197102" 
+              className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
+            >
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                <Phone className="w-6 h-6 text-accent" />
+              </div>
+              <div className="text-left flex-1">
+                <div className="font-semibold mb-1">Phone</div>
+                <div className="text-muted-foreground">+234 706 519 7102</div>
+              </div>
+            </a>
+
+            <a 
+              href="https://www.linkedin.com/in/aadebukola/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
+            >
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                <Linkedin className="w-6 h-6 text-accent" />
+              </div>
+              <div className="text-left flex-1">
+                <div className="font-semibold mb-1">LinkedIn</div>
+                <div className="text-muted-foreground">Connect with me professionally</div>
+              </div>
+            </a>
           </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-card border-t border-border py-6">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            Adebukola Akanji. Building Products that Matter
+          </p>
         </div>
       </footer>
     </div>

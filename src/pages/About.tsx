@@ -59,21 +59,29 @@ const About = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 p-8 rounded-2xl gradient-subtle border border-border text-center">
-            <p className="text-lg mb-6">
-              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.{" "}
-              <Link to="/contact" className="text-accent hover:underline font-semibold">
-                Let's talk
-              </Link>
+          <div className="mt-16 bg-background border border-border p-8 rounded-2xl">
+            <p className="text-lg text-muted-foreground mb-6 text-center">
+              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
             </p>
-            <Link to="/contact">
-              <Button variant="accent" size="lg">
-                Get in Touch
-              </Button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <Button variant="accent" size="lg">
+                  Let's Talk
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-card border-t border-border py-6">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            Adebukola Akanji. Building Products that Matter
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
