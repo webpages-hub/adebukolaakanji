@@ -254,7 +254,7 @@ const Gamification = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-8 border border-accent/30">
+              <div className="bg-white rounded-xl p-8">
                 <p className="text-lg leading-relaxed font-semibold">
                   We saw a spike in repeat usage. Proof that people were coming back, not because they had to… but because they wanted to.
                 </p>
@@ -264,7 +264,7 @@ const Gamification = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-white rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
                 <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   This project reminded me that users don't just engage with functionality; they engage with feelings.
                 </p>

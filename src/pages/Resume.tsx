@@ -176,10 +176,10 @@ const Resume = () => {
           <div className="glass-card p-6">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
               <h3 className="text-xl font-semibold text-foreground">University of Ilorin, Nigeria</h3>
-              <p className="text-sm text-accent font-medium">GPA: 4.59/5.0</p>
+              <p className="text-sm font-medium" style={{ color: "#1A1A1A" }}>GPA: 4.59/5.0</p>
             </div>
             <p className="text-muted-foreground mb-2">B.Sc. Library and Information Science | First Class Honors</p>
-            <p className="text-sm text-accent">Award: Best Graduating Student, Department of Library and Information Science.</p>
+            <p className="text-sm" style={{ color: "#1A1A1A" }}>Award: Best Graduating Student, Department of Library and Information Science.</p>
           </div>
         </section>
 

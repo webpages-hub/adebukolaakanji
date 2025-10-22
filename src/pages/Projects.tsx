@@ -169,11 +169,11 @@ const Projects = () => {
                 <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
                   <Brain className="w-12 h-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-3">Research Artifacts</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>🧠 Persona development</li>
-                    <li>🗺️ Journey mapping</li>
-                    <li>💡 Pain point analysis</li>
-                    <li>🔍 Competitive insights</li>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Persona development</li>
+                    <li>Journey mapping</li>
+                    <li>Pain point analysis</li>
+                    <li>Competitive insights</li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-border">
@@ -365,7 +365,7 @@ const Projects = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8 mt-8">
-                <div className="bg-white rounded-2xl p-8 border-2 border-accent/40 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-accent">
                     <CheckCircle2 className="w-7 h-7 text-accent" />
                     What Worked
@@ -389,7 +389,7 @@ const Projects = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-white rounded-2xl p-8 border-2 border-primary/40 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-primary">
                     <Lightbulb className="w-7 h-7 text-primary" />
                     What I'd Improve

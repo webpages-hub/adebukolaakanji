@@ -224,7 +224,7 @@ const MultiCurrencyWallet = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-8 border border-accent/30">
+              <div className="bg-white rounded-xl p-8">
                 <p className="text-lg leading-relaxed mb-4">
                   Users finally had the flexibility to transact in the currencies they actually lived and earned in.
                 </p>
@@ -240,7 +240,7 @@ const MultiCurrencyWallet = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-white rounded-2xl p-8 md:p-10 border-2 border-accent/40 shadow-lg">
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
                 <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>

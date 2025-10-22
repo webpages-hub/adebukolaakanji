@@ -55,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">LinkedIn</div>
-                  <div className="text-muted-foreground">Connect with me professionally</div>
+                  <div className="text-muted-foreground">Connect with me</div>
                 </div>
               </a>
             </div>

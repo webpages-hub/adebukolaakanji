@@ -183,7 +183,7 @@ const GlobalTransfers = () => {
               
               <ArrowRight className="w-6 h-6 text-primary rotate-90 md:rotate-0" />
               
-              <div className="flex-1 p-6 rounded-xl text-center text-white shadow-accent-glow" style={{ backgroundColor: "#FFB703" }}>
+              <div className="flex-1 p-6 rounded-xl text-center text-white shadow-accent-glow" style={{ backgroundColor: "#fadd93" }}>
                 <Zap className="w-8 h-8 mx-auto mb-3" />
                 <div className="font-semibold mb-1">Partner API</div>
                 <div className="text-sm opacity-90">Real-time processing</div>
@@ -235,12 +235,12 @@ const GlobalTransfers = () => {
             </li>
           </ul>
 
-          <div className="p-6 rounded-xl border border-primary/30" style={{ backgroundColor: "#FFB703" }}>
+          <div className="p-6 rounded-none" style={{ backgroundColor: "#FFFFFF", color: "#1A1A1A" }}>
             <div className="flex items-center gap-3 mb-2">
-              <BarChart3 className="w-6 h-6 text-white" />
-              <div className="font-bold text-lg text-white">The Spread = Our Margin</div>
+              <BarChart3 className="w-6 h-6" style={{ color: "#1A1A1A" }} />
+              <div className="font-bold text-lg" style={{ color: "#1A1A1A" }}>The Spread = Our Margin</div>
             </div>
-            <p className="text-white/90">
+            <p style={{ color: "#1A1A1A" }}>
               A delicate balance between user value and revenue. We monitored FX movements across key pairs daily and adjusted automatically based on volatility.
             </p>
           </div>
@@ -293,7 +293,7 @@ const GlobalTransfers = () => {
             We rolled out gradually, starting with limited corridors. Then, as adoption grew, we expanded coverage and optimized delivery speed through batch processing and better partner routing.
           </p>
 
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-primary/10 border border-primary/30 mb-6">
+          <div className="p-8 rounded-2xl border border-primary/30 mb-6" style={{ backgroundColor: "#FFFFFF" }}>
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold mb-2">First 3 Months Results</h3>
             </div>
@@ -344,7 +344,7 @@ const GlobalTransfers = () => {
               Users don't just want cheaper transfers. They want to know exactly what happens between "Send" and "Received."
             </p>
 
-            <div className="p-8 rounded-xl bg-white border-2 border-primary/40 shadow-lg">
+            <div className="p-8 rounded-xl shadow-lg" style={{ backgroundColor: "#FFFFFF" }}>
               <div className="font-bold text-2xl mb-4 text-primary">I learned how to:</div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
