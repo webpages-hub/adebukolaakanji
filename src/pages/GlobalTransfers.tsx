@@ -97,7 +97,7 @@ const GlobalTransfers = () => {
           <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
           
           <p className="text-lg leading-relaxed mb-6">
-            International money transfers sound simple until you're the one building them.
+            International money transfers sound simple. Until you're the one building them.
           </p>
           <p className="text-lg leading-relaxed mb-6">
             The existing rails were slow and expensive. Users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
