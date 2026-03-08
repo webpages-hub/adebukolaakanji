@@ -11,6 +11,17 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "where-it-began", label: "Where It Began" },
+  { id: "what-i-owned", label: "What I Owned" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 2 },
+  { id: "step-build", label: "Build", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const Projects = () => {
   return (
