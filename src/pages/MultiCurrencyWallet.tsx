@@ -245,7 +245,7 @@ card             <p className="text-lg leading-relaxed">
                 <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   But what users saw was freedom.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6" style={{ color: "#1A1A1A" }}>
