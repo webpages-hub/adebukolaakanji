@@ -56,7 +56,7 @@ const Home = () => {
       {/* Contact Me Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto rounded-3xl p-12 md:p-16" style={{ backgroundColor: '#1A1A2E' }}>
+          <div className="max-w-5xl mx-auto rounded-3xl p-12 md:p-16 bg-muted border border-border">
             <div className="flex flex-col md:flex-row items-center gap-10">
               {/* Left: CTA */}
               <div className="flex-1 text-center md:text-left">
