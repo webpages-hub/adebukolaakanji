@@ -97,7 +97,7 @@ const MultiCurrencyWallet = () => {
                   I started by mapping out how users were currently transacting across currencies. In DRC, it was mostly USD and CDF. In our global expansion, we needed EUR, GBP, CAD, and NGN.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  But building a multi-currency wallet wasn't as simple as just "adding more currencies." Each one came with its own regulatory and KYC requirements, and compliance rules varied by region.
+                  But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements that had to be designed around, not bolted on after.
                 </p>
                 <p className="text-lg leading-relaxed">
                   So before anything else, I dug deep into how each currency should behave, what KYC tier was needed to create it, what limits applied, and how conversion or transfer logic would work behind the scenes.
