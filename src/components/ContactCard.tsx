@@ -10,10 +10,10 @@ const ContactCard = () => {
             {/* Left: CTA */}
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-3">
-                Do you have a<br />
-                <span className="text-3xl md:text-4xl lg:text-5xl">business idea?</span>
+                Let's build something<br />
+                <span className="text-3xl md:text-4xl lg:text-5xl">worth building.</span>
               </h2>
-              <p className="text-muted-foreground mb-6">It's the perfect time to get started!</p>
+              <p className="text-muted-foreground mb-6">Whether you're looking to bring on a PM, want to collaborate, or just want to talk product, I'd love to hear from you.</p>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 font-bold text-sm px-8 py-3 rounded-full transition-base hover:opacity-90 bg-primary text-primary-foreground"

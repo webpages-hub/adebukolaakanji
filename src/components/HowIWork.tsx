@@ -4,18 +4,28 @@ import { Plus, X } from "lucide-react";
 const items = [
   {
     number: "01",
-    label: "Research",
-    content: "Market survey, user interviews, competitor analysis\nTools: Perplexity AI, Notebook LM, Notion",
+    label: "Understand",
+    content: "Before I touch a roadmap or wireframe, I want to know who I'm building for and what's actually in their way. That means user interviews, market surveys, and digging into behavioral data until the pattern becomes clear.",
   },
   {
     number: "02",
-    label: "Prototyping and Wireframing",
-    content: "Idea validation, idea refining, MVP validation\nTools: Lovable, Claude AI, User interviews",
+    label: "Define",
+    content: "A problem well-defined is half solved. I translate research into something the whole team can build toward: a clear problem statement, a prioritized backlog, and a shared understanding of what success looks like.",
   },
   {
     number: "03",
-    label: "Soft Skills",
-    content: "Creativity, Communication, Collaboration, Stakeholder management",
+    label: "Build and Test",
+    content: "I work closely with design and engineering to turn direction into product. I prototype, test early, and stay involved through to launch, because the best surprises are the ones you catch before shipping.",
+  },
+  {
+    number: "04",
+    label: "Launch and Drive Adoption",
+    content: "Shipping is only half the job. I partner with sales and marketing to shape the go-to-market strategy, making sure the right people know about the product and know how to use it.",
+  },
+  {
+    number: "05",
+    label: "Measure and Iterate",
+    content: "Launch is not the finish line. I track what actually happens after users get their hands on it, then use that data to decide what's next.",
   },
 ];
 
@@ -84,7 +94,7 @@ const HowIWork = () => {
     <section ref={sectionRef} className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left">How I Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left">My Process</h2>
 
           <div className="divide-y divide-border">
             {items.map((item, index) => {
@@ -116,11 +126,9 @@ const HowIWork = () => {
                     }`}
                   >
                     <div className="px-4 pb-5 pl-12">
-                      {item.content.split("\n").map((line, i) => (
-                        <p key={i} className="text-sm md:text-base leading-relaxed">
-                          {line}
-                        </p>
-                      ))}
+                      <p className="text-sm md:text-base leading-relaxed">
+                        {item.content}
+                      </p>
                     </div>
                   </div>
                 </div>
