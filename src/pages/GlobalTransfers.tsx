@@ -67,7 +67,7 @@ const GlobalTransfers = () => {
           
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              I still remember the first time I saw it.
+              I still remember the exact moment it clicked.
             </p>
             <p className="text-lg leading-relaxed">
               A customer had tried to send $1000 to the United Arab Emirates from the Democratic Republic of Congo, and it took <span className="font-bold text-primary">five days</span> to get to the receiver.
