@@ -120,7 +120,7 @@ const Gamification = () => {
               <h2 className="text-4xl font-bold mb-6">Research & Ideation</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
-                  I started with user interviews. I wanted to understand what would motivate people to keep using the product. Status? Savings? Competition?
+                  Before designing anything, I ran user interviews. I needed to understand what would actually motivate someone to come back. Status? Savings? A sense of progress?
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
