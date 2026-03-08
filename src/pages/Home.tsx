@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { ArrowRight } from "lucide-react";
 import heroPhoto from "@/assets/hero-photo.jpg";
-import MarqueeStrip from "@/components/MarqueeStrip";
 import FeaturedWork from "@/components/FeaturedWork";
 import HowIWork from "@/components/HowIWork";
 import AboutSection from "@/components/AboutSection";
@@ -53,8 +52,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Marquee Strip */}
-      <MarqueeStrip />
 
       {/* Featured Work */}
       <FeaturedWork />
