@@ -239,6 +239,7 @@ const Gamification = () => {
                 />
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

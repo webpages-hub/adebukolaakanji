@@ -288,6 +288,7 @@ const GlobalTransfers = () => {
             />
           </div>
         </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

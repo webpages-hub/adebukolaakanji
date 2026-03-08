@@ -94,7 +94,7 @@ const MultiCurrencyWallet = () => {
             <ScrollReveal>
               <div className="mb-20 case-study-prose">
                 <h2 className="text-4xl font-bold mb-6">The Idea</h2>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+              <div id="the-idea" className="scroll-mt-28">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
                 <UserVoiceQuote 
