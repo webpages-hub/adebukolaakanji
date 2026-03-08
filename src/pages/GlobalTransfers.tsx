@@ -256,7 +256,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Speed and affordability don't matter if the experience feels confusing. So I worked with designers to create a simple, transparent flow:
+            A fast, cheap transfer that confuses the user is still a bad product. I worked with the designer to strip the flow down to exactly what someone needs to feel confident hitting send:
           </p>
 
           <div className="space-y-3">
