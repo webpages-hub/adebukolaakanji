@@ -10,19 +10,17 @@ const About = () => {
       <main className="container mx-auto px-6 pt-32 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
-            {/* Left Column ~45% - Stacked Photos */}
+            {/* Left Column ~45% - Two-frame grid */}
             <div className="md:w-[45%] flex justify-center items-start">
-              <div className="relative w-full max-w-[340px]">
-                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-2 gap-3 w-full max-w-[420px]">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <img
                     src={profilePhoto}
                     alt="Adebukola Akanji"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div
-                  className="w-[70%] aspect-[4/3] rounded-xl overflow-hidden absolute -bottom-8 -right-4 z-10 border-4 border-background shadow-elegant"
-                >
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden mt-8">
                   <img
                     src={heroPhoto}
                     alt="Adebukola working"
