@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground"view</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -68,7 +68,7 @@ const Projects = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   It started with one big question:
                 </p>
-                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-6">
+                <blockquote className="bg-white border-cardorder-accent rounded-r-xl p-6 my-6">
                   <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
                     "Can we make everyday payments simpler for people in the DRC?"
                   </p>
