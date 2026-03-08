@@ -239,7 +239,7 @@ card             <p className="text-lg leading-relaxed">
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
               <div className="bg-white rounded-2xl p-8 md:p-1carddow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
