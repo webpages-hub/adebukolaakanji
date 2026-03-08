@@ -116,7 +116,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 1 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-problem" className="mb-20 scroll-mt-28">
                 <StepHeading number={1} title="Understanding the Real Problem" accentWord="Real" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
