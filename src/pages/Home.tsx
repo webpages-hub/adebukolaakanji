@@ -52,8 +52,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Marquee Strip */}
-      <MarqueeStrip />
 
       {/* Featured Work */}
       <FeaturedWork />
