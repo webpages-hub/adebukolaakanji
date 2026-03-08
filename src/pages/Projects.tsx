@@ -336,7 +336,7 @@ const Projects = () => {
               <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  This project changed how I think about building products.
+                  Six weeks sounds short. But constraints have a way of making you ruthlessly clear about what actually matters.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 my-8">
                   {[
