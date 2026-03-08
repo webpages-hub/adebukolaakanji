@@ -17,7 +17,7 @@ const Projects = () => {
               Building a Local Payments MVP in 6 Weeks
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              My Journey Launching in the DRC
+              What six weeks in a brand new market actually looks like.
             </p>
           </div>
           
