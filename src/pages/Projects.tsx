@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"iv className="grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-foreground""grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">6 weeks (research to MVP launch)</p>
@@ -68,7 +68,7 @@ const Projects = () => {
                   It started with one big question:
                 </p>
                 <blockquote className="bg-white border-cardorder-acccardounded-r-card6 my-6">
-                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foreground"ay payments simpler for people in the DRC?"
+card             <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foreground"ple in the DRC?"
                   </p>
                 </blockquote>
                 <p className="text-lg leading-relaxed">
@@ -145,8 +145,7 @@ const Projects = () => {
                   in reviews, and what "trust" meant in this market.
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" text-foreground"nd over again:</p>
-                  <ul className="space-y-2">
+                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" text-foreground"nd over ag text-foreground" className="space-y-2">
                     <li>👉 Speed mattered more than fancy features.</li>
                     <li>👉 Downtime killed adoption.</li>
                     <li>👉 Agents cared more about liquidity than commissions.</li>
@@ -205,7 +204,7 @@ const Projects = () => {
                   We decided on a clean, three-step onboarding process and prioritized clarity over complexity.
                 </p>
                 <div className="bg-white rounded-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed">
+            card <p className="text-lg leading-relaxed">
                     When we tested it with a few agents, their feedback was short but powerful:
                   </p>
                   <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-4">
