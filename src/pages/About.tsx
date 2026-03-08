@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import ContactCard from "@/components/ContactCard";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import heroPhoto from "@/assets/hero-photo.jpg";
 
@@ -11,13 +10,10 @@ const About = () => {
       <main className="container mx-auto px-6 pt-32 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
-            {/* Left Column ~45% - Photo Collage */}
-            <div className="md:w-[45%] relative flex justify-center items-start min-h-[400px]">
-              <div className="relative w-full max-w-[360px]">
-                <div
-                  className="w-[260px] h-[320px] rounded-lg overflow-hidden absolute top-0 left-0 z-10"
-                  style={{ transform: 'rotate(-3deg)' }}
-                >
+            {/* Left Column ~45% - Stacked Photos */}
+            <div className="md:w-[45%] flex justify-center items-start">
+              <div className="relative w-full max-w-[340px]">
+                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden">
                   <img
                     src={profilePhoto}
                     alt="Adebukola Akanji"
@@ -25,8 +21,7 @@ const About = () => {
                   />
                 </div>
                 <div
-                  className="w-[260px] h-[320px] rounded-lg overflow-hidden absolute top-12 left-16 z-20"
-                  style={{ transform: 'rotate(3deg)' }}
+                  className="w-[70%] aspect-[4/3] rounded-xl overflow-hidden absolute -bottom-8 -right-4 z-10 border-4 border-background shadow-elegant"
                 >
                   <img
                     src={heroPhoto}
@@ -38,7 +33,7 @@ const About = () => {
             </div>
 
             {/* Right Column ~55% - Text Content */}
-            <div className="md:w-[55%]">
+            <div className="md:w-[55%] mt-8 md:mt-0">
               <h1 className="text-3xl md:text-4xl font-bold font-heading mb-10">Meet Adebukola</h1>
 
               <div className="space-y-12">
@@ -69,22 +64,11 @@ const About = () => {
               </p>
             </div>
           </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 bg-background border border-border p-8 rounded-2xl">
-            <p className="text-lg text-muted-foreground mb-6 text-center">
-              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
-            </p>
-            <div className="flex justify-center">
-              <Link to="/contact">
-                <Button variant="accent" size="lg">
-                  Let's Talk
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </main>
+
+      {/* Contact Card */}
+      <ContactCard />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-6">
