@@ -98,7 +98,7 @@ const Projects = () => {
                   },
                   {
                     icon: TrendingUp,
-                    text: "Launched an MVP within six weeks, leading to rapid agent adoption and consistent transaction growth."
+                    text: "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
                   }
                 ].map((item, index) => (
                   <div key={index} className="flex gap-4 p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-base">
