@@ -90,7 +90,7 @@ const Projects = () => {
                   },
                   {
                     icon: Users,
-                    text: "Mapped the agent journey on Figma and collaborated with engineers to design a mobile-first onboarding experience."
+                    text: "Mapped the full agent journey from onboarding to first transaction, then worked with the designer to turn those flows into a mobile-first experience that made sense without training."
                   },
                   {
                     icon: CheckCircle2,
