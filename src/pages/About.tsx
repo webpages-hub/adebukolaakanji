@@ -36,28 +36,32 @@ const About = () => {
               <div className="space-y-12">
                 <div>
                   <span className="text-sm italic text-accent mb-2 block">Who I am</span>
+                  <h2 className="text-xl font-semibold font-heading mb-4 text-foreground">Hi, I'm Bukola</h2>
                   <p className="text-base leading-relaxed text-foreground/90">
-                    Somewhere between a library full of information and a fintech serving a million users, I found my thing.
+                    Somewhere between a library full of information and building products people use, I found my thing. I didn't take the straight road into product. I studied Library and Information Science, graduated top of my department, and then a single coursework module changed everything. It showed me that understanding how people look for things, and why they fail to find them, is exactly the problem product management exists to solve.
                   </p>
                   <p className="text-base leading-relaxed text-foreground/90 mt-4">
-                    My name is Adebukola Akanji, but most people call me Bukola. I'm a Product Manager who gets genuinely excited about the moment a real person's life gets a little easier because of something I helped build. The kind of excited where I'm still thinking about a user research session three days later, turning it over, asking better questions.
-                  </p>
-                  <p className="text-base leading-relaxed text-foreground/90 mt-4">
-                    I've spent five years figuring out how to turn messy, complicated problems into products that work. Products that cross borders. Products that move money for families separated by continents. Products that actually grow.
+                    Five years later, I've built payment products that cross borders, led market entry into five countries, and shipped things used by over a million people. The unconventional start turned out to be the whole point.
                   </p>
                 </div>
 
                 <div>
                   <span className="text-sm italic text-accent mb-2 block">What I do</span>
                   <p className="text-base leading-relaxed text-foreground/90">
-                    I've helped build and scale fintech products that power payments and expand financial access across borders. In the DRC, I led the launch of an agent network that onboarded over 1,000 agents in six weeks and processed millions in transactions. I helped launch a cross-border payments solution that generated $200K in revenue within three months. I also designed a gamification system that improved user retention by 10%.
+                    I sit at the intersection of user needs, business goals, and what's actually possible to build, then I make the case for the version where all three overlap.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/90 mt-4">
+                    In practice, that's meant going from zero to a live product in the DRC in six weeks, generating $600K in cross-border payment revenue in seven months, and growing daily active usage by 20% on a multi-currency wallet. The through-line in all of it is the same: understand the real problem before touching the solution.
                   </p>
                 </div>
 
                 <div>
-                  <span className="text-sm italic text-accent mb-2 block">What I love</span>
+                  <span className="text-sm italic text-accent mb-2 block">What gets me going</span>
                   <p className="text-base leading-relaxed text-foreground/90">
-                    My approach blends data-driven strategy with deep market empathy. I move between using Mixpanel for insights and designing user flows that convert on FigJam. But beyond the tools, my real strength lies in turning user pain points into scalable solutions that move the business forward. I thrive in complex environments where products must bridge regulatory, cultural, and technical gaps to succeed.
+                    Honestly? I love when the data says something nobody expected. That moment when a user behavior pattern quietly tells you the whole product assumption was slightly off, and you get to be the person who caught it.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/90 mt-4">
+                    I also write. About market entry, product strategy, user behavior, and the things you only learn by shipping. Writing is how I process the work and stay sharp between projects.
                   </p>
                 </div>
               </div>
