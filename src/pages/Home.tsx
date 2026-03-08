@@ -85,21 +85,32 @@ const Home = () => {
       {/* Explore My Articles */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto rounded-3xl p-12 md:p-16 bg-muted border border-border text-center">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-              Explore My Articles
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              I write about product management, fintech, and building products that matter. Check out my latest thoughts and insights.
-            </p>
-            <a
-              href="https://medium.com/@adebukolaakanji"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full transition-base hover:opacity-90 bg-primary text-primary-foreground"
-            >
-              Read on Medium <ArrowRight className="w-4 h-4" />
-            </a>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-10">Explore My Articles</h2>
+
+            <div className="space-y-4">
+              {[
+                { title: "Beyond Borders: Secrets to Launching a Product in Africa", url: "https://medium.com/@adebukolaakanji/beyond-borders-secrets-to-launching-a-product-in-africa" },
+                { title: "How do you know if you are building the right product?", url: "https://medium.com/@adebukolaakanji/how-do-you-know-if-you-are-building-the-right-product" },
+                { title: "Data is a Product's Love Language", url: "https://medium.com/@adebukolaakanji/data-is-a-products-love-language" },
+                { title: "You Don't Break Into a New Market. You Learn How to Belong.", url: "https://medium.com/@adebukolaakanji/you-dont-break-into-a-new-market-you-learn-how-to-belong" },
+              ].map((article) => (
+                <a
+                  key={article.title}
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block rounded-2xl bg-muted border border-border p-6 pl-8 border-l-4 border-l-accent hover:shadow-md transition-base"
+                >
+                  <h3 className="font-bold font-heading text-lg md:text-xl text-foreground mb-2 group-hover:text-accent transition-base">
+                    {article.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 text-sm text-muted-foreground group-hover:text-accent transition-base">
+                    Read article <ArrowRight className="w-4 h-4" />
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
