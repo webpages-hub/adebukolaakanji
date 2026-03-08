@@ -244,7 +244,7 @@ const Gamification = () => {
                 </div>
                 <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
                   <BarChart3 className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">↑</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Increased</div>
                   <p className="text-muted-foreground">BNPL Engagement</p>
                 </div>
                 <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
