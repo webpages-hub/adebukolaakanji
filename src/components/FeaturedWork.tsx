@@ -7,7 +7,7 @@ import multicurrencyHero from "@/assets/multicurrency-wallet-hero.jpg";
 
 const projects = [
   {
-    number: "2024",
+    number: "202424",
     name: "DRC Payments",
     description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents.",
     tags: ["PRODUCT MANAGEMENT", "USER RESEARCH", "MVP LAUNCH"],
@@ -15,7 +15,7 @@ const projects = [
     image: drcHero,
   },
   {
-    number: "02",
+    number:202502",
     name: "Global Transfers",
     description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times.",
     tags: ["GLOBAL PAYMENTS", "FX STRATEGY", "API INTEGRATION"],
