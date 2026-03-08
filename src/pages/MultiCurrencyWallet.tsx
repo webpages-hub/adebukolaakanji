@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import multicurrencyWalletHero from "@/assets/multicurrency-wallet-hero.jpg";
+import ContextTag from "@/components/case-study/ContextTag";
+import StepHeading from "@/components/case-study/StepHeading";
+import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
+import DrivingQuestion from "@/components/case-study/DrivingQuestion";
+import DarkStatsSection from "@/components/case-study/DarkStatsSection";
+import TakeawayCards from "@/components/case-study/TakeawayCards";
+import ResultCallout from "@/components/case-study/ResultCallout";
 
 const MultiCurrencyWallet = () => {
   return (
@@ -12,7 +19,10 @@ const MultiCurrencyWallet = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="flex justify-center">
+              <ContextTag tags={["Product Management", "Fintech", "Multi-Currency"]} />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Building a Multi-Currency Wallet for Everyday Transactions
             </h1>
@@ -63,200 +73,188 @@ const MultiCurrencyWallet = () => {
             </div>
 
             {/* The Idea */}
-            <div className="mb-20">
+            <div className="mb-20 case-study-prose">
               <h2 className="text-4xl font-bold mb-6">The Idea</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
-                  The first time I heard an agent complain, it sounded simple:
-                </p>
-                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed">
-                    "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
-                  </p>
-                </blockquote>
-                <p className="text-lg leading-relaxed mb-6">
-                  It sounded like a one-off complaint. It wasn't.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  By the time I'd spoken to ten more agents, the pattern was clear. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
-                </p>
-                <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
-                  <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-                  <p className="text-xl leading-relaxed font-semibold text-foreground">
-                    That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
-                  </p>
-                </div>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                The first time I heard an agent complain, it sounded simple:
+              </p>
+              <UserVoiceQuote 
+                quote="I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
+                attribution="DRC agent"
+              />
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                It sounded like a one-off complaint. It wasn't.
+              </p>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                By the time I'd spoken to ten more agents, the pattern was clear. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
+              </p>
+              <DrivingQuestion 
+                question="What if we could just let users hold and transact in multiple currencies within a single account?"
+                goldEmphasis="multiple currencies"
+              />
             </div>
 
-            {/* Understanding the Problem */}
+            {/* Step 1: Understanding the Problem */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Understanding the Problem</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={1} title="Understanding the Real Problem" accentWord="Real" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I started by mapping out how users were currently transacting across currencies. In DRC, it was mostly USD and CDF. In our global expansion, we needed EUR, GBP, CAD, and NGN.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements that had to be designed around, not bolted on after.
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                  But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
                   So before touching design or engineering, I mapped out how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever having to think about it.
                 </p>
               </div>
             </div>
 
-            {/* Designing the Wallet System */}
+            {/* Step 2: Designing the Wallet System */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Designing the Wallet System</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
-                  With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  Each wallet type, USD, CDF, NGN, EUR, GBP, CAD, had to do three things well:
+              <StepHeading number={2} title="Designing the Wallet System" accentWord="System" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                  With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users. Each wallet type had to do three things well:
                 </p>
               </div>
 
-              <div className="grid gap-6">
+              <div className="max-w-[620px]">
                 {[
-                  {
-                    icon: Shield,
-                    title: "Be created independently based on user KYC level",
-                    description: "Compliance-first approach to wallet creation"
-                  },
-                  {
-                    icon: Zap,
-                    title: "Hold and transfer value seamlessly",
-                    description: "Instant transactions across all supported currencies"
-                  },
-                  {
-                    icon: BarChart3,
-                    title: "Sync in real time with our existing ledger system",
-                    description: "Accurate balance tracking across all wallets"
-                  }
+                  { title: "Be created independently based on user KYC level", desc: "Compliance-first approach to wallet creation" },
+                  { title: "Hold and transfer value seamlessly", desc: "Instant transactions across all supported currencies" },
+                  { title: "Sync in real time with our existing ledger system", desc: "Accurate balance tracking across all wallets" }
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-4 p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-base border-l-4 border-accent">
-                    <div className="flex-shrink-0">
-                      <item.icon className="w-8 h-8 text-accent" />
-                    </div>
+                  <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
+                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <div>
-                      <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
+                      <span className="font-bold text-[14px]">{item.title}</span>
+                      <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-lg leading-relaxed mt-8">
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
                 The result was a structure where each currency lived as its own account, but the user only ever saw one wallet.
               </p>
             </div>
 
-            {/* Mapping the User Experience */}
+            {/* Step 3: Mapping the User Experience */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Mapping the User Experience</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={3} title="Mapping the User Experience" accentWord="Experience" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Next, I moved to the user experience. The goal was to keep it simple; users shouldn't have to think about which currency wallet to use.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I designed the user flow in Figma, mapping out every interaction: creating a new wallet, funding it, viewing balances, and switching between currencies.
                 </p>
-                <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed font-semibold">
-                    The design had to look effortless but handle complexity underneath.
-                  </p>
-                </div>
-                <p className="text-lg leading-relaxed">
+              </div>
+
+              <UserVoiceQuote quote="The design had to look effortless but handle complexity underneath." />
+
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
                   We tested small micro-interactions like currency switching and transaction confirmations to make the experience feel natural and fluid.
                 </p>
               </div>
             </div>
 
-            {/* Bringing It to Life */}
+            {/* Step 4: Bringing It to Life */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Bringing It to Life</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={4} title="Bringing It to Life" accentWord="Life" isLast />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Once the designs were finalized, I worked closely with the engineers during development to ensure everything aligned from wallet creation logic to transaction reconciliation.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I also collaborated with compliance and support teams to make sure we didn't miss any regulatory nuances.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  And in just a few weeks, the multi-currency wallet went live first in the DRC, then globally.
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                  And in just a few weeks, the multi-currency wallet went live — first in the DRC, then globally.
                 </p>
-                <div className="bg-card rounded-xl p-8 shadow-elegant border-l-4 border-accent">
-                  <p className="text-lg leading-relaxed mb-4">
-                    Users could now hold USD, CDF, and NGN wallets locally…
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    And for global users, they could manage EUR, GBP, CAD, and NGN  all in one app.
-                  </p>
-                </div>
               </div>
+
+              <ResultCallout 
+                stat="20%"
+                description="daily active usage increase — users could now hold USD, CDF, EUR, GBP, CAD, and NGN all in one app."
+              />
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* The Impact */}
+      {/* Dark Stats Section */}
+      <DarkStatsSection
+        introText="Users finally had the flexibility to transact in the currencies they actually lived and earned in. What I loved most was hearing users say, 'I don't have to think twice anymore.'"
+        stats={[
+          { number: "20%", description: "Daily active usage increase within weeks of launch" },
+          { number: "10%", description: "Cross-currency transaction growth across all supported corridors" },
+          { number: "6", description: "Currencies supported seamlessly in a single wallet" }
+        ]}
+      />
+
+      {/* What I Learned */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">The Impact</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed">
-                  Within a few weeks of launch:
-                </p>
+              <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
+                This project taught me how powerful simplicity can be — especially in fintech.
+              </p>
+
+              <TakeawayCards cards={[
+                "Complexity under the hood, simplicity on the surface.",
+                "Compliance can be designed around, not bolted on.",
+                "Users don't see the work — they just see that it works."
+              ]} />
+
+              <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-accent">
+                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                    What Worked
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Compliance-first design approach",
+                      "Single wallet abstraction for multiple currencies",
+                      "Micro-interaction testing for fluid UX",
+                      "Cross-team collaboration with compliance and support"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent text-sm">✓</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-muted-foreground" />
+                    What I'd Improve
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Earlier user testing with multi-currency scenarios",
+                      "Built-in conversion rate comparison tool",
+                      "Better onboarding for currency switching",
+                      "Analytics for currency preference patterns"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-muted-foreground text-sm">→</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">20%</div>
-                  <p className="text-muted-foreground">Daily Active Usage Increase</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <Globe className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">10%</div>
-                  <p className="text-muted-foreground">Cross-Currency Transaction Growth</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <CheckCircle2 className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">∞</div>
-                  <p className="text-muted-foreground">User Flexibility</p>
-                </div>
-              </div>
-
-              <div className="bg-card rounded-xl p-8">
-                <p className="text-lg leading-relaxed mb-4">
-                  Users finally had the flexibility to transact in the currencies they actually lived and earned in.
-                </p>
-                <p className="text-lg leading-relaxed font-semibold">
-                  What I loved most was hearing users say, "I don't have to think twice anymore. I can just send money."
-                </p>
-                <p className="text-lg leading-relaxed mt-4">
-                  That's when I knew we'd built something meaningful.
-                </p>
-              </div>
-            </div>
-
-            {/* Reflection */}
-            <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
-                  This project taught me how powerful simplicity can be — especially in fintech.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
-                  Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
-                  But what users saw was freedom.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6 text-foreground">
-                  They didn't see the work. They just saw that it worked.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground">
-                  And that's the real magic of product management.
-                </p>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
+                Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration. But what users saw was freedom. And that's the real magic of product management.
+              </p>
             </div>
 
             {/* CTA Section */}

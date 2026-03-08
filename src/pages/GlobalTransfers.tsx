@@ -1,8 +1,15 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft } from "lucide-react";
+import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import globalTransfersHero from "@/assets/global-transfers-hero.jpg";
+import ContextTag from "@/components/case-study/ContextTag";
+import StepHeading from "@/components/case-study/StepHeading";
+import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
+import DrivingQuestion from "@/components/case-study/DrivingQuestion";
+import DarkStatsSection from "@/components/case-study/DarkStatsSection";
+import TakeawayCards from "@/components/case-study/TakeawayCards";
+import ResultCallout from "@/components/case-study/ResultCallout";
 
 const GlobalTransfers = () => {
   return (
@@ -13,6 +20,9 @@ const GlobalTransfers = () => {
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="flex justify-center">
+              <ContextTag tags={["Product Management", "Fintech", "Cross-Border"]} />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Building Fast, Affordable Global Transfers from Africa
             </h1>
@@ -64,340 +74,288 @@ const GlobalTransfers = () => {
           </div>
 
         {/* Hook Section */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-6 flex items-center gap-3">
-            <Zap className="w-8 h-8 text-primary" />
-            The Moment It Hit Me
-          </h2>
+        <div className="mb-20 case-study-prose">
+          <h2 className="text-4xl font-bold mb-6">The Moment It Hit Me</h2>
           
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed">
-              I still remember the exact moment it clicked.
-            </p>
-            <p className="text-lg leading-relaxed">
-              A customer had tried to send $1000 to the United Arab Emirates from the Democratic Republic of Congo, and it took <span className="font-bold text-primary">five days</span> to get to the receiver.
-            </p>
-            
-            <div className="p-6 rounded-xl bg-destructive/10 border border-destructive/30">
-              <div className="flex items-center gap-3 mb-3">
-                <Clock className="w-5 h-5 text-destructive" />
-                <span className="font-semibold">Five whole days.</span>
-              </div>
-              <p className="text-muted-foreground">
-                And when it finally landed, the receiver got less than expected. Fees. Exchange losses. Delays.
-              </p>
-            </div>
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+            I still remember the exact moment it clicked.
+          </p>
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+            A customer had tried to send $1000 to the United Arab Emirates from the Democratic Republic of Congo, and it took <span className="font-bold text-foreground">five days</span> to get to the receiver.
+          </p>
+          
+          <UserVoiceQuote 
+            quote="Five whole days. And when it finally landed, the receiver got less than expected. Fees. Exchange losses. Delays."
+            attribution="Customer pain point"
+          />
 
-            <p className="text-lg leading-relaxed">
-              That was the moment I knew: <span className="font-bold">the global money transfer system was broken for ordinary users.</span>
-            </p>
-            <p className="text-lg leading-relaxed">
-              So we decided to fix it. Faster delivery, fairer rates, full transparency. And I was the PM leading the build.
-            </p>
-          </div>
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+            That was the moment I knew: <span className="font-bold text-foreground">the global money transfer system was broken for ordinary users.</span>
+          </p>
+          <p className="text-[15px] leading-[1.75] text-muted-foreground">
+            So we decided to fix it. Faster delivery, fairer rates, full transparency. And I was the PM leading the build.
+          </p>
         </div>
 
         {/* Challenge Section */}
-        <div className="mb-20">
+        <div className="mb-20 case-study-prose">
           <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
           
-          <p className="text-lg leading-relaxed mb-6">
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
             International money transfers sound simple. Until you're the one building them.
           </p>
-          <p className="text-lg leading-relaxed mb-6">
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
             The existing rails were slow and expensive. Users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
           </p>
 
           <h3 className="text-2xl font-bold mb-4">The Goal</h3>
-          <p className="text-lg leading-relaxed mb-4">The product had to do four things well:</p>
-          <div className="space-y-4">
-            <div className="p-5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary">
-              <div className="flex items-start gap-3">
-                <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div>Move money across borders within minutes, not days</div>
-              </div>
+          <p className="text-[15px] leading-[1.75] text-muted-foreground mb-4">The product had to do four things well:</p>
+        </div>
+
+        {/* Insight Grid for goals */}
+        <div className="grid grid-cols-2 max-w-[620px] mb-20">
+          {[
+            "Move money across borders within minutes, not days",
+            "Offer competitive exchange rates without losing margin",
+            "Stay compliant while integrating licensed global partners",
+            "Scale seamlessly once adoption began"
+          ].map((goal, index) => (
+            <div key={index} className="flex items-start gap-3 p-5 border border-border">
+              <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-1.5" />
+              <p className="text-[14px] text-foreground leading-[1.5]">{goal}</p>
             </div>
-            <div className="p-5 rounded-lg bg-gradient-to-r from-accent/10 to-accent/5 border-l-4 border-accent">
-              <div className="flex items-start gap-3">
-                <DollarSign className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>Offer competitive exchange rates without losing margin</div>
-              </div>
-            </div>
-            <div className="p-5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary">
-              <div className="flex items-start gap-3">
-                <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div>Stay compliant while integrating licensed global partners</div>
-              </div>
-            </div>
-            <div className="p-5 rounded-lg bg-gradient-to-r from-accent/10 to-accent/5 border-l-4 border-accent">
-              <div className="flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>Scale seamlessly once adoption began</div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Step 1: Research */}
         <div className="mb-20">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
-              1
-            </div>
-            <h2 className="text-4xl font-bold">Understanding Where Money Actually Moves</h2>
+          <StepHeading number={1} title="Understanding Where Money Actually Moves" accentWord="Money" />
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+              Before touching the product, I needed to understand the corridors that actually mattered to our users.
+            </p>
           </div>
 
-          <p className="text-lg leading-relaxed mb-6">
-            Before touching the product, I needed to understand the corridors that actually mattered to our users.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-              <div className="text-2xl font-bold mb-2">🌍 → 🇪🇺</div>
-              <div className="font-semibold mb-1">Africa → Europe</div>
-              <div className="text-sm text-muted-foreground">UK and France</div>
-            </div>
-            <div className="p-6 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30">
-              <div className="text-2xl font-bold mb-2">🌍 → 🇨🇳</div>
-              <div className="font-semibold mb-1">Africa → Asia</div>
-              <div className="text-sm text-muted-foreground">Trade settlements</div>
-            </div>
-            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-              <div className="text-2xl font-bold mb-2">💱</div>
-              <div className="font-semibold mb-1">Top Pairs</div>
-              <div className="text-sm text-muted-foreground">USD/CNY, USD/NGN, EUR/USD</div>
-            </div>
+          <div className="grid md:grid-cols-3 gap-4 mb-6 max-w-[620px]">
+            {[
+              { emoji: "🌍 → 🇪🇺", title: "Africa → Europe", desc: "UK and France" },
+              { emoji: "🌍 → 🇨🇳", title: "Africa → Asia", desc: "Trade settlements" },
+              { emoji: "💱", title: "Top Pairs", desc: "USD/CNY, USD/NGN, EUR/USD" }
+            ].map((item, index) => (
+              <div key={index} className="p-5 border border-border rounded-md">
+                <div className="text-2xl font-bold mb-2">{item.emoji}</div>
+                <div className="font-semibold mb-1 text-[14px]">{item.title}</div>
+                <div className="text-[13px] text-muted-foreground">{item.desc}</div>
+              </div>
+            ))}
           </div>
 
-          <p className="text-lg leading-relaxed">
-            I dug into currency behaviors, volatility patterns, and average delivery times. Then I benchmarked competitors like Wise, Remitly, and Sendwave. What were they charging, how fast were they delivering, and how could we stand out?
-          </p>
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground">
+              I dug into currency behaviors, volatility patterns, and average delivery times. Then I benchmarked competitors like Wise, Remitly, and Sendwave.
+            </p>
+          </div>
         </div>
 
         {/* Transaction Flow */}
         <div className="mb-20">
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-background to-primary/5 border border-primary/20">
-            <h3 className="text-xl font-bold mb-6 text-center">Optimized Transaction Flow</h3>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1 p-6 rounded-xl bg-background border border-primary/30 text-center">
-                <Users className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-semibold mb-1">Sender</div>
-                <div className="text-sm text-muted-foreground">Initiates transfer</div>
-              </div>
-              
-              <ArrowRight className="w-6 h-6 text-primary rotate-90 md:rotate-0" />
-              
-              <div className="flex-1 p-6 rounded-xl text-center bg-accent shadow-accent-glow">
-                <Zap className="w-8 h-8 mx-auto mb-3 text-accent-foreground" />
-                <div className="font-semibold mb-1 text-accent-foreground">Partner API</div>
-                <div className="text-sm text-accent-foreground/80">Real-time processing</div>
-              </div>
-              
-              <ArrowRight className="w-6 h-6 text-primary rotate-90 md:rotate-0" />
-              
-              <div className="flex-1 p-6 rounded-xl bg-background border border-accent/30 text-center">
-                <CheckCircle2 className="w-8 h-8 mx-auto mb-3 text-accent" />
-                <div className="font-semibold mb-1">Recipient</div>
-                <div className="text-sm text-muted-foreground">Receives funds</div>
-              </div>
+          <div className="border border-border rounded-md overflow-hidden max-w-[620px]">
+            <div className="bg-foreground px-5 py-3 flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Optimized Transaction Flow</span>
             </div>
-            
-            <div className="mt-6 text-center text-sm text-muted-foreground">
-              Average delivery: <span className="font-bold text-primary">Under 1 hour</span>
+            <div className="flex flex-col md:flex-row items-center gap-3 p-6">
+              {["Sender", "Partner API", "Recipient"].map((step, index, array) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div className={`${index === 1 ? 'bg-accent text-accent-foreground' : 'bg-[hsl(43_100%_95%)] border border-[hsl(43_100%_85%)]'} rounded-full px-4 py-2`}>
+                    <span className="text-[13px] font-medium">{step}</span>
+                  </div>
+                  {index < array.length - 1 && (
+                    <span className="text-accent hidden md:block">→</span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="px-6 pb-4 text-center text-[13px] text-muted-foreground">
+              Average delivery: <span className="font-bold text-foreground">Under 1 hour</span>
             </div>
           </div>
         </div>
 
         {/* Step 3: FX Rates */}
         <div className="mb-20">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
-              3
-            </div>
-            <h2 className="text-4xl font-bold">Getting the Rates Right</h2>
+          <StepHeading number={2} title="Getting the Rates Right" accentWord="Rates" />
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+              Rates are where users decide whether to trust you. Set them too high and they leave. Too low and the business bleeds. I worked with finance and data to build a model that kept both sides honest.
+            </p>
           </div>
 
-          <p className="text-lg leading-relaxed mb-6">
-            Rates are where users decide whether to trust you. Set them too high and they leave. Too low and the business bleeds. I worked with finance and data to build a model that kept both sides honest:
-          </p>
-
-          <ul className="space-y-4 mb-6">
-            <li className="flex gap-4 p-4 rounded-lg bg-card">
-              <div className="text-3xl">⬇️</div>
-              <div>
-                <div className="font-bold text-xl mb-2">Bid Rate</div>
-                <p className="text-muted-foreground">The price users buy foreign currency at</p>
+          <div className="max-w-[620px] space-y-0">
+            {[
+              { label: "Bid Rate", desc: "The price users buy foreign currency at" },
+              { label: "Ask Rate", desc: "The rate we get from our partner or liquidity provider" },
+              { label: "The Spread", desc: "Our margin — a delicate balance between user value and revenue" }
+            ].map((item, index) => (
+              <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
+                <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <span className="font-bold text-[14px]">{item.label}</span>
+                  <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
+                </div>
               </div>
-            </li>
-            
-            <li className="flex gap-4 p-4 rounded-lg bg-card">
-              <div className="text-3xl">⬆️</div>
-              <div>
-                <div className="font-bold text-xl mb-2">Ask Rate</div>
-                <p className="text-muted-foreground">The rate we get from our partner or liquidity provider</p>
-              </div>
-            </li>
-          </ul>
-
-          <div className="p-6 rounded-xl bg-card">
-            <div className="flex items-center gap-3 mb-2">
-              <BarChart3 className="w-6 h-6 text-foreground" />
-              <div className="font-bold text-lg text-foreground">The Spread = Our Margin</div>
-            </div>
-            <p className="text-foreground">
-              A delicate balance between user value and revenue. We monitored FX movements across key pairs daily and adjusted automatically based on volatility.
-            </p>
+            ))}
           </div>
         </div>
 
         {/* Step 4: Design */}
         <div className="mb-20">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
-              4
-            </div>
-            <h2 className="text-4xl font-bold">Designing for Clarity, Not Features</h2>
+          <StepHeading number={3} title="Designing for Clarity, Not Features" accentWord="Clarity" />
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+              A fast, cheap transfer that confuses the user is still a bad product. I worked with the designer to strip the flow down to exactly what someone needs to feel confident hitting send.
+            </p>
           </div>
 
-          <p className="text-lg leading-relaxed mb-6">
-            A fast, cheap transfer that confuses the user is still a bad product. I worked with the designer to strip the flow down to exactly what someone needs to feel confident hitting send:
-          </p>
-
-          <div className="space-y-3">
+          {/* Numbered list box */}
+          <div className="border border-border rounded-md overflow-hidden max-w-[620px] my-8">
             {[
-              'Choose country and currency',
-              'Enter amount',
-              'Instantly see delivery time, fees, and exchange rate',
-              'Confirm and send'
+              "Choose country and currency",
+              "Enter amount",
+              "Instantly see delivery time, fees, and exchange rate",
+              "Confirm and send"
             ].map((step, index) => (
-              <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-accent/5 border border-accent/20">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold flex-shrink-0">
-                  {index + 1}
-                </div>
-                <div className="font-medium">{step}</div>
+              <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
+                <span className="font-serif-display text-[22px] font-bold text-accent">{index + 1}</span>
+                <p className="text-[14px] text-foreground">{step}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-lg leading-relaxed mt-6">
-            We added a real-time rate refresh timer so users always felt in control.
-          </p>
-        </div>
-
-        {/* Step 5: Launch Results */}
-        <div className="mb-20">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
-              5
-            </div>
-            <h2 className="text-4xl font-bold">Shipping and Scaling</h2>
-          </div>
-
-          <p className="text-lg leading-relaxed mb-6">
-            We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage and cut delivery times further through smarter partner routing and batch processing.
-          </p>
-
-          <div className="p-8 rounded-2xl border border-primary/30 bg-card mb-6">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">First 3 Months Results</h3>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 rounded-xl bg-background/50">
-                <DollarSign className="w-10 h-10 mx-auto mb-3 text-primary" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  $200K+
-                </div>
-                <div className="text-sm text-muted-foreground">Revenue Generated</div>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-background/50">
-                <TrendingUp className="w-10 h-10 mx-auto mb-3 text-accent" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                  Millions in Transfers
-                </div>
-                <div className="text-sm text-muted-foreground">Processed in 3 months</div>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-background/50">
-                <Clock className="w-10 h-10 mx-auto mb-3 text-primary" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  &lt;1 Hour
-                </div>
-                <div className="text-sm text-muted-foreground">Avg. Delivery Time</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center space-y-2">
-            <p className="text-lg font-semibold">Users came back. Agents referred others.</p>
-            <p className="text-lg font-semibold">Leadership used it as the blueprint for every market expansion that followed.</p>
-          </div>
-        </div>
-
-        {/* Learnings */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
-          
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed">
-              The biggest lesson had nothing to do with rates or APIs. Global payments are a trust problem first.
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground">
+              We added a real-time rate refresh timer so users always felt in control.
             </p>
-            
-            <p className="text-lg leading-relaxed">
-              Users don't just want cheaper transfers. They want to know exactly what's happening between "Send" and "Received." The gap between those two words is where trust is won or lost.
-            </p>
-
-            <div className="p-8 rounded-xl shadow-lg bg-card">
-              <div className="font-bold text-2xl mb-4 text-primary">I learned how to:</div>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-lg">Balance profitability with user trust through rate setting</div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-lg">Manage complex integrations without sacrificing speed</div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-lg">Launch a global-facing product under strict compliance and time pressure</div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
-          <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
-            If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
-          </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
-              Let's talk
-            </Button>
-          </Link>
-        </div>
+        {/* Step 5: Launch */}
+        <div className="mb-20">
+          <StepHeading number={4} title="Shipping and Scaling" accentWord="Scaling" isLast />
+          <div className="case-study-prose">
+            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+              We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage and cut delivery times further through smarter partner routing and batch processing.
+            </p>
+          </div>
 
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
-          <Link to="/projects" className="w-full sm:w-auto">
-            <Button variant="ghost" className="gap-2 w-full sm:w-auto">
-              <ArrowLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Previous: DRC Payments</span>
-              <span className="sm:hidden">Previous</span>
-            </Button>
-          </Link>
-          <Link to="/gamification" className="w-full sm:w-auto">
-            <Button variant="ghost" className="gap-2 w-full sm:w-auto">
-              <span className="hidden sm:inline">Next: Gamification</span>
-              <span className="sm:hidden">Next</span>
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
+          <ResultCallout 
+            stat="$200K+"
+            description="revenue generated in the first three months, with millions processed in transfers."
+          />
         </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dark Stats Section */}
+      <DarkStatsSection
+        introText="We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage — and the numbers followed."
+        stats={[
+          { number: "$200K+", description: "Revenue generated in the first three months" },
+          { number: "Millions", description: "In transfers processed across multiple corridors" },
+          { number: "<1 hr", description: "Average delivery time, down from days" }
+        ]}
+      />
+
+      {/* What I Learned */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-20">
+              <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
+                The biggest lesson had nothing to do with rates or APIs. Global payments are a trust problem first.
+              </p>
+
+              <TakeawayCards cards={[
+                "Users want transparency between 'Send' and 'Received.'",
+                "Balance profitability with user trust through rate setting.",
+                "Launch a global product under strict compliance and time pressure."
+              ]} />
+
+              <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-accent">
+                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                    What Worked
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Balance profitability with user trust through rate setting",
+                      "Manage complex integrations without sacrificing speed",
+                      "Real-time rate refresh built user confidence"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent text-sm">✓</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-muted-foreground" />
+                    What I'd Improve
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Earlier partner testing for edge-case corridors",
+                      "More granular error messaging for failed transfers",
+                      "Proactive rate alerts for users"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-muted-foreground text-sm">→</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
+                Users came back. Agents referred others. Leadership used it as the blueprint for every market expansion that followed.
+              </p>
+            </div>
+
+            {/* CTA Section */}
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
+              <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
+                If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
+              </p>
+              <Link to="/contact">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
+                  Let's talk
+                </Button>
+              </Link>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+              <Link to="/projects" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
+                  <ArrowLeft className="w-4 h-4" />
+                  <span className="hidden sm:inline">Previous: DRC Payments</span>
+                  <span className="sm:hidden">Previous</span>
+                </Button>
+              </Link>
+              <Link to="/gamification" className="w-full sm:w-auto">
+                <Button variant="ghost" className="gap-2 w-full sm:w-auto">
+                  <span className="hidden sm:inline">Next: Gamification</span>
+                  <span className="sm:hidden">Next</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
