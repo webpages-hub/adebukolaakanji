@@ -10,16 +10,14 @@ const projects = [
     number: "2024",
     name: "DRC Payments",
     description: "Six weeks. That's how long it took to go from zero to a live, locally compliant payment product in the DRC. I conducted on-ground research, shaped the MVP, and drove rapid adoption across a brand new market.",
-    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
-    href: "/projects",
+    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH  href: "/projects",
     image: drcHero,
   },
   {
     number: "2025",
     name: "Global Transfers",
     description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, and grew it to $600K in revenue within seven months.",
-    tags: ["Global Payments", "FX Strategy", "API Integration"],
-    href: "/global-transfers",
+    tags: ["GlobalCROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH  href: "/global-transfers",
     image: globalHero,
   },
   {
