@@ -144,7 +144,7 @@ const Gamification = () => {
                   { title: "Reward logic", desc: "What users got at each stage" }
                 ].map((item, index) => (
                   <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <div>
                       <span className="font-bold text-[14px]">{item.title}</span>
                       <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
