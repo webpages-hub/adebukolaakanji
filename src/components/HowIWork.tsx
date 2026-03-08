@@ -39,7 +39,7 @@ const HowIWork = () => {
                 <div
                   key={item.number}
                   className="transition-base"
-                  style={isOpen ? { backgroundColor: '#fef3cd' } : {}}
+                  style={isOpen ? { backgroundColor: '#EFEFEF' } : {}}
                 >
                   <button
                     onClick={() => toggle(index)}

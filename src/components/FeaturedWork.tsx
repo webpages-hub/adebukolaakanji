@@ -54,8 +54,7 @@ const FeaturedWork = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium"
-                      style={{ backgroundColor: '#fadd93', color: '#1A1A1A' }}
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-[#EFEFEF] text-foreground"
                     >
                       {tag}
                     </span>
