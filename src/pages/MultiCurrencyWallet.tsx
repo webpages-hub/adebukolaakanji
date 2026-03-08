@@ -248,7 +248,7 @@ card             <p className="text-lg leading-relaxed">
                 <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   But what users saw was freedom.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6 text-foreground">
                   They didn't see the work. They just saw that it worked.
                 </p>
                 <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
