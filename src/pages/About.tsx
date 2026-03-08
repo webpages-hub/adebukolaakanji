@@ -31,7 +31,7 @@ const About = () => {
 
             {/* Right Column ~55% - Text Content */}
             <div className="md:w-[55%] mt-8 md:mt-0">
-              <h1 className="text-3xl md:text-4xl font-bold font-heading mb-10">Meet Adebukola</h1>
+              <h1 className="text-3xl md:text-4xl font-bold font-heading mb-10">Hi, I'm Bukola</h1>
 
               <div className="space-y-12">
                 <div>
