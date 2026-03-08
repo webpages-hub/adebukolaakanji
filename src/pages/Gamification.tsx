@@ -187,7 +187,7 @@ const Gamification = () => {
 
             {/* Step 3 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-design" className="mb-20 scroll-mt-28">
                 <StepHeading number={3} title="Designing the Experience to Feel Alive" accentWord="Alive" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
