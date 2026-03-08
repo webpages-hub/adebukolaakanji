@@ -78,7 +78,7 @@ const MultiCurrencyWallet = () => {
                   It sounded like a one-off complaint. It wasn't.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  By the time I'd spoken to ten more agents, I realized this was a pattern. Users were juggling currencies like a circus act. Every transaction meant friction, delay, and lost value.
+                  By the time I'd spoken to ten more agents, the pattern was clear. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
                   <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
