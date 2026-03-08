@@ -1,47 +1,63 @@
 import Navigation from "@/components/Navigation";
-import { Briefcase, Lightbulb, Rocket, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+
+type Category = "all" | "live" | "vibe";
+
+interface CaseStudy {
+  name: string;
+  description: string;
+  tags: string[];
+  href: string;
+  category: Category[];
+}
+
+const caseStudies: CaseStudy[] = [
+  {
+    name: "DRC Payments MVP",
+    description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents.",
+    tags: ["Product Management", "User Research", "MVP Launch"],
+    href: "/projects",
+    category: ["live"],
+  },
+  {
+    name: "Global Transfers",
+    description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times.",
+    tags: ["Global Payments", "FX Strategy", "API Integration"],
+    href: "/global-transfers",
+    category: ["live"],
+  },
+  {
+    name: "Gamification",
+    description: "Launched a gamification system for a BNPL product that boosted user retention by 10% through rewards.",
+    tags: ["Gamification", "User Engagement", "BNPL"],
+    href: "/gamification",
+    category: ["live"],
+  },
+  {
+    name: "Multi-Currency Wallet",
+    description: "Built a seamless multi-currency wallet system that increased daily active usage by 20%.",
+    tags: ["Multi-Currency", "Compliance", "UX Design"],
+    href: "/multi-currency-wallet",
+    category: ["live"],
+  },
+];
+
+const tabs: { label: string; value: Category }[] = [
+  { label: "All", value: "all" },
+  { label: "Live Projects", value: "live" },
+  { label: "Vibe Coded Projects", value: "vibe" },
+];
 
 const CaseStudies = () => {
-  const projects = [
-    {
-      href: "/projects",
-      icon: Briefcase,
-      timeline: "6 weeks",
-      title: "Building a Local Payments MVP in 6 Weeks",
-      description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents and processing millions in transactions.",
-      tags: ["Product Management", "User Research", "MVP Launch"],
-      accentColor: "accent"
-    },
-    {
-      href: "/global-transfers",
-      icon: Lightbulb,
-      timeline: "2 months",
-      title: "Building Fast, Affordable Global Transfers from Africa",
-      description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times across multiple currency corridors.",
-      tags: ["Global Payments", "FX Strategy", "API Integration"],
-      accentColor: "primary"
-    },
-    {
-      href: "/gamification",
-      icon: Rocket,
-      timeline: "1 month",
-      title: "Making Payments Fun",
-      description: "Launched a gamification system for a BNPL product that boosted user retention by 10% through progress-based rewards and level progression.",
-      tags: ["Gamification", "User Engagement", "BNPL"],
-      accentColor: "accent"
-    },
-    {
-      href: "/multi-currency-wallet",
-      icon: Rocket,
-      timeline: "1 month",
-      title: "Building a Multi-Currency Wallet for Everyday Transactions",
-      description: "Built a seamless multi-currency wallet system that increased daily active usage by 20% and cross-currency transactions by 10%.",
-      tags: ["Multi-Currency", "Compliance", "UX Design"],
-      accentColor: "accent"
-    }
-  ];
+  const [activeTab, setActiveTab] = useState<Category>("all");
+
+  const filtered =
+    activeTab === "all"
+      ? caseStudies
+      : caseStudies.filter((cs) => cs.category.includes(activeTab));
 
   return (
     <div className="min-h-screen bg-background">
@@ -49,7 +65,7 @@ const CaseStudies = () => {
       
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Case Studies
@@ -58,58 +74,65 @@ const CaseStudies = () => {
                 Explore my journey building products that solve real problems and drive meaningful impact.
               </p>
             </div>
-            
-            <div className="grid gap-8">
-              {projects.map((project, index) => (
-                <Link 
-                  key={project.href} 
-                  to={project.href} 
-                  className="block group animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+
+            {/* Filter Tabs */}
+            <div className="flex gap-2 mb-10">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.value}
+                  onClick={() => setActiveTab(tab.value)}
+                  className={`text-sm font-medium px-5 py-[10px] rounded-full transition-base ${
+                    activeTab === tab.value
+                      ? "text-white"
+                      : "text-foreground hover:text-accent"
+                  }`}
+                  style={activeTab === tab.value ? { backgroundColor: '#111111' } : {}}
                 >
-                  <div className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-accent-glow transition-smooth h-full border border-border hover:border-accent/50">
-                    <div className="p-8 md:p-10">
-                      <div className="flex flex-col md:flex-row gap-6">
-                        <div className={`p-4 rounded-xl bg-${project.accentColor}/10 w-fit h-fit`}>
-                          <project.icon className={`w-8 h-8 text-${project.accentColor}`} />
-                        </div>
-                        
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <span className="text-sm text-muted-foreground">Case Study</span>
-                            <span className="text-sm text-muted-foreground">•</span>
-                            <span className="text-sm text-muted-foreground">{project.timeline}</span>
-                          </div>
-                          
-                          <h3 className={`text-2xl md:text-3xl font-bold mb-4 group-hover:text-${project.accentColor} transition-base`}>
-                            {project.title}
-                          </h3>
-                          
-                          <p className="text-muted-foreground leading-relaxed mb-6">
-                            {project.description}
-                          </p>
-                          
-                          <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map((tag) => (
-                              <span 
-                                key={tag} 
-                                className="px-3 py-1 rounded-full bg-muted text-sm font-medium"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                          
-                          <div className={`flex items-center gap-2 text-${project.accentColor} font-medium group-hover:gap-4 transition-base`}>
-                            Read Case Study <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                  {tab.label}
+                </button>
               ))}
             </div>
+            
+            {/* Rows */}
+            <div className="divide-y divide-border">
+              {filtered.map((cs) => (
+                <div
+                  key={cs.name}
+                  className="grid grid-cols-1 md:grid-cols-[20%_40%_20%_20%] gap-6 items-center py-6 md:py-8"
+                >
+                  <div className="font-bold text-lg">{cs.name}</div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {cs.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {cs.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-xs font-medium"
+                        style={{ backgroundColor: '#fadd93', color: '#1A1A1A' }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-start md:justify-end">
+                    <Link
+                      to={cs.href}
+                      className="inline-flex items-center gap-2 text-sm font-medium text-white px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90"
+                      style={{ backgroundColor: '#111111' }}
+                    >
+                      View Case Study <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filtered.length === 0 && (
+              <p className="text-center text-muted-foreground py-12">
+                No projects in this category yet. Check back soon!
+              </p>
+            )}
           </div>
 
           {/* CTA Section */}
