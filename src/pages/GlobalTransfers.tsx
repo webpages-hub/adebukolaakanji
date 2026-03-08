@@ -154,7 +154,7 @@ const GlobalTransfers = () => {
 
         {/* Step 1: Research */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-research" className="mb-20 scroll-mt-28">
             <StepHeading number={1} title="Understanding Where Money Actually Moves" accentWord="Money" />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
