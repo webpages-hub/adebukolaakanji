@@ -56,7 +56,9 @@ const GlobalTransfers = () => {
       {/* Content */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto flex gap-12">
+            <CaseStudyTOC sections={tocSections} />
+            <div className="max-w-4xl flex-1 min-w-0">
           
           {/* Project Meta Cards */}
           <ScrollReveal>
