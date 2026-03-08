@@ -29,7 +29,7 @@ const StepHeading = ({ number, title, accentWord, isLast = false }: StepHeadingP
           {String(number).padStart(2, '0')}
         </span>
       </div>
-      <h2 className="text-2xl md:text-4xl font-bold leading-[1.2] tracking-tight pt-2 md:pt-3">
+      <h2 className="text-xl sm:text-2xl md:text-4xl font-bold leading-[1.2] tracking-tight pt-2 md:pt-3">
         {renderTitle()}
       </h2>
     </div>
