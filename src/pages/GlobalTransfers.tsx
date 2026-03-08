@@ -104,7 +104,7 @@ const GlobalTransfers = () => {
           </p>
 
           <h3 className="text-2xl font-bold mb-4">The Goal</h3>
-          <p className="text-lg leading-relaxed mb-4">We needed to build a product that could:</p>
+          <p className="text-lg leading-relaxed mb-4">The product had to do four things well:</p>
           <div className="space-y-4">
             <div className="p-5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary">
               <div className="flex items-start gap-3">
