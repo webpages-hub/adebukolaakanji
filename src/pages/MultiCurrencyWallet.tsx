@@ -113,7 +113,7 @@ const MultiCurrencyWallet = () => {
                   With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  We had to make sure each wallet type: USD, CDF, NGN, EUR, GBP, CAD could:
+                  Each wallet type, USD, CDF, NGN, EUR, GBP, CAD, had to do three things well:
                 </p>
               </div>
 
