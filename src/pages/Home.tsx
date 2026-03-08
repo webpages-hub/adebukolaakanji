@@ -3,15 +3,10 @@ import { ArrowRight } from "lucide-react";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import FeaturedWork from "@/components/FeaturedWork";
 import HowIWork from "@/components/HowIWork";
-import AboutSection from "@/components/AboutSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
 import { Mail, Phone, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -30,13 +25,13 @@ const Home = () => {
                   I am Adebukola Akanji, a product manager with five years of experience driving business growth and expansion. I am dedicated to crafting simple user experiences that simplify people's lives.
                 </p>
                 
-                <button
-                  onClick={scrollToAbout}
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 text-sm font-medium text-white px-[22px] py-[10px] rounded-[22px] transition-base hover:opacity-90"
                   style={{ backgroundColor: '#111111' }}
                 >
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </button>
+                  Get in touch <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
               
               {/* Right Column ~45% - Profile Image */}
@@ -52,18 +47,11 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* Featured Work */}
       <FeaturedWork />
 
       {/* How I Work (My Approach Accordion) */}
       <HowIWork />
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Case Studies Section */}
-      <CaseStudiesSection />
 
       {/* Contact Me Section */}
       <section className="py-20 bg-background">

@@ -20,7 +20,7 @@ const items = [
 ];
 
 const HowIWork = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -39,7 +39,7 @@ const HowIWork = () => {
                 <div
                   key={item.number}
                   className="transition-base"
-                  style={isOpen ? { backgroundColor: 'hsl(var(--accent))' } : {}}
+                  style={isOpen ? { backgroundColor: '#fef3cd' } : {}}
                 >
                   <button
                     onClick={() => toggle(index)}
