@@ -11,6 +11,16 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-idea", label: "The Idea" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-rules", label: "Rules", isStep: true, stepNumber: 2 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
+  { id: "step-impact", label: "Impact", isStep: true, stepNumber: 4 },
+];
 
 const Gamification = () => {
   return (
