@@ -37,7 +37,13 @@ const About = () => {
                 <div>
                   <span className="text-sm italic text-accent mb-2 block">Who I am</span>
                   <p className="text-base leading-relaxed text-foreground/90">
-                    I've always been fascinated by how money moves. How a single transaction can connect people, businesses, and even countries. It's more than just numbers on a screen to me. It's the heartbeat of economies, the quiet bridge between opportunity and access. That curiosity started in university, where I first discovered software development while studying Library and Information Science. I became obsessed with how technology could simplify complex systems.
+                    Somewhere between a library full of information and a fintech serving a million users, I found my thing.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/90 mt-4">
+                    My name is Adebukola Akanji, but most people call me Bukola. I'm a Product Manager who gets genuinely excited about the moment a real person's life gets a little easier because of something I helped build. The kind of excited where I'm still thinking about a user research session three days later, turning it over, asking better questions.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/90 mt-4">
+                    I've spent five years figuring out how to turn messy, complicated problems into products that work. Products that cross borders. Products that move money for families separated by continents. Products that actually grow.
                   </p>
                 </div>
 
