@@ -84,7 +84,7 @@ const Gamification = () => {
                 </blockquote>
                 <div className="bg-white rounded-xl p-6 my-6">
                   <p className="text-lg leading-relaxed">
-                    That was the question that sparked the idea for a gamified experience inside our app, one that didn't just let users transact but actually made them want to come back.
+                    That question became the brief. Build something inside the product that made coming back feel worth it.
                   </p>
                 </div>
               </div>
