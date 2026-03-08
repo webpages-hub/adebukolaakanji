@@ -15,7 +15,7 @@ const About = () => {
               <div className="grid grid-cols-2 gap-3 w-full max-w-[420px]">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <img
-                    src={profilePhoto}
+                    src={aboutPhoto1}
                     alt="Adebukola Akanji"
                     className="w-full h-full object-cover"
                   />
