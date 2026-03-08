@@ -95,7 +95,7 @@ const Gamification = () => {
               <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
-                  Our data showed a steady decline in returning users on the BNPL (Buy Now, Pay Later) product.
+                  The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
                 </p>
                 <div className="bg-muted rounded-xl p-6 my-8">
                   <p className="font-semibold mb-4">The problem?</p>
