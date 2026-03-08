@@ -36,7 +36,6 @@ const About = () => {
               <div className="space-y-12">
                 <div>
                   <span className="text-sm italic text-accent mb-2 block">Who I am</span>
-                  <h2 className="text-xl font-semibold font-heading mb-4 text-foreground">Hi, I'm Bukola</h2>
                   <p className="text-base leading-relaxed text-foreground/90">
                     Somewhere between a library full of information and building products people use, I found my thing. I didn't take the straight road into product. I studied Library and Information Science, graduated top of my department, and then a single coursework module changed everything. It showed me that understanding how people look for things, and why they fail to find them, is exactly the problem product management exists to solve.
                   </p>
