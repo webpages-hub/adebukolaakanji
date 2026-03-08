@@ -57,7 +57,7 @@ const MultiCurrencyWallet = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  The goal was to make it easy, really easy, for users and agents who worked with multiple currencies to manage everything in one place.
+                  Users and agents working across currencies were doing too much manual work just to move money. The goal was to fix that with one wallet that handled everything.
                 </p>
               </div>
             </div>
