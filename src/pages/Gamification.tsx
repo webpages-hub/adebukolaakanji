@@ -134,7 +134,7 @@ const Gamification = () => {
                   So we designed a rewards system built around progress and achievement. Not discounts, not cashback. The feeling of moving forward.
                 </p>
                 <p className="text-lg leading-relaxed mt-6">
-                  Each level would have its own theme and personality , and trust me, naming them was half the fun.
+                  Each level had its own theme and personality. Naming them was honestly half the fun.
                 </p>
               </div>
             </div>
