@@ -173,13 +173,14 @@ const Resume = () => {
 
         {/* Key Skills */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-foreground">Key Skills & Technologies</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">Skills & Tools</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               { title: "Product Management", desc: "Go-to-Market Strategy, Product Lifecycle Management, Growth Strategy, Stakeholder Management, Market Research, Agile & Scrum." },
               { title: "Fintech & Payments", desc: "Cross-Border Payments, Multi-Currency Wallets, International Expansion, Remittance Solutions, Regulatory Compliance, Market Localization." },
               { title: "Technical & Analytical", desc: "SQL, Product Analytics, Cohort Analysis, A/B Testing, Mixpanel, Jira, Figma." },
               { title: "Leadership & Strategy", desc: "OKRs, Product Strategy Alignment, Cross-Functional Collaboration, Partner Management." },
+              { title: "AI & Productivity Tools", desc: "Claude, Perplexity AI, Lovable, NotebookLM, Cursor, Claude Code, Notion." },
             ].map((skill) => (
               <div key={skill.title} className="glass-card p-6">
                 <h3 className="font-semibold text-foreground mb-2">{skill.title}</h3>
