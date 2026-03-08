@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="grid gap-6 mb-12">
               <a 
                 href="mailto:adebukolaakanji@gmail.com" 
-                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
+                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-lg transition-base border border-border hover:border-foreground/30 flex items-center gap-4"
               >
                 <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
                   <Mail className="w-6 h-6 text-muted-foreground" />
