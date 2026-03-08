@@ -265,11 +265,8 @@ const Gamification = () => {
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
-                  This project reminded me that users don't just engage with functionality; they engage with feelings.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
-                  If you can make a product fun, intuitive, and emotionally rewarding, you've already won half the battle.
+                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
+                  Users don't engage with functionality. They engage with how something makes them feel. This project proved that when you build for that, the numbers follow.
                 </p>
               </div>
             </div>
