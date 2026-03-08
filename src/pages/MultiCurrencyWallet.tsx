@@ -34,8 +34,7 @@ const MultiCurrencyWallet = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"view</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-foreground"           <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">One Month</p>
@@ -69,7 +68,7 @@ const MultiCurrencyWallet = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
-                <blockquote className="bg-white border-cardorder-accent rounded-r-xl p-6 my-8">
+                <blockquote className="bg-white border-cardorder-acccardounded-r-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
                     "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   </p>
@@ -82,8 +81,7 @@ const MultiCurrencyWallet = () => {
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
                   <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
-                    That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
+                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foreground"        That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
                   </p>
                 </div>
               </div>
