@@ -123,8 +123,7 @@ const Projects = () => {
                   customers and track transactions easily without juggling multiple accounts or sim cards.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Our task was simple on paper but complex in practice: Design, build, and launch a local payment MVP 
-                  that agents and merchants could trust.
+                  The task was clear. What wasn't clear was whether six weeks was enough to do it right.
                 </p>
               </div>
             </div>
