@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import ContactCard from "@/components/ContactCard";
-import profilePhoto from "@/assets/profile-photo.jpg";
-import heroPhoto from "@/assets/hero-photo.jpg";
+import aboutPhoto1 from "@/assets/about-photo-1.jpg";
+import aboutPhoto2 from "@/assets/about-photo-2.jpg";
 
 const About = () => {
   return (
