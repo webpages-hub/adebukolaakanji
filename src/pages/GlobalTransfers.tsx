@@ -252,7 +252,7 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               4
             </div>
-            <h2 className="text-3xl font-bold">Designing the Experience</h2>
+            <h2 className="text-3xl font-bold">Designing for Clarity, Not Features</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
