@@ -272,7 +272,7 @@ const Projects = () => {
 
             {/* Step 3: Engineering */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-build" className="mb-20 scroll-mt-28">
                 <StepHeading number={3} title="Working with Engineers and Moving Fast" accentWord="Moving Fast" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
