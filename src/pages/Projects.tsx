@@ -147,7 +147,7 @@ const Projects = () => {
                   in reviews, and what "trust" meant in this market.
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" }}>What stood out was eye-opening:</p>
+                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" }}>Four things came up over and over again:</p>
                   <ul className="space-y-2">
                     <li>👉 Speed mattered more than fancy features.</li>
                     <li>👉 Downtime killed adoption.</li>
