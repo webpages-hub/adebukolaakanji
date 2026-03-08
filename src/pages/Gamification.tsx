@@ -112,7 +112,7 @@ const Gamification = () => {
 
             {/* The Challenge */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
