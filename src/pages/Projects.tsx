@@ -223,7 +223,8 @@ const Projects = () => {
               <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
                 <div className="bg-foreground px-5 py-3 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-mono-tag text-text-[10px] uppercatext-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold            </div>
+                  <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Simplified Agent Journey</span>
+                </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 p-6">
                   {["Sign Up", "Verify", "Accept Payment", "Track Transactions"].map((step, index, array) => (
                     <div key={index} className="flex items-center gap-3">
