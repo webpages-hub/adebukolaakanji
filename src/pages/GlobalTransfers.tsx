@@ -214,7 +214,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Global transfers live and die by their rates. If you set them too high, users leave. Too low, and your business bleeds. To solve this, I collaborated with finance and data teams to build a bid-ask rate model:
+            Rates are where users decide whether to trust you. Set them too high and they leave. Too low and the business bleeds. I worked with finance and data to build a model that kept both sides honest:
           </p>
 
           <ul className="space-y-4 mb-6">
