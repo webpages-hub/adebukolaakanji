@@ -310,9 +310,9 @@ const GlobalTransfers = () => {
               <div className="text-center p-6 rounded-xl bg-background/50">
                 <TrendingUp className="w-10 h-10 mx-auto mb-3 text-accent" />
                 <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                  Millions
+                  Millions in Transfers
                 </div>
-                <div className="text-sm text-muted-foreground">Transaction Value</div>
+                <div className="text-sm text-muted-foreground">Processed in 3 months</div>
               </div>
               
               <div className="text-center p-6 rounded-xl bg-background/50">
