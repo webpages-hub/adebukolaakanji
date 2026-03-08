@@ -11,6 +11,16 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-moment", label: "The Moment" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-rates", label: "Rates", isStep: true, stepNumber: 2 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const GlobalTransfers = () => {
   return (
