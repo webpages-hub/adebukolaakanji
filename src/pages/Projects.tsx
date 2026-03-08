@@ -250,7 +250,7 @@ const Projects = () => {
               <h2 className="text-4xl font-bold mb-6">Step 3: Working with Engineers (and Moving Fast)</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  With design ready, execution became everything.
+                  Design locked. Now the question was whether we could build it without scope creeping our way past the deadline.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   I held two-week sprints and daily check-ins with engineers, mostly to unblock decisions quickly.
