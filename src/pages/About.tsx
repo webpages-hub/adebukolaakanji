@@ -21,7 +21,8 @@ const About = () => {
                 </div>
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden mt-8">
                   <img
-                    src=a{aboutPhoto2}                    alt="Adebukola working"
+                    src={aboutPhoto2}
+                    alt="Adebukola working"
                     className="w-full h-full object-cover"
                   />
                 </div>
