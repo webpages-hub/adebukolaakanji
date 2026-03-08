@@ -18,7 +18,7 @@ const ContactCard = () => {
                 to="/contact"
                 className="inline-flex items-center gap-2 font-bold text-sm px-8 py-3 rounded-full transition-base hover:opacity-90 bg-primary text-primary-foreground"
               >
-                CONTACT ME
+                GET IN TOUCH
               </Link>
             </div>
 
