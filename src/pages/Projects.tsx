@@ -56,7 +56,7 @@ const Projects = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  Build and launch a local payments product that promotes interoperability, and enable agents to serve customers better.
+                  Build and launch a local payment product that agents and merchants in the DRC could trust from day one — fast, reliable, and built around how they actually move money.
                 </p>
               </div>
             </div>
