@@ -36,7 +36,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"iv className="grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-foreground""grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">One Month</p>
@@ -77,10 +77,10 @@ const Gamification = () => {
                   You pay. You leave. Done.
                 </p>
                 <blockquote className="bg-white border-cardorder-acccardounded-r-card8 my-8">
-                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foreground"payments could feel rewarding?
+card             <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foreground"ng?
                   </p>
                 </blockquote>
-                <div className="bg-white rounded-xl p-6 my-6">card              <p className="text-lg leading-relaxed">
+                <div className="bg-white rounded-xl p-6 my-6">card              <p classNcardtext-lg leading-relaxed">
                     That question became the brief. Build something inside the product that made coming back feel worth it.
                   </p>
                 </div>
@@ -252,7 +252,7 @@ const Gamification = () => {
               </div>
 
               <div className="bg-white rounded-xl p-8">
-                <p className="text-lg leading-relaxed font-semibold">
+     card      <p className="text-lg leading-relaxed font-semibold">
                   Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
                 </p>
               </div>
