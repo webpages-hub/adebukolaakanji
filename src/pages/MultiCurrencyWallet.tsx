@@ -110,7 +110,7 @@ const MultiCurrencyWallet = () => {
               <h2 className="text-4xl font-bold mb-6">Designing the Wallet System</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  Once the logic was clear, I worked with engineers to define how the multi-currency system would function technically.
+                  With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   We had to make sure each wallet type: USD, CDF, NGN, EUR, GBP, CAD could:
