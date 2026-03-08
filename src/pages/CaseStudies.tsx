@@ -16,29 +16,29 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    name: "DRC Payments MVP",
-    description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents.",
+    name: "DRC Payments",
+    description: "Six weeks. That's how long it took to go from zero to a live, locally compliant payment product in the DRC. I conducted on-ground research, shaped the MVP, and drove rapid adoption across a brand new market.",
     tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
     href: "/projects",
     category: ["live"],
   },
   {
     name: "Global Transfers",
-    description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times.",
+    description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, and grew it to $600K in revenue within seven months.",
     tags: ["CROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH"],
     href: "/global-transfers",
     category: ["live"],
   },
   {
     name: "Gamification",
-    description: "Launched a gamification system for a BNPL product that boosted user retention by 10% through rewards.",
+    description: "Users weren't sticking around. Rather than spamming them with push notifications, I dug into why, then built a badge and rewards system tied directly to how they actually used the product. Retention went up 10%.",
     tags: ["RETENTION STRATEGY", "USER ENGAGEMENT", "BEHAVIORAL DESIGN"],
     href: "/gamification",
     category: ["live"],
   },
   {
     name: "Multi-Currency Wallet",
-    description: "Built a seamless multi-currency wallet system that increased daily active usage by 20%.",
+    description: "Managing money across currencies shouldn't feel like a chore. I built a wallet that made it feel effortless, and the 20% jump in daily active usage told us users agreed.",
     tags: ["PRODUCT STRATEGY", "USER EXPERIENCE", "GROWTH"],
     href: "/multi-currency-wallet",
     category: ["live"],
