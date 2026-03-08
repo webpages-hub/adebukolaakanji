@@ -17,7 +17,8 @@ const projects = [
   {
     number: "2025",
     name: "Global Transfers",
-    description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, and grew it to $600K in revenue within seven montGlobal Payments", "FX Strategy", "API IntegrationGROWTH"],
+    description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, and grew it to $600K in revenue within seven months.",
+    tags: ["Global Payments", "FX Strategy", "API Integration"],
     href: "/global-transfers",
     image: globalHero,
   },
@@ -25,14 +26,16 @@ const projects = [
     number: "2023",
     name: "Gamification",
     description: "Users weren't sticking around. Rather than spamming them with push notifications, I dug into why, then built a badge and rewards system tied directly to how they actually used the product. Retention went up 10%.",
-    tags: ["Gamification", "User Engagement", "BNPLification",
+    tags: ["Gamification", "User Engagement", "BNPL"],
+    href: "/gamification",
     image: gamificationHero,
   },
   {
     number: "2024",
     name: "Multi-Currency Wallet",
     description: "Managing money across currencies shouldn't feel like a chore. I built a wallet that made it feel effortless, and the 20% jump in daily active usage told us users agreed.",
-    tags: ["PRODUCT STRATEGY", Multi-Currency", "Compliance", "UX Designti-currency-wallet",
+    tags: ["Multi-Currency", "Compliance", "UX Design"],
+    href: "/multi-currency-wallet",
     image: multicurrencyHero,
   },
 ];
