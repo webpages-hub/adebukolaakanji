@@ -36,7 +36,8 @@ const Home = () => {
               {/* Left Column ~55% */}
               <div className="flex-1 text-center md:text-left md:w-[55%]">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-foreground">
-                  Building products that{" "}
+                  Building products that
+                  <br />
                   <span className="inline-block overflow-hidden align-bottom" style={{ height: '1.2em' }}>
                     <span
                       className="inline-block text-accent transition-transform duration-400 ease-in-out"
