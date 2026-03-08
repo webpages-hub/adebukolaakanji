@@ -132,7 +132,7 @@ const Projects = () => {
             <div className="mb-20">
               <div className="flex items-center gap-3 mb-6">
                 <Lightbulb className="w-8 h-8 text-accent" />
-                <h2 className="text-4xl font-bold">Step 1: Finding the Story in the Market</h2>
+                <h2 className="text-4xl font-bold">Step 1: Understanding the Market Before Assuming Anything</h2>
               </div>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
