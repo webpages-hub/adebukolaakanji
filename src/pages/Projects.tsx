@@ -81,7 +81,7 @@ const Projects = () => {
 
             {/* Responsibilities */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-8">My Responsibilities</h2>
+              <h2 className="text-4xl font-bold mb-8">What I Owned</h2>
               <div className="grid gap-6">
                 {[
                   {
