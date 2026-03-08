@@ -62,7 +62,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto flex gap-12">
             <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0">
+            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
             <ScrollReveal>
               <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
                 <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
