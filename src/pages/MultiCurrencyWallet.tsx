@@ -100,7 +100,7 @@ const MultiCurrencyWallet = () => {
                   But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements that had to be designed around, not bolted on after.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  So before anything else, I dug deep into how each currency should behave, what KYC tier was needed to create it, what limits applied, and how conversion or transfer logic would work behind the scenes.
+                  So before touching design or engineering, I mapped out how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever having to think about it.
                 </p>
               </div>
             </div>
