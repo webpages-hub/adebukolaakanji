@@ -366,12 +366,8 @@ const GlobalTransfers = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal>
-              <ContactCard />
-            </ScrollReveal>
-
             {/* Navigation */}
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pb-8 border-b border-border">
               <Link to="/projects" className="w-full sm:w-auto">
                 <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                   <ArrowLeft className="w-4 h-4" />
@@ -387,6 +383,10 @@ const GlobalTransfers = () => {
                 </Button>
               </Link>
             </div>
+
+            <ScrollReveal>
+              <ContactCard />
+            </ScrollReveal>
           </div>
         </div>
       </section>
