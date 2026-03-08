@@ -180,6 +180,7 @@ const Resume = () => {
               { title: "Fintech & Payments", desc: "Cross-Border Payments, Multi-Currency Wallets, International Expansion, Remittance Solutions, Regulatory Compliance, Market Localization." },
               { title: "Technical & Analytical", desc: "SQL, Product Analytics, Cohort Analysis, A/B Testing, Mixpanel, Jira, Figma." },
               { title: "Leadership & Strategy", desc: "OKRs, Product Strategy Alignment, Cross-Functional Collaboration, Partner Management." },
+              { title: "AI & Productivity Tools", desc: "Claude, Perplexity AI, Lovable, NotebookLM, Cursor, Claude Code, Notion." },
             ].map((skill) => (
               <div key={skill.title} className="glass-card p-6">
                 <h3 className="font-semibold text-foreground mb-2">{skill.title}</h3>
