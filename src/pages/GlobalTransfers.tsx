@@ -213,7 +213,7 @@ const GlobalTransfers = () => {
 
         {/* Step 2: FX Rates */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-rates" className="mb-20 scroll-mt-28">
             <StepHeading number={2} title="Getting the Rates Right" accentWord="Rates" />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
