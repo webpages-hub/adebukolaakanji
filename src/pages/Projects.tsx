@@ -350,7 +350,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <p className="text-lg leading-relaxed mb-6">
-                  The six-week sprint wasn't just a timeline. It was a test of clarity, focus, and belief.
+                  The six-week sprint forced every decision to earn its place.
                 </p>
                 <p className="text-lg leading-relaxed">
                   If I were to do it again, I'd involve agents even earlier in usability testing and integrate 
