@@ -286,7 +286,7 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               5
             </div>
-            <h2 className="text-3xl font-bold">Launching and Scaling</h2>
+            <h2 className="text-3xl font-bold">Shipping and Scaling</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
