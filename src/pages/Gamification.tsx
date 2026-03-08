@@ -36,7 +36,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"           <div className="grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-foreground"iv className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">One Month</p>
@@ -76,12 +76,11 @@ const Gamification = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   You pay. You leave. Done.
                 </p>
-                <blockquote className="bg-white border-cardorder-acccardounded-r-xl p-8 my-8">
-                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foreground"        But what if making payments could feel rewarding?
+                <blockquote className="bg-white border-cardorder-acccardounded-r-card8 my-8">
+                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foreground"payments could feel rewarding?
                   </p>
                 </blockquote>
-                <div className="bg-white rounded-xl p-6 my-6">
-                  <p className="text-lg leading-relaxed">
+                <div className="bg-white rounded-xl p-6 my-6">card              <p className="text-lg leading-relaxed">
                     That question became the brief. Build something inside the product that made coming back feel worth it.
                   </p>
                 </div>
