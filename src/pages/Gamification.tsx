@@ -1,8 +1,15 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Target, Trophy, Users, TrendingUp, Zap, CheckCircle2, BarChart3, Sparkles, Star, Award, ArrowRight, ArrowLeft } from "lucide-react";
+import { Target, Trophy, Users, TrendingUp, Zap, CheckCircle2, BarChart3, Sparkles, Star, Award, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import gamificationHero from "@/assets/gamification-hero.jpg";
+import ContextTag from "@/components/case-study/ContextTag";
+import StepHeading from "@/components/case-study/StepHeading";
+import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
+import DrivingQuestion from "@/components/case-study/DrivingQuestion";
+import DarkStatsSection from "@/components/case-study/DarkStatsSection";
+import TakeawayCards from "@/components/case-study/TakeawayCards";
+import ResultCallout from "@/components/case-study/ResultCallout";
 
 const Gamification = () => {
   return (
@@ -13,6 +20,9 @@ const Gamification = () => {
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="flex justify-center">
+              <ContextTag tags={["Product Management", "BNPL", "Retention"]} />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Making Payments Fun
             </h1>
@@ -65,161 +75,118 @@ const Gamification = () => {
             </div>
 
             {/* The Idea */}
-            <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6 flex items-center gap-3">
-                <Sparkles className="w-8 h-8 text-accent" />
-                The Idea
-              </h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
-                  Let's be honest. Payments can feel boring.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  You pay. You leave. Done.
-                </p>
-                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-8 my-8">
-                  <p className="text-xl leading-relaxed font-semibold text-foreground">
-                    But what if making payments could feel rewarding?
-                  </p>
-                </blockquote>
-                <div className="bg-card rounded-xl p-6 my-6">
-                  <p className="text-lg leading-relaxed">
-                    That question became the brief. Build something inside the product that made coming back feel worth it.
-                  </p>
-                </div>
-              </div>
+            <div className="mb-20 case-study-prose">
+              <h2 className="text-4xl font-bold mb-6">The Idea</h2>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                Let's be honest. Payments can feel boring.
+              </p>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                You pay. You leave. Done.
+              </p>
+              <UserVoiceQuote quote="But what if making payments could feel rewarding?" />
+              <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                That question became the brief. Build something inside the product that made coming back feel worth it.
+              </p>
             </div>
 
             {/* The Challenge */}
-            <div className="mb-20">
+            <div className="mb-20 case-study-prose">
               <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
-                  The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
-                </p>
-                <div className="bg-muted rounded-xl p-6 my-8">
-                  <p className="font-semibold mb-4">The problem?</p>
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    People would use BNPL once or twice, then drift away. No loyalty, no stickiness.
-                  </p>
-                </div>
-                <p className="text-lg leading-relaxed mb-6">
-                  And if users only show up for a single transaction, it's hard to build lifetime value.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  So I asked myself, how do we keep them coming back without relying solely on discounts or cashback?
-                </p>
-                <p className="text-lg leading-relaxed mt-6 font-semibold">
-                  That's when I started asking whether the product itself could be the reason people came back.
-                </p>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
+              </p>
+              <DrivingQuestion 
+                question="People would use BNPL once or twice, then drift away. No loyalty, no stickiness. How do we keep them coming back without relying solely on discounts or cashback?"
+                goldEmphasis="keep them coming back"
+              />
+              <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                That's when I started asking whether the product itself could be the reason people came back.
+              </p>
             </div>
 
-            {/* Research & Ideation */}
+            {/* Step 1: Research & Ideation */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Research & Ideation</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={1} title="Uncovering What Drives Users Back" accentWord="Drives" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Before designing anything, I ran user interviews. I needed to understand what would actually motivate someone to come back. Status? Savings? A sense of progress?
                 </p>
-                <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed">
-                    Most users said they wanted to <span className="font-bold text-accent">"feel like they were progressing"</span> financially, not just spending.
-                  </p>
-                  <p className="text-lg leading-relaxed mt-4 font-semibold">
-                    That was the insight everything else was built on.
-                  </p>
-                </div>
-                <p className="text-lg leading-relaxed">
-                  So we designed a rewards system built around progress and achievement. Not discounts, not cashback. The feeling of moving forward.
+              </div>
+              
+              <UserVoiceQuote 
+                quote="I want to feel like I'm progressing financially, not just spending."
+                attribution="User interview insight"
+              />
+
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                  That was the insight everything else was built on.
                 </p>
-                <p className="text-lg leading-relaxed mt-6">
-                  Each level had its own theme and personality. Naming them was honestly half the fun.
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                  So we designed a rewards system built around progress and achievement. Not discounts, not cashback. The feeling of moving forward. Each level had its own theme and personality.
                 </p>
               </div>
             </div>
 
-            {/* Defining the Rules */}
+            {/* Step 2: Defining the Rules */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Defining the Rules</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={2} title="Defining the Rules of the Game" accentWord="Rules" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I worked on defining the entire structure of the gamification system:
                 </p>
               </div>
 
-              <div className="grid gap-6">
+              <div className="max-w-[620px]">
                 {[
-                  {
-                    icon: Trophy,
-                    title: "Level names and criteria",
-                    description: "Designed tier progression with meaningful milestones"
-                  },
-                  {
-                    icon: TrendingUp,
-                    title: "Progress metrics",
-                    description: "How users earned points, unlocked levels, and maintained streaks"
-                  },
-                  {
-                    icon: Award,
-                    title: "Reward logic",
-                    description: "What users got at each stage"
-                  }
+                  { title: "Level names and criteria", desc: "Designed tier progression with meaningful milestones" },
+                  { title: "Progress metrics", desc: "How users earned points, unlocked levels, and maintained streaks" },
+                  { title: "Reward logic", desc: "What users got at each stage" }
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-4 p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-base border-l-4 border-accent">
-                    <div className="flex-shrink-0">
-                      <item.icon className="w-8 h-8 text-accent" />
-                    </div>
+                  <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
+                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <div>
-                      <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
+                      <span className="font-bold text-[14px]">{item.title}</span>
+                      <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-lg leading-relaxed mt-8">
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
                 Every rule had to balance fun with fairness, and make sense financially.
               </p>
             </div>
 
-            {/* Designing the Experience */}
+            {/* Step 3: Designing the Experience */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Designing the Experience</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={3} title="Designing the Experience to Feel Alive" accentWord="Alive" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Once the rules were set, I jumped into Figma to map the user flow.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   From the moment a user made a BNPL payment to the instant they saw their progress bar rise, every tap had to feel rewarding.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
                   I worked closely with our designer to turn the flows into something that felt alive. The goal was simple: open the app, feel something.
                 </p>
               </div>
 
               {/* User Flow Visualization */}
-              <div className="bg-card rounded-2xl p-8 shadow-elegant border-l-4 border-accent mt-8">
-                <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
-                  <Sparkles className="w-6 h-6 text-accent" />
-                  Gamified User Journey
-                </h3>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                  {[
-                    { label: "Make Payment", icon: Target },
-                    { label: "Earn Points", icon: Star },
-                    { label: "Level Up", icon: Trophy },
-                    { label: "Unlock Rewards", icon: Award }
-                  ].map((step, index, array) => (
-                    <div key={index} className="flex items-center gap-4 w-full md:w-auto">
-                      <div className="flex-1 md:flex-initial">
-                        <div className="bg-accent/10 rounded-xl p-4 text-center">
-                          <step.icon className="w-8 h-8 text-accent mx-auto mb-2" />
-                          <p className="font-semibold">{step.label}</p>
-                        </div>
+              <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
+                <div className="bg-foreground px-5 py-3 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-accent" />
+                  <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Gamified User Journey</span>
+                </div>
+                <div className="flex flex-col md:flex-row items-center gap-3 p-6">
+                  {["Make Payment", "Earn Points", "Level Up", "Unlock Rewards"].map((step, index, array) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="bg-[hsl(43_100%_95%)] border border-[hsl(43_100%_85%)] rounded-full px-4 py-2">
+                        <span className="text-[13px] font-medium text-foreground">{step}</span>
                       </div>
                       {index < array.length - 1 && (
-                        <div className="hidden md:block text-accent text-2xl">→</div>
+                        <span className="text-accent hidden md:block">→</span>
                       )}
                     </div>
                   ))}
@@ -227,48 +194,94 @@ const Gamification = () => {
               </div>
             </div>
 
-            {/* The Impact */}
+            {/* Step 4: The Impact */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">The Impact</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed">
-                  Within three months of launch:
+              <StepHeading number={4} title="Measuring the Impact" accentWord="Impact" isLast />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                  Within three months of launch, the results were clear.
                 </p>
               </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">10%</div>
-                  <p className="text-muted-foreground">Retention Increase</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <BarChart3 className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">Increased</div>
-                  <p className="text-muted-foreground">BNPL Engagement</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">Measurable</div>
-                  <p className="text-muted-foreground">Repeat Usage Growth</p>
-                </div>
-              </div>
-
-              <div className="bg-card rounded-xl p-8">
-                <p className="text-lg leading-relaxed font-semibold">
-                  Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
-                </p>
-              </div>
+              
+              <ResultCallout 
+                stat="10%"
+                description="retention increase — repeat usage went up because the product gave users a reason to return on their own."
+              />
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Reflection */}
+      {/* Dark Stats Section */}
+      <DarkStatsSection
+        introText="Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own."
+        stats={[
+          { number: "10%", description: "Retention increase within three months of launch" },
+          { number: "↑", description: "BNPL engagement increased measurably across active users" },
+          { number: "Repeat", description: "Usage growth driven by intrinsic motivation, not incentives" }
+        ]}
+      />
+
+      {/* What I Learned */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed text-foreground">
-                  Users don't engage with functionality. They engage with how something makes them feel. This project proved that when you build for that, the numbers follow.
-                </p>
+              <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
+                Users don't engage with functionality. They engage with how something makes them feel.
+              </p>
+
+              <TakeawayCards cards={[
+                "Build for emotion, not just function — the numbers follow.",
+                "Progress feels better than discounts as a retention lever.",
+                "Simple rules, well-designed, create lasting engagement."
+              ]} />
+
+              <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-accent">
+                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                    What Worked
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "User interviews surfaced the right motivation lever",
+                      "Progress-based rewards outperformed discount models",
+                      "Close designer collaboration made flows feel alive",
+                      "Balanced fun with financial sustainability"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent text-sm">✓</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-muted-foreground" />
+                    What I'd Improve
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "A/B test reward structures earlier",
+                      "Add social features for peer competition",
+                      "Build analytics dashboard from day one",
+                      "Test level pacing with more user segments"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-muted-foreground text-sm">→</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
+
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
+                This project proved that when you build for how users feel, the numbers follow.
+              </p>
             </div>
 
             {/* CTA Section */}

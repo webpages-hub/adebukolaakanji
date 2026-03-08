@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/drc-payments-hero.jpg";
+import ContextTag from "@/components/case-study/ContextTag";
+import StepHeading from "@/components/case-study/StepHeading";
+import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
+import DrivingQuestion from "@/components/case-study/DrivingQuestion";
+import DarkStatsSection from "@/components/case-study/DarkStatsSection";
+import TakeawayCards from "@/components/case-study/TakeawayCards";
+import ResultCallout from "@/components/case-study/ResultCallout";
 
 const Projects = () => {
   return (
@@ -13,6 +20,9 @@ const Projects = () => {
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="flex justify-center">
+              <ContextTag tags={["Product Management", "Fintech", "DRC"]} />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Building a Local Payments MVP in 6 Weeks
             </h1>
@@ -62,119 +72,103 @@ const Projects = () => {
             </div>
 
             {/* Where It Began */}
-            <div className="mb-20">
+            <div className="mb-20 case-study-prose">
               <h2 className="text-4xl font-bold mb-6">Where it all began</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
-                  It started with one big question:
-                </p>
-                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-6">
-                  <p className="text-xl leading-relaxed font-semibold text-foreground">
-                    "Can we make everyday payments simpler for people in the DRC?"
-                  </p>
-                </blockquote>
-                <p className="text-lg leading-relaxed">
-                  Nomba had already built a product that worked in Nigeria. But a new market meant new users, new infrastructure constraints, and new reasons people might not trust you. My job was to figure out what "simple" actually meant here, before we wrote a single line of code.
-                </p>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                It started with one big question:
+              </p>
+              <UserVoiceQuote quote="Can we make everyday payments simpler for people in the DRC?" />
+              <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                Nomba had already built a product that worked in Nigeria. But a new market meant new users, new infrastructure constraints, and new reasons people might not trust you. My job was to figure out what "simple" actually meant here, before we wrote a single line of code.
+              </p>
             </div>
 
             {/* Responsibilities */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-8">What I Owned</h2>
-              <div className="grid gap-6">
+              <div className="max-w-[620px]">
                 {[
-                  {
-                    icon: Target,
-                    text: "Ran on-ground market and user research, interviewing agents, merchants, and mobile money operators to understand what trust actually meant in this market."
-                  },
-                  {
-                    icon: Users,
-                    text: "Mapped the full agent journey from onboarding to first transaction, then worked with the designer to turn those flows into a mobile-first experience that made sense without training."
-                  },
-                  {
-                    icon: CheckCircle2,
-                    text: "Identified and vetted local partners to handle agent verification and float funding, solving two of the biggest blockers to launch."
-                  },
-                  {
-                    icon: TrendingUp,
-                    text: "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="flex gap-4 p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-base">
-                    <div className="flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <p className="text-lg leading-relaxed">{item.text}</p>
+                  "Ran on-ground market and user research, interviewing agents, merchants, and mobile money operators to understand what trust actually meant in this market.",
+                  "Mapped the full agent journey from onboarding to first transaction, then worked with the designer to turn those flows into a mobile-first experience that made sense without training.",
+                  "Identified and vetted local partners to handle agent verification and float funding, solving two of the biggest blockers to launch.",
+                  "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
+                ].map((text, index) => (
+                  <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
+                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                    <p className="text-[14px] text-foreground leading-[1.6]">{text}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* The Challenge */}
-            <div className="mb-20">
+            <div className="mb-20 case-study-prose">
               <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed mb-6">
-                  Agents and merchants in the DRC were already used to local mobile money systems. But there was a gap.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  Payments were fragmented. Settlement took too long. Agents wanted a single, reliable solution to serve 
-                  customers and track transactions easily without juggling multiple accounts or sim cards.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  The task was clear. What wasn't clear was whether six weeks was enough to do it right.
-                </p>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                Agents and merchants in the DRC were already used to local mobile money systems. But there was a gap.
+              </p>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                Payments were fragmented. Settlement took too long. Agents wanted a single, reliable solution to serve 
+                customers and track transactions easily without juggling multiple accounts or sim cards.
+              </p>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground">
+                The task was clear. What wasn't clear was whether six weeks was enough to do it right.
+              </p>
             </div>
 
             {/* Step 1: Research */}
             <div className="mb-20">
-              <div className="flex items-center gap-3 mb-6">
-                <Lightbulb className="w-8 h-8 text-accent" />
-                <h2 className="text-4xl font-bold">Step 1: Understanding the Market Before Assuming Anything</h2>
-              </div>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={1} title="Finding the Story in the Market" accentWord="Story" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I started with research. Always.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I interviewed agents, small shop owners, and mobile money operators to understand how they actually 
                   moved money daily.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I also conducted a mini-competitor audit; what other wallets existed, what users complained about 
                   in reviews, and what "trust" meant in this market.
                 </p>
-                <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4 text-foreground">Four things came up over and over again:</p>
-                  <ul className="space-y-2">
-                    <li>👉 Speed mattered more than fancy features.</li>
-                    <li>👉 Downtime killed adoption.</li>
-                    <li>👉 Agents cared more about liquidity than commissions.</li>
-                    <li>👉 Merchants wanted tools, not dashboards.</li>
-                  </ul>
-                </div>
-                <p className="text-lg leading-relaxed">
+              </div>
+
+              {/* Insight Grid */}
+              <div className="grid grid-cols-2 max-w-[620px] my-8">
+                {[
+                  "Speed mattered more than fancy features.",
+                  "Downtime killed adoption.",
+                  "Agents cared more about liquidity than commissions.",
+                  "Merchants wanted tools, not dashboards."
+                ].map((insight, index) => (
+                  <div key={index} className="flex items-start gap-3 p-5 border border-border">
+                    <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-1.5" />
+                    <p className="text-[14px] text-foreground leading-[1.5]">{insight}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground">
                   I summarized these insights into personas and core use cases, and that became our blueprint.
                 </p>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
-                  <Brain className="w-12 h-12 text-accent mb-4" />
-                  <h3 className="text-xl font-bold mb-3">Research Artifacts</h3>
-                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                <div className="bg-[hsl(43_100%_97%)] rounded-md p-8 border border-border">
+                  <Brain className="w-10 h-10 text-accent mb-4" />
+                  <h3 className="text-lg font-bold mb-3">Research Artifacts</h3>
+                  <ul className="space-y-2 text-[14px] text-muted-foreground list-disc list-inside">
                     <li>Persona development</li>
                     <li>Journey mapping</li>
                     <li>Pain point analysis</li>
                     <li>Competitive insights</li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-border">
-                  <Eye className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-bold mb-3">Key Discovery</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="bg-[hsl(0_0%_96%)] rounded-md p-8 border border-border">
+                  <Eye className="w-10 h-10 text-foreground mb-4" />
+                  <h3 className="text-lg font-bold mb-3">Key Discovery</h3>
+                  <p className="text-[14px] text-muted-foreground leading-relaxed">
                     Trust and speed were the critical factors. Agents needed a solution that felt reliable from day one, 
                     with instant settlement and zero downtime.
                   </p>
@@ -184,60 +178,61 @@ const Projects = () => {
 
             {/* Step 2: Design */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Step 2: Designing What "Simple" Should Feel Like</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={2} title='Designing What "Simple" Should Feel Like' accentWord="Simple" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Once the insights were clear, I opened Figma and started sketching the experience.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I wasn't trying to make it beautiful. I wanted it to make sense.
                 </p>
-                <div className="bg-card rounded-xl p-6 my-8 border border-border">
-                  <ol className="space-y-2 text-lg">
-                    <li>1. How would an agent onboard?</li>
-                    <li>2. How do they accept a payment?</li>
-                    <li>3. How does a merchant check if a payment was successful?</li>
-                  </ol>
-                </div>
-                <p className="text-lg leading-relaxed mb-6">
+              </div>
+
+              {/* Numbered list box */}
+              <div className="border border-border rounded-md overflow-hidden max-w-[620px] my-8">
+                {[
+                  "How would an agent onboard?",
+                  "How do they accept a payment?",
+                  "How does a merchant check if a payment was successful?"
+                ].map((question, index) => (
+                  <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
+                    <span className="font-serif-display text-[22px] font-bold text-accent">{index + 1}</span>
+                    <p className="text-[14px] text-foreground">{question}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I mapped the end-to-end user journey from onboarding to transaction confirmation and worked closely 
                   with the designer to translate flows into wireframes.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   We decided on a clean, three-step onboarding process and prioritized clarity over complexity.
                 </p>
-                <div className="bg-card rounded-xl p-6 my-8">
-                  <p className="text-lg leading-relaxed">
-                    When we tested it with a few agents, their feedback was short but powerful:
-                  </p>
-                  <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-4">
-                    <p className="text-2xl font-bold text-foreground">"This looks easy. I can use this."</p>
-                  </blockquote>
-                  <p className="text-lg leading-relaxed bg-card p-4 rounded-lg mt-4">That was all I needed to hear.</p>
-                </div>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
+                  When we tested it with a few agents, their feedback was short but powerful:
+                </p>
               </div>
-              
-              <div className="bg-card rounded-2xl p-8 shadow-elegant border-l-4 border-accent mt-8">
-                <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
-                  <Sparkles className="w-6 h-6 text-accent" />
-                  Simplified Agent Journey for MVP
-                </h3>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                  {[
-                    { label: "Sign Up", icon: Users },
-                    { label: "Verify", icon: CheckCircle2 },
-                    { label: "Accept Payment", icon: Target },
-                    { label: "Track Transactions", icon: BarChart3 }
-                  ].map((step, index, array) => (
-                    <div key={index} className="flex items-center gap-4 w-full md:w-auto">
-                      <div className="flex-1 md:flex-initial">
-                        <div className="bg-accent/10 rounded-xl p-4 text-center">
-                          <step.icon className="w-8 h-8 text-accent mx-auto mb-2" />
-                          <p className="font-semibold">{step.label}</p>
-                        </div>
+
+              <UserVoiceQuote quote="This looks easy. I can use this." attribution="DRC agent, usability test" />
+
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-4">That was all I needed to hear.</p>
+
+              {/* Design Journey Flow */}
+              <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
+                <div className="bg-foreground px-5 py-3 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-accent" />
+                  <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Simplified Agent Journey</span>
+                </div>
+                <div className="flex flex-col md:flex-row items-center gap-3 p-6">
+                  {["Sign Up", "Verify", "Accept Payment", "Track Transactions"].map((step, index, array) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="bg-[hsl(43_100%_95%)] border border-[hsl(43_100%_85%)] rounded-full px-4 py-2">
+                        <span className="text-[13px] font-medium text-foreground">{step}</span>
                       </div>
                       {index < array.length - 1 && (
-                        <div className="hidden md:block text-accent text-2xl">→</div>
+                        <span className="text-accent hidden md:block">→</span>
                       )}
                     </div>
                   ))}
@@ -247,42 +242,43 @@ const Projects = () => {
 
             {/* Step 3: Engineering */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Step 3: Working with Engineers (and Moving Fast)</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={3} title="Working with Engineers and Moving Fast" accentWord="Moving Fast" />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Design locked. Now the question was whether we could build it without scope creeping our way past the deadline.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I held two-week sprints and daily check-ins with engineers, mostly to unblock decisions quickly.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   I simplified specs, clarified API dependencies, and made sure we didn't overbuild.
                 </p>
-                <div className="bg-card rounded-xl p-6 my-8 border-l-4 border-accent">
-                  <p className="text-lg leading-relaxed">
-                    Every week had one question: <span className="font-bold text-accent">"What's the minimum we can launch that still delivers value?"</span>
-                  </p>
-                </div>
-                <p className="text-lg leading-relaxed">
-                  By week six, we had a working product.
-                </p>
               </div>
+
+              <DrivingQuestion 
+                question={"Every week had one question: \"What's the minimum we can launch that still delivers value?\""}
+                goldEmphasis="minimum we can launch"
+              />
+
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8">
+                By week six, we had a working product.
+              </p>
               
-              <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-8 mt-8 border border-accent/20">
-                <h3 className="text-xl font-bold mb-6 text-center">Six-Week Sprint Breakdown</h3>
-                <div className="grid md:grid-cols-3 gap-6">
+              {/* Sprint table */}
+              <div className="border border-border rounded-md overflow-hidden">
+                <div className="grid md:grid-cols-3">
                   {[
-                    { week: "Weeks 1-2", title: "Foundation", items: ["API specs defined", "Core architecture", "Database design", "Authentication flow"] },
-                    { week: "Weeks 3-4", title: "Development", items: ["Frontend development", "Backend integration", "Payment processing", "Agent dashboard"] },
-                    { week: "Weeks 5-6", title: "Refinement", items: ["Testing & QA", "Bug fixes", "Performance tuning", "Soft launch prep"] }
+                    { week: "Weeks 1–2", title: "Foundation", items: ["API specs defined", "Core architecture", "Database design", "Authentication flow"] },
+                    { week: "Weeks 3–4", title: "Development", items: ["Frontend development", "Backend integration", "Payment processing", "Agent dashboard"] },
+                    { week: "Weeks 5–6", title: "Refinement", items: ["Testing & QA", "Bug fixes", "Performance tuning", "Soft launch prep"] }
                   ].map((phase, index) => (
-                    <div key={index} className="bg-card rounded-xl p-6 shadow-md">
-                      <div className="text-sm text-accent font-semibold mb-2">{phase.week}</div>
+                    <div key={index} className={`p-6 ${index > 0 ? 'md:border-l border-t md:border-t-0 border-border' : ''}`}>
+                      <div className="font-mono-tag text-[10px] text-accent uppercase tracking-[0.1em] mb-1">{phase.week}</div>
                       <h4 className="text-lg font-bold mb-4">{phase.title}</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
+                      <ul className="space-y-2 text-[13px] text-muted-foreground">
                         {phase.items.map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
-                            <Code className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="text-accent mt-0.5">•</span>
                             <span>{item}</span>
                           </li>
                         ))}
@@ -295,120 +291,97 @@ const Projects = () => {
 
             {/* Step 4: Launch */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Step 4: Shipping It</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
+              <StepHeading number={4} title="Launching the MVP" accentWord="MVP" isLast />
+              <div className="case-study-prose">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Within two months, the answer was clear. It worked.
                 </p>
-                <div className="bg-accent/10 rounded-xl p-8 my-8">
-                  <p className="text-lg leading-relaxed mb-4">
-                    We onboarded over <span className="font-bold text-accent text-2xl">1,000 agents</span>, processed 
-                    millions in local currency transactions, and got consistent feedback that the product was easier 
-                    and faster than what they were used to.
-                  </p>
-                </div>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">1,000+</div>
-                  <p className="text-muted-foreground">Agents Onboarded</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">Millions</div>
-                  <p className="text-muted-foreground">Transactions Processed</p>
-                </div>
-                <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
-                  <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">Organic</div>
-                  <p className="text-muted-foreground">Agent Referrals</p>
-                </div>
-              </div>
+              <ResultCallout 
+                stat="1,000+" 
+                description="agents onboarded within two months of MVP launch, processing millions in local currency transactions." 
+              />
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Learnings */}
+      {/* Dark Stats Section */}
+      <DarkStatsSection
+        introText="We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions. Within two months, it was clear: It worked."
+        stats={[
+          { number: "1,000+", description: "Agents onboarded within two months of MVP launch" },
+          { number: "6 wks", description: "From research to live product in market" },
+          { number: "Organic", description: "Agent referrals driven by word of mouth, no paid acquisition" }
+        ]}
+      />
+
+      {/* What I Learned */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
-              <div className="prose prose-lg max-w-none mb-8">
-                <p className="text-lg leading-relaxed mb-6">
-                  Six weeks sounds short. But constraints have a way of making you ruthlessly clear about what actually matters.
-                </p>
-                <div className="grid md:grid-cols-3 gap-6 my-8">
-                  {[
-                    "Local context trumps global assumptions.",
-                    "Speed doesn't have to sacrifice quality.",
-                    "Launch is the beginning. Not the end."
-                  ].map((learning, index) => (
-                    <div key={index} className="bg-card rounded-xl p-6 shadow-md border-t-4 border-accent">
-                      <p className="text-lg font-semibold">{learning}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-lg leading-relaxed mb-6">
-                  The six-week sprint forced every decision to earn its place.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  If I were to do it again, I'd involve agents even earlier in usability testing and integrate 
-                  analytics from day one. But I wouldn't change the pace. The energy of those six weeks built 
-                  momentum that carried the product long after MVP.
-                </p>
-              </div>
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
+                This project changed how I think about building products.
+              </p>
+
+              <TakeawayCards cards={[
+                "Local context trumps global assumptions.",
+                "Speed doesn't have to sacrifice quality.",
+                "Launch is really just the beginning — not the end."
+              ]} />
               
               <div className="grid md:grid-cols-2 gap-8 mt-8">
-                <div className="bg-card rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-accent">
-                    <CheckCircle2 className="w-7 h-7 text-accent" />
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-accent">
+                    <CheckCircle2 className="w-6 h-6 text-accent" />
                     What Worked
                   </h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent text-lg">✓</span>
-                      <span className="text-lg">Prioritized user feedback early and often</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent text-lg">✓</span>
-                      <span className="text-lg">Daily standups kept momentum high</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent text-lg">✓</span>
-                      <span className="text-lg">MVP scope was ruthlessly focused</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent text-lg">✓</span>
-                      <span className="text-lg">Local partnerships accelerated adoption</span>
-                    </li>
+                    {[
+                      "Prioritized user feedback early and often",
+                      "Daily standups kept momentum high",
+                      "MVP scope was ruthlessly focused",
+                      "Local partnerships accelerated adoption"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent text-sm">✓</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
-                <div className="bg-card rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-primary">
-                    <Lightbulb className="w-7 h-7 text-primary" />
+                <div className="bg-background rounded-md p-8 border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-muted-foreground" />
                     What I'd Improve
                   </h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary text-lg">→</span>
-                      <span className="text-lg">Involve agents in usability testing earlier</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary text-lg">→</span>
-                      <span className="text-lg">Integrate analytics from day one</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary text-lg">→</span>
-                      <span className="text-lg">Plan for scalability sooner</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary text-lg">→</span>
-                      <span className="text-lg">Document decisions in real-time</span>
-                    </li>
+                    {[
+                      "Involve agents in usability testing earlier",
+                      "Integrate analytics from day one",
+                      "Plan for scalability sooner",
+                      "Document decisions in real-time"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-muted-foreground text-sm">→</span>
+                        <span className="text-[14px]">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
+
+              <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
+                If I were to do it again, I'd involve agents even earlier in usability testing and integrate 
+                analytics from day one. But I wouldn't change the pace. The energy of those six weeks built 
+                momentum that carried the product long after MVP.
+              </p>
             </div>
 
             {/* CTA Section */}
