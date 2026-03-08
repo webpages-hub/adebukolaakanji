@@ -15,7 +15,7 @@ const projects = [
     image: drcHero,
   },
   {
-    num20252025202502",
+    number: "2025",
     name: "Global Transfers",
     description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times.",
     tags: ["GLOBAL PAYMENTS", "FX STRATEGY", "API INTEGRATION"],
