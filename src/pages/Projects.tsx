@@ -94,7 +94,7 @@ const Projects = () => {
                   },
                   {
                     icon: CheckCircle2,
-                    text: "Screened and secured reliable local partners to streamline agent verification and float funding."
+                    text: "Identified and vetted local partners to handle agent verification and float funding, solving two of the biggest blockers to launch."
                   },
                   {
                     icon: TrendingUp,
