@@ -59,7 +59,7 @@ const Gamification = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  Our BNPL product was great, but engagement was dipping. People would use it once or twice, then forget about it. I wanted to fix that.
+                  Our BNPL product worked. Users transacted, paid back, moved on. The problem was they never came back. I wanted to fix that.
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ const Gamification = () => {
                   Let's be honest. Payments can feel boring.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  You pay. You leave. End of story.
+                  You pay. You leave. Done.
                 </p>
                 <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-8 my-8">
                   <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
@@ -84,7 +84,7 @@ const Gamification = () => {
                 </blockquote>
                 <div className="bg-white rounded-xl p-6 my-6">
                   <p className="text-lg leading-relaxed">
-                    That was the question that sparked the idea for a gamified experience inside our app, one that didn't just let users transact but actually made them want to come back.
+                    That question became the brief. Build something inside the product that made coming back feel worth it.
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const Gamification = () => {
               <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
-                  Our data showed a steady decline in returning users on the BNPL (Buy Now, Pay Later) product.
+                  The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
                 </p>
                 <div className="bg-muted rounded-xl p-6 my-8">
                   <p className="font-semibold mb-4">The problem?</p>
@@ -110,7 +110,7 @@ const Gamification = () => {
                   So I asked myself, how do we keep them coming back without relying solely on discounts or cashback?
                 </p>
                 <p className="text-lg leading-relaxed mt-6 font-semibold">
-                  That's where the idea of gamification came in.
+                  That's when I started asking whether the product itself could be the reason people came back.
                 </p>
               </div>
             </div>
@@ -120,21 +120,21 @@ const Gamification = () => {
               <h2 className="text-4xl font-bold mb-6">Research & Ideation</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed mb-6">
-                  I started with user interviews. I wanted to understand what would motivate people to keep using the product. Status? Savings? Competition?
+                  Before designing anything, I ran user interviews. I needed to understand what would actually motivate someone to come back. Status? Savings? A sense of progress?
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
                     Most users said they wanted to <span className="font-bold text-accent">"feel like they were progressing"</span> financially, not just spending.
                   </p>
                   <p className="text-lg leading-relaxed mt-4 font-semibold">
-                    That was the lightbulb moment.
+                    That was the insight everything else was built on.
                   </p>
                 </div>
                 <p className="text-lg leading-relaxed">
-                  We decided to design a rewards system built around progress and achievement, not just perks.
+                  So we designed a rewards system built around progress and achievement. Not discounts, not cashback. The feeling of moving forward.
                 </p>
                 <p className="text-lg leading-relaxed mt-6">
-                  Each level would have its own theme and personality , and trust me, naming them was half the fun.
+                  Each level had its own theme and personality. Naming them was honestly half the fun.
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ const Gamification = () => {
                   From the moment a user made a BNPL payment to the instant they saw their progress bar rise, every tap had to feel rewarding.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  I collaborated closely with our designer to translate my flow into a vibrant, intuitive interface that made users smile just by opening the app.
+                  I worked closely with our designer to turn the flows into something that felt alive. The goal was simple: open the app, feel something.
                 </p>
               </div>
 
@@ -244,19 +244,19 @@ const Gamification = () => {
                 </div>
                 <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
                   <BarChart3 className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">↑</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Increased</div>
                   <p className="text-muted-foreground">BNPL Engagement</p>
                 </div>
                 <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
                   <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">+</div>
-                  <p className="text-muted-foreground">Repeat Usage</p>
+                  <div className="text-4xl font-bold text-accent mb-2">Measurable</div>
+                  <p className="text-muted-foreground">Repeat Usage Growth</p>
                 </div>
               </div>
 
               <div className="bg-white rounded-xl p-8">
                 <p className="text-lg leading-relaxed font-semibold">
-                  We saw a spike in repeat usage. Proof that people were coming back, not because they had to… but because they wanted to.
+                  Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
                 </p>
               </div>
             </div>
@@ -265,11 +265,8 @@ const Gamification = () => {
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
-                  This project reminded me that users don't just engage with functionality; they engage with feelings.
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
-                  If you can make a product fun, intuitive, and emotionally rewarding, you've already won half the battle.
+                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
+                  Users don't engage with functionality. They engage with how something makes them feel. This project proved that when you build for that, the numbers follow.
                 </p>
               </div>
             </div>
