@@ -86,7 +86,7 @@ const Projects = () => {
                 {[
                   {
                     icon: Target,
-                    text: "Conducted market and user research to understand agent pain points, onboarding bottlenecks, and trust drivers."
+                    text: "Ran on-ground market and user research, interviewing agents, merchants, and mobile money operators to understand what trust actually meant in this market."
                   },
                   {
                     icon: Users,
