@@ -35,8 +35,8 @@ const Contact = () => {
                 href="tel:+2347065197102" 
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-muted-foreground" />
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">Phone</div>
