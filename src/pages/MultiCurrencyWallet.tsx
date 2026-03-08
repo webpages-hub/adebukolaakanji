@@ -57,7 +57,7 @@ const MultiCurrencyWallet = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  The goal was to make it easy, really easy, for users and agents who worked with multiple currencies to manage everything in one place.
+                  Users and agents working across currencies were doing too much manual work just to move money. The goal was to fix that with one wallet that handled everything.
                 </p>
               </div>
             </div>
@@ -75,10 +75,10 @@ const MultiCurrencyWallet = () => {
                   </p>
                 </blockquote>
                 <p className="text-lg leading-relaxed mb-6">
-                  It sounded like a one-off issue. But it wasn't.
+                  It sounded like a one-off complaint. It wasn't.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  By the time I'd spoken to ten more agents, I realized this was a pattern. Users were juggling currencies like a circus act. Every transaction meant friction, delay, and lost value.
+                  By the time I'd spoken to ten more agents, the pattern was clear. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
                   <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
@@ -97,10 +97,10 @@ const MultiCurrencyWallet = () => {
                   I started by mapping out how users were currently transacting across currencies. In DRC, it was mostly USD and CDF. In our global expansion, we needed EUR, GBP, CAD, and NGN.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  But building a multi-currency wallet wasn't as simple as just "adding more currencies." Each one came with its own regulatory and KYC requirements, and compliance rules varied by region.
+                  But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements that had to be designed around, not bolted on after.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  So before anything else, I dug deep into how each currency should behave, what KYC tier was needed to create it, what limits applied, and how conversion or transfer logic would work behind the scenes.
+                  So before touching design or engineering, I mapped out how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever having to think about it.
                 </p>
               </div>
             </div>
@@ -110,10 +110,10 @@ const MultiCurrencyWallet = () => {
               <h2 className="text-4xl font-bold mb-6">Designing the Wallet System</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  Once the logic was clear, I worked with engineers to define how the multi-currency system would function technically.
+                  With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  We had to make sure each wallet type: USD, CDF, NGN, EUR, GBP, CAD could:
+                  Each wallet type, USD, CDF, NGN, EUR, GBP, CAD, had to do three things well:
                 </p>
               </div>
 
@@ -148,7 +148,7 @@ const MultiCurrencyWallet = () => {
               </div>
 
               <p className="text-lg leading-relaxed mt-8">
-                Together, we designed a structure that treated each wallet as a separate account under a single user identity.
+                The result was a structure where each currency lived as its own account, but the user only ever saw one wallet.
               </p>
             </div>
 
