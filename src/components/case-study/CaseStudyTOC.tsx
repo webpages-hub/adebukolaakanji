@@ -67,13 +67,18 @@ const CaseStudyTOC = ({ sections }: CaseStudyTOCProps) => {
                   className="flex items-center gap-3 w-full text-left py-2 group"
                 >
                   {/* Dot */}
-                  <div
-                    className={`relative z-10 w-[11px] h-[11px] rounded-full border-[1.5px] flex-shrink-0 transition-colors duration-200 ${
-                      isActive
-                        ? "bg-accent border-accent"
-                        : "bg-background border-muted-foreground/30"
-                    }`}
-                  />
+                  <div className="relative z-10 flex-shrink-0">
+                    {isActive && (
+                      <div className="absolute inset-0 w-[11px] h-[11px] rounded-full bg-accent/30 animate-ping" />
+                    )}
+                    <div
+                      className={`w-[11px] h-[11px] rounded-full border-[1.5px] transition-all duration-300 ease-out ${
+                        isActive
+                          ? "bg-accent border-accent scale-125"
+                          : "bg-background border-muted-foreground/30 scale-100"
+                      }`}
+                    />
+                  </div>
                   {/* Label */}
                   <span
                     className={`text-[13px] leading-tight transition-colors duration-200 ${
