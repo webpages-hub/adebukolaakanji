@@ -65,9 +65,6 @@ const About = () => {
                 </div>
               </div>
 
-              <p className="mt-12 text-accent italic text-lg">
-                Let's create something amazing together!
-              </p>
             </div>
           </div>
         </div>
