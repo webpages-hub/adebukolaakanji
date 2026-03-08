@@ -295,7 +295,7 @@ const Projects = () => {
 
             {/* Step 4: Launch */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Step 4: Launching the MVP</h2>
+              <h2 className="text-4xl font-bold mb-6">Step 4: Shipping It</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
                   We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions.
