@@ -36,8 +36,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"">
-                <div>
+              <h2 className="text-3xl font-bold mb-8 text-foreground"      <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">One Month</p>
                   
@@ -77,8 +76,7 @@ const Gamification = () => {
                   You pay. You leave. Done.
                 </p>
                 <blockquote className="bg-white border-cardorder-acccardounded-r-card8 my-8">
-card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foregrou text-foregrou text-foreground"e>
-                <div className="bg-white rounded-xl p-6 my-6">card              <p classNcardtext-lg leading-relaxedcard                  That cardion became the brief. Build something inside the product that made coming back feel worth it.
+card         cardp classNacardext-xl lecard-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foregrou text-foregrou text-foregrou text-foreground"ssName="bg-white rounded-xl p-6 my-6">card              <p classNcardtext-lg leading-relaxedcard                  That cardion became the brief. Bcardsomething inside the product that made coming back feel worth it.
                   </p>
                 </div>
               </div>
@@ -250,7 +248,7 @@ card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col
 
               <div className="bg-white rounded-xl p-8">
      card      <p className="textcardeading-relaxed font-semicard>
-                  Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
+                  Repecardage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
                 </p>
               </div>
             </div>
@@ -259,14 +257,13 @@ card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
               <div className="bg-white rounded-2xl p-8 md:p-10cardow-lg">
-                <cardssName="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }} text-foreground"t engage with functionality. They engage with how something makes them feel. This project proved that when you build for that, the numbers follow.
+                <cardssName="text-lg md:text-xcardding-relaxed" style={{ color: "#1A1A1A" }} text-foreground"t engage with text-foreground"th how something makes them feel. This project proved that when you build for that, the numbers follow.
                 </p>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
-              <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-centcard              <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>
               <Link to="/contact">

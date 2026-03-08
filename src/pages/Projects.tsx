@@ -36,8 +36,7 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground"">
-                <div>
+              <h2 className="text-3xl font-bold mb-8 text-foreground"      <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">6 weeks (research to MVP launch)</p>
                   
@@ -68,8 +67,7 @@ const Projects = () => {
                   It started with one big question:
                 </p>
                 <blockquote className="bg-white border-cardorder-acccardounded-r-card6 my-6">
-card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foregrou text-foregrou text-foreground"  </blockquote>
-                <p className="text-lg leading-relaxed">
+card         cardp classNacardext-xl lecard-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foregrou text-foregrou text-foregrou text-foreground"     <p className="text-lg leading-relaxed">
                   Nomba had already built a product that worked in Nigeria. But a new market meant new users, new infrastructure constraints, and new reasons people might not trust you. My job was to figure out what "simple" actually meant here, before we wrote a single line of code.
                 </p>
               </div>
@@ -143,8 +141,7 @@ card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col
                   in reviews, and what "trust" meant in this market.
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" text-foreground"nd over ag text-foreground" className text-foreground"    <li>� text-foreground"ncy features.</li>
-                    <li>👉 Downtime killed adoption.</li>
+                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" text-foreground"nd over ag text-foreground" className text-foreground"    <li>� text-foreground"ncy featur text-foreground"li>👉 Downtime killed adoption.</li>
                     <li>👉 Agents cared more about liquidity than commissions.</li>
                     <li>👉 Merchants wanted tools, not dashboards.</li>
                   </ul>
@@ -201,11 +198,10 @@ card         cardp classNacardext-xl leading-relaxed font-semibold" style={{ col
                   We decided on a clean, three-step onboarding process and prioritized clarity over complexity.
                 </p>
                 <div className="bg-white rounded-xl p-6 my-8">
-            card <p className="text-lg leading-relaxcard                    When we tested icardh a few agents, their feedback was short but powerful:
+            card <p className="text-lg leading-relaxcard                    When we tested icardh a few agents, their feedback was scardbut powerful:
                   </p>
                   <blockquote className="bg-white border-l-4 border-accent rounded-r-card6 my-4">
-                    <p classcard"text-2xl font-bold" style={{ color: "#1A1A1A" }}>"This looks text-foreground"                </blockquote>
-                  <p className="text-lg leading-relaxed bg-white p-4 rounded-lg mt-4">That was all I needed to hear.</p>
+                    <p classcard"text-2xl font-bold" style={{ color: cardA1A" }}>"This looks text-foreground"                </blockqu text-foreground"sName="text-lg leading-relaxed bg-white p-4 rounded-lg mt-4">That was all I needed to hear.</p>
                 </div>
               </div>
               

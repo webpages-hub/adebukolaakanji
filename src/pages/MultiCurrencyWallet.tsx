@@ -258,7 +258,7 @@ card             <p className="text-lg leading-relaxed">
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>
