@@ -226,7 +226,7 @@ const GlobalTransfers = () => {
               "Confirm and send"
             ].map((step, index) => (
               <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                <span className="font-serif-display text-[22px] font-bold text-accent">{index + 1}</span>
+                <span className="text-[22px] font-bold text-accent">{index + 1}</span>
                 <p className="text-[14px] text-foreground">{step}</p>
               </div>
             ))}
