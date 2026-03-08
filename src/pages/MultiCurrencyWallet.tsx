@@ -11,6 +11,15 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-idea", label: "The Idea" },
+  { id: "step-problem", label: "Problem", isStep: true, stepNumber: 1 },
+  { id: "step-system", label: "System", isStep: true, stepNumber: 2 },
+  { id: "step-experience", label: "Experience", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const MultiCurrencyWallet = () => {
   return (
