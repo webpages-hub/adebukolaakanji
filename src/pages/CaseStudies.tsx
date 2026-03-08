@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
+import ContactCard from "@/components/ContactCard";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 type Category = "all" | "live" | "vibe";
@@ -83,10 +83,9 @@ const CaseStudies = () => {
                   onClick={() => setActiveTab(tab.value)}
                   className={`text-sm font-medium px-5 py-[10px] rounded-full transition-base ${
                     activeTab === tab.value
-                      ? "text-white"
+                      ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:text-accent"
                   }`}
-                  style={activeTab === tab.value ? { backgroundColor: '#111111' } : {}}
                 >
                   {tab.label}
                 </button>
@@ -108,8 +107,7 @@ const CaseStudies = () => {
                     {cs.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full text-xs font-medium"
-                        style={{ backgroundColor: '#fadd93', color: '#1A1A1A' }}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-foreground"
                       >
                         {tag}
                       </span>
@@ -118,8 +116,7 @@ const CaseStudies = () => {
                   <div className="flex justify-start md:justify-end">
                     <Link
                       to={cs.href}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-white px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90"
-                      style={{ backgroundColor: '#111111' }}
+                      className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
                     >
                       View Case Study <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -134,22 +131,11 @@ const CaseStudies = () => {
               </p>
             )}
           </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 bg-background border border-border p-8 rounded-2xl max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground mb-6 text-center">
-              If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
-            </p>
-            <div className="flex justify-center">
-              <Link to="/contact">
-                <Button variant="accent" size="lg">
-                  Let's Talk
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* Contact Card */}
+      <ContactCard />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-6">

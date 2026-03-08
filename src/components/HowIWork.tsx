@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Plus, X } from "lucide-react";
 
 const items = [
@@ -19,15 +19,69 @@ const items = [
   },
 ];
 
+const CYCLE_INTERVAL = 5000;
+
 const HowIWork = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [userClicked, setUserClicked] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startCycling = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    setUserClicked(false);
+    setOpenIndex(0);
+    timerRef.current = setInterval(() => {
+      setOpenIndex((prev) => {
+        const next = ((prev ?? -1) + 1) % items.length;
+        return next;
+      });
+    }, CYCLE_INTERVAL);
+  }, []);
+
+  const stopCycling = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startCycling();
+        } else {
+          stopCycling();
+          setUserClicked(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(section);
+    return () => {
+      observer.disconnect();
+      stopCycling();
+    };
+  }, [startCycling, stopCycling]);
+
+  useEffect(() => {
+    if (userClicked) {
+      stopCycling();
+    }
+  }, [userClicked, stopCycling]);
 
   const toggle = (index: number) => {
+    setUserClicked(true);
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section ref={sectionRef} className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left">How I Work</h2>
@@ -51,9 +105,7 @@ const HowIWork = () => {
                     <span className="flex-1 font-bold text-lg md:text-xl">
                       {item.label}
                     </span>
-                    <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-accent text-accent-foreground"
-                    >
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-accent text-accent-foreground">
                       {isOpen ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </div>
                   </button>

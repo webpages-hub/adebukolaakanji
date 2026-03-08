@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
+import ContactCard from "@/components/ContactCard";
 import { Mail, Phone, Linkedin, MapPin, Download } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Resume = () => {
@@ -27,7 +27,7 @@ const Resume = () => {
         </div>
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
             ADEBUKOLA AKANJI
           </h1>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
@@ -84,26 +84,18 @@ const Resume = () => {
               A fintech with $58.5M in funding, providing payment solutions to 1M+ users across multiple markets.
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Drove international expansion into four new markets (UK, Canada, France, and Belgium) within two months, leveraging user research and product localization to achieve rapid go-to-market readiness.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Led market entry into the Democratic Republic of Congo, localizing the product for regulatory and cultural fit within six weeks, resulting in rapid user adoption and strong transaction growth.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Launched a cross-border payment product that generated $200K in revenue within 3 months, driving early adoption in high-value remittance corridors.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Built and scaled a multi-currency wallet, increasing daily active usage by 20% and boosting cross-currency transactions by 10%.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Designed a rewards-based agent acquisition model, improving onboarding efficiency by 15% and agent engagement by 25%, strengthening network growth in emerging markets.</span>
-              </li>
+              {[
+                "Drove international expansion into four new markets (UK, Canada, France, and Belgium) within two months, leveraging user research and product localization to achieve rapid go-to-market readiness.",
+                "Led market entry into the Democratic Republic of Congo, localizing the product for regulatory and cultural fit within six weeks, resulting in rapid user adoption and strong transaction growth.",
+                "Launched a cross-border payment product that generated $200K in revenue within 3 months, driving early adoption in high-value remittance corridors.",
+                "Built and scaled a multi-currency wallet, increasing daily active usage by 20% and boosting cross-currency transactions by 10%.",
+                "Designed a rewards-based agent acquisition model, improving onboarding efficiency by 15% and agent engagement by 25%, strengthening network growth in emerging markets.",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-accent mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -123,18 +115,16 @@ const Resume = () => {
               A Techstars-backed Buy Now Pay Later (BNPL) fintech helping users improve financial flexibility.
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Developed a go-to-market strategy for Canada, aligning product compliance, user behavior insights, and partnerships to position Payfi for global expansion.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Implemented data-driven decision frameworks through A/B testing, cohort analysis, and user feedback loops that improved product outcomes by 25%.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Launched a gamification and rewards system, improving user retention by 10% and increasing BNPL customer engagement.</span>
-              </li>
+              {[
+                "Developed a go-to-market strategy for Canada, aligning product compliance, user behavior insights, and partnerships to position Payfi for global expansion.",
+                "Implemented data-driven decision frameworks through A/B testing, cohort analysis, and user feedback loops that improved product outcomes by 25%.",
+                "Launched a gamification and rewards system, improving user retention by 10% and increasing BNPL customer engagement.",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-accent mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -154,18 +144,16 @@ const Resume = () => {
               A startup specializing in YouTube growth & digital content strategies.
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Managed 5+ media projects, improving on-time delivery by 30% and reducing costs by 20% through efficient project management and process improvements.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Launched multi-channel campaigns that increased audience engagement by 40% through data-backed optimization.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent mt-1">•</span>
-                <span>Introduced a project management system that improved team efficiency by 35%.</span>
-              </li>
+              {[
+                "Managed 5+ media projects, improving on-time delivery by 30% and reducing costs by 20% through efficient project management and process improvements.",
+                "Launched multi-channel campaigns that increased audience engagement by 40% through data-backed optimization.",
+                "Introduced a project management system that improved team efficiency by 35%.",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-accent mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
@@ -176,10 +164,10 @@ const Resume = () => {
           <div className="glass-card p-6">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
               <h3 className="text-xl font-semibold text-foreground">University of Ilorin, Nigeria</h3>
-              <p className="text-sm font-medium" style={{ color: "#1A1A1A" }}>GPA: 4.59/5.0</p>
+              <p className="text-sm font-medium text-foreground">GPA: 4.59/5.0</p>
             </div>
             <p className="text-muted-foreground mb-2">B.Sc. Library and Information Science | First Class Honors</p>
-            <p className="text-sm" style={{ color: "#1A1A1A" }}>Award: Best Graduating Student, Department of Library and Information Science.</p>
+            <p className="text-sm text-foreground">Award: Best Graduating Student, Department of Library and Information Science.</p>
           </div>
         </section>
 
@@ -187,47 +175,23 @@ const Resume = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-foreground">Key Skills & Technologies</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-2">Product Management</h3>
-              <p className="text-sm text-muted-foreground">
-                Go-to-Market Strategy, Product Lifecycle Management, Growth Strategy, Stakeholder Management, Market Research, Agile & Scrum.
-              </p>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-2">Fintech & Payments</h3>
-              <p className="text-sm text-muted-foreground">
-                Cross-Border Payments, Multi-Currency Wallets, International Expansion, Remittance Solutions, Regulatory Compliance, Market Localization.
-              </p>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-2">Technical & Analytical</h3>
-              <p className="text-sm text-muted-foreground">
-                SQL, Product Analytics, Cohort Analysis, A/B Testing, Mixpanel, Jira, Figma.
-              </p>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-2">Leadership & Strategy</h3>
-              <p className="text-sm text-muted-foreground">
-                OKRs, Product Strategy Alignment, Cross-Functional Collaboration, Partner Management.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-background border border-border p-8 rounded-2xl">
-          <p className="text-lg text-muted-foreground mb-6 text-center">
-            If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
-          </p>
-          <div className="flex justify-center">
-            <Link to="/contact">
-              <Button variant="accent" size="lg">
-                Let's Talk
-              </Button>
-            </Link>
+            {[
+              { title: "Product Management", desc: "Go-to-Market Strategy, Product Lifecycle Management, Growth Strategy, Stakeholder Management, Market Research, Agile & Scrum." },
+              { title: "Fintech & Payments", desc: "Cross-Border Payments, Multi-Currency Wallets, International Expansion, Remittance Solutions, Regulatory Compliance, Market Localization." },
+              { title: "Technical & Analytical", desc: "SQL, Product Analytics, Cohort Analysis, A/B Testing, Mixpanel, Jira, Figma." },
+              { title: "Leadership & Strategy", desc: "OKRs, Product Strategy Alignment, Cross-Functional Collaboration, Partner Management." },
+            ].map((skill) => (
+              <div key={skill.title} className="glass-card p-6">
+                <h3 className="font-semibold text-foreground mb-2">{skill.title}</h3>
+                <p className="text-sm text-muted-foreground">{skill.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
       </main>
+
+      {/* Contact Card */}
+      <ContactCard />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-6">
