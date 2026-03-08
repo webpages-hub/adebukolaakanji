@@ -110,7 +110,7 @@ const Gamification = () => {
                   So I asked myself, how do we keep them coming back without relying solely on discounts or cashback?
                 </p>
                 <p className="text-lg leading-relaxed mt-6 font-semibold">
-                  That's where the idea of gamification came in.
+                  That's when I started asking whether the product itself could be the reason people came back.
                 </p>
               </div>
             </div>
