@@ -73,12 +73,8 @@ const Projects = () => {
                     "Can we make everyday payments simpler for people in the DRC?"
                   </p>
                 </blockquote>
-                <p className="text-lg leading-relaxed mb-6">
-                  At the time, Nomba had built a solid fintech product in Nigeria, but we wanted to take on new challenges in a new market. A local payments solution that could help agents and merchants serve customers faster and more reliably in the DRC.
-                </p>
                 <p className="text-lg leading-relaxed">
-                  I was the product manager leading this expansion. And from day one, I knew this wasn't going to be about 
-                  building fast, it was about building smart.
+                  Nomba had already built a product that worked in Nigeria. But a new market meant new users, new infrastructure constraints, and new reasons people might not trust you. My job was to figure out what "simple" actually meant here, before we wrote a single line of code.
                 </p>
               </div>
             </div>
