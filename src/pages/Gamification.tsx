@@ -75,7 +75,7 @@ const Gamification = () => {
                   Let's be honest. Payments can feel boring.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  You pay. You leave. End of story.
+                  You pay. You leave. Done.
                 </p>
                 <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-8 my-8">
                   <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
