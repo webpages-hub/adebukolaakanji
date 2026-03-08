@@ -326,8 +326,8 @@ const GlobalTransfers = () => {
           </div>
 
           <div className="text-center space-y-2">
-            <p className="text-lg font-semibold">Users loved it. Agents trusted it.</p>
-            <p className="text-lg font-semibold">And leadership saw it as a blueprint for global expansion.</p>
+            <p className="text-lg font-semibold">Users came back. Agents referred others.</p>
+            <p className="text-lg font-semibold">Leadership used it as the blueprint for every market expansion that followed.</p>
           </div>
         </section>
 
