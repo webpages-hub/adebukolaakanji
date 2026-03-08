@@ -301,7 +301,7 @@ const Projects = () => {
                   We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  Within two months, it was clear: It worked.
+                  Within two months, the answer was clear. It worked.
                 </p>
                 <div className="bg-accent/10 rounded-xl p-8 my-8">
                   <p className="text-lg leading-relaxed mb-4">
