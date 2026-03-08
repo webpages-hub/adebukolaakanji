@@ -194,7 +194,7 @@ const Gamification = () => {
                   From the moment a user made a BNPL payment to the instant they saw their progress bar rise, every tap had to feel rewarding.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  I collaborated closely with our designer to translate my flow into a vibrant, intuitive interface that made users smile just by opening the app.
+                  I worked closely with our designer to turn the flows into something that felt alive. The goal was simple: open the app, feel something.
                 </p>
               </div>
 
