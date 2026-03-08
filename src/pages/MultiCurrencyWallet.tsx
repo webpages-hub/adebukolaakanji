@@ -296,7 +296,7 @@ const MultiCurrencyWallet = () => {
       <footer className="bg-card border-t border-border py-6">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            Adebukola Akanji. Building Products that Matter
+            Adebukola Akanji. Product Manager, problem-solver, and occasional overthinker about user behavior.
           </p>
         </div>
       </footer>

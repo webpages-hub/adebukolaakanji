@@ -71,7 +71,7 @@ const CaseStudies = () => {
                 Case Studies
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Explore my journey building products that solve real problems and drive meaningful impact.
+                Every case study here started with a real user problem and a team trying to figure out the right answer. Here's what we learned.
               </p>
             </div>
 
@@ -141,7 +141,7 @@ const CaseStudies = () => {
       <footer className="bg-card border-t border-border py-6">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            Adebukola Akanji. Building Products that Matter
+            Adebukola Akanji. Product Manager, problem-solver, and occasional overthinker about user behavior.
           </p>
         </div>
       </footer>

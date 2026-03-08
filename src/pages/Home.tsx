@@ -7,7 +7,7 @@ import ContactCard from "@/components/ContactCard";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const rotatingWords = ["Growth", "Impact", "Revenue", "Goals"];
+const rotatingWords = ["generate revenue", "cross borders", "reach people", "actually work", "solve problems"];
 
 const Home = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -36,7 +36,7 @@ const Home = () => {
               {/* Left Column ~55% */}
               <div className="flex-1 text-center md:text-left md:w-[55%]">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-foreground">
-                  Driving Business{" "}
+                  Building products that{" "}
                   <span className="inline-block overflow-hidden align-bottom" style={{ height: '1.2em' }}>
                     <span
                       className="inline-block text-accent transition-transform duration-400 ease-in-out"
@@ -49,10 +49,9 @@ const Home = () => {
                       {rotatingWords[wordIndex]}
                     </span>
                   </span>
-                  , Creating Customer-Centric Innovation
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-                  I am Adebukola Akanji, a product manager with five years of experience driving business growth and expansion. I am dedicated to crafting simple user experiences that simplify people's lives.
+                  My name is Bukola. I find the gap between what users need and what they're currently getting, then I build the solution that closes it. I have spent five years doing that across fintech, payments, and international markets.
                 </p>
                 
                 <Link
@@ -82,11 +81,11 @@ const Home = () => {
       {/* How I Work (My Approach Accordion) */}
       <HowIWork />
 
-      {/* Explore My Articles */}
+      {/* How I Think */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-10">Explore My Articles</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-10">How I Think</h2>
 
             <div className="space-y-4">
               {[
@@ -122,7 +121,7 @@ const Home = () => {
       <footer className="bg-card border-t border-border py-6">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            Adebukola Akanji. Building Products that Matter
+            Adebukola Akanji. Product Manager, problem-solver, and occasional overthinker about user behavior.
           </p>
         </div>
       </footer>
