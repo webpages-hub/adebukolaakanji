@@ -87,7 +87,7 @@ const GlobalTransfers = () => {
               That was the moment I knew: <span className="font-bold">the global money transfer system was broken for ordinary users.</span>
             </p>
             <p className="text-lg leading-relaxed">
-              So we decided to fix it, to make international transfers faster, cheaper, and more transparent. And I was leading the product charge.
+              So we decided to fix it. Faster delivery, fairer rates, full transparency. And I was the PM leading the build.
             </p>
           </div>
         </section>
