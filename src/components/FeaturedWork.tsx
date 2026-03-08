@@ -10,7 +10,7 @@ const projects = [
     number: "2024",
     name: "DRC Payments",
     description: "Six weeks. That's how long it took to go from zero to a live, locally compliant payment product in the DRC. I conducted on-ground research, shaped the MVP, and drove rapid adoption across a brand new market.",
-    tags: ["Product Management", "User Research", "MVP LaunchLaunchLaunchLaunch"],
+    tags: ["Product Management", "User Research", "MVP Launch"],
     href: "/projects",
     image: drcHero,
   },
