@@ -94,7 +94,7 @@ const Projects = () => {
                   "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
                 ].map((text, index) => (
                   <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <p className="text-[14px] text-foreground leading-[1.6]">{text}</p>
                   </div>
                 ))}
