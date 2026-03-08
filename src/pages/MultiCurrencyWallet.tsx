@@ -148,7 +148,7 @@ const MultiCurrencyWallet = () => {
               </div>
 
               <p className="text-lg leading-relaxed mt-8">
-                Together, we designed a structure that treated each wallet as a separate account under a single user identity.
+                The result was a structure where each currency lived as its own account, but the user only ever saw one wallet.
               </p>
             </div>
 
