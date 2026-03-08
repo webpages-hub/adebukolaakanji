@@ -18,15 +18,13 @@ const caseStudies: CaseStudy[] = [
   {
     name: "DRC Payments MVP",
     description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents.",
-    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
-    href: "/projects",
+    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH  href: "/projects",
     category: ["live"],
   },
   {
     name: "Global Transfers",
     description: "Enabling cross-border payments that generated $200K+ revenue in 3 months with under 1-hour delivery times.",
-    tags: ["Global Payments", "FX Strategy", "API Integration"],
-    href: "/global-transfers",
+    tags: ["GlobalCROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH  href: "/global-transfers",
     category: ["live"],
   },
   {
