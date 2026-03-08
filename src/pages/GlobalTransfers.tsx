@@ -337,7 +337,7 @@ const GlobalTransfers = () => {
           
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              This project taught me that global payments aren't just a financial problem, they're a trust problem.
+              The biggest lesson had nothing to do with rates or APIs. Global payments are a trust problem first.
             </p>
             
             <p className="text-lg leading-relaxed">
