@@ -75,7 +75,7 @@ const MultiCurrencyWallet = () => {
                   </p>
                 </blockquote>
                 <p className="text-lg leading-relaxed mb-6">
-                  It sounded like a one-off issue. But it wasn't.
+                  It sounded like a one-off complaint. It wasn't.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   By the time I'd spoken to ten more agents, I realized this was a pattern. Users were juggling currencies like a circus act. Every transaction meant friction, delay, and lost value.
