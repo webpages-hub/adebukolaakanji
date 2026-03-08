@@ -18,7 +18,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "DRC Payments MVP",
     description: "Leading product strategy for a fintech solution in the DRC. From research to MVP launch, onboarding 1,000+ agents.",
-    tags: ["Product Management", "User Research", "MVP Launch"],
+    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
     href: "/projects",
     category: ["live"],
   },
