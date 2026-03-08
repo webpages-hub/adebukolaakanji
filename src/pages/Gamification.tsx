@@ -59,7 +59,7 @@ const Gamification = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  Our BNPL product was great, but engagement was dipping. People would use it once or twice, then forget about it. I wanted to fix that.
+                  Our BNPL product worked. Users transacted, paid back, moved on. The problem was they never came back. I wanted to fix that.
                 </p>
               </div>
             </div>
