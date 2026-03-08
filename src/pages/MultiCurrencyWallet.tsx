@@ -48,7 +48,7 @@ const MultiCurrencyWallet = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto flex gap-12">
             <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0">
+            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
             {/* Hero Image */}
             <ScrollReveal>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
