@@ -12,7 +12,6 @@ const Navigation = () => {
     { href: "/about", label: "About" },
     { href: "/case-studies", label: "Works" },
     { href: "/resume", label: "Resume" },
-    { href: "/contact", label: "Contact" },
   ];
 
   const handleLinkClick = () => {
@@ -46,7 +45,10 @@ const Navigation = () => {
 
           <Link
             to="/contact"
-            className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-[22px] py-[10px] rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+            className={cn(
+              "hidden md:inline-flex items-center gap-2 text-sm font-medium px-[22px] py-[10px] rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground",
+              location.pathname === "/contact" && "ring-2 ring-accent ring-offset-2"
+            )}
           >
             Get in touch <ArrowRight className="w-4 h-4" />
           </Link>

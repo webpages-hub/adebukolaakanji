@@ -86,9 +86,9 @@ const FeaturedWork = () => {
 
                   <Link
                     to={project.href}
-                    className="inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border border-foreground text-foreground transition-base hover:bg-primary hover:text-primary-foreground"
+                    className="group inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border border-foreground text-foreground transition-base hover:bg-primary hover:text-primary-foreground"
                   >
-                    View Case Study <ArrowRight className="w-4 h-4" />
+                    View Case Study <ArrowRight className="w-4 h-4 animate-arrow-bounce" />
                   </Link>
                 </div>
               </div>

@@ -19,7 +19,7 @@ const items = [
   },
 ];
 
-const CYCLE_INTERVAL = 5000;
+const CYCLE_INTERVAL = 3500;
 
 const HowIWork = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

@@ -10,10 +10,10 @@ const Contact = () => {
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: "#1A1A1A" }}>
+            <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6 text-foreground">
               Let's Connect
             </h1>
-            <p className="text-xl text-muted-foreground mb-12">
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               I'm always excited to discuss product opportunities, collaborations, or just have a conversation about building great user experiences.
             </p>
 
@@ -22,8 +22,8 @@ const Contact = () => {
                 href="mailto:adebukolaakanji@gmail.com" 
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-muted-foreground" />
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">Email</div>
@@ -35,8 +35,8 @@ const Contact = () => {
                 href="tel:+2347065197102" 
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-muted-foreground" />
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">Phone</div>
@@ -50,8 +50,8 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-accent-glow transition-base border border-border hover:border-accent/50 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Linkedin className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <Linkedin className="w-6 h-6 text-muted-foreground" />
                 </div>
                 <div className="text-left flex-1">
                   <div className="font-semibold mb-1">LinkedIn</div>

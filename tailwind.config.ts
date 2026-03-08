@@ -84,10 +84,15 @@ export default {
             height: "0",
           },
         },
+        "arrow-bounce": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(4px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "arrow-bounce": "arrow-bounce 1s ease-in-out infinite",
       },
     },
   },

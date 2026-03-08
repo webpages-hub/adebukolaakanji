@@ -7,7 +7,7 @@ import ContactCard from "@/components/ContactCard";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const rotatingWords = ["Growth", "Impact", "Revenue", "Expansion", "Goals"];
+const rotatingWords = ["Growth", "Impact", "Revenue", "Goals"];
 
 const Home = () => {
   const [wordIndex, setWordIndex] = useState(0);
