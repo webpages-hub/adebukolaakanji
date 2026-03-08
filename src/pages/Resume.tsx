@@ -173,7 +173,7 @@ const Resume = () => {
 
         {/* Key Skills */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-foreground">Key Skills & Technologies</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">Skills & Tools</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               { title: "Product Management", desc: "Go-to-Market Strategy, Product Lifecycle Management, Growth Strategy, Stakeholder Management, Market Research, Agile & Scrum." },
