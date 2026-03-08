@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import ContactCard from "@/components/ContactCard";
-import profilePhoto from "@/assets/profile-photo.jpg";
-import heroPhoto from "@/assets/hero-photo.jpg";
+import aboutPhoto1 from "@/assets/about-photo-1.jpg";
+import aboutPhoto2 from "@/assets/about-photo-2.jpg";
 
 const About = () => {
   return (
@@ -15,14 +15,13 @@ const About = () => {
               <div className="grid grid-cols-2 gap-3 w-full max-w-[420px]">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <img
-                    src={profilePhoto}
-                    alt="Adebukola Akanji"
+                    src={aboutPhoto1}                    alt="Adebukola Akanji"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden mt-8">
                   <img
-                    src={heroPhoto}
+                    src={aboutPhoto2}
                     alt="Adebukola working"
                     className="w-full h-full object-cover"
                   />
