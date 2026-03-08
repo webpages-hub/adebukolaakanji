@@ -93,7 +93,7 @@ const Projects = () => {
 
             {/* Where It Began */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="where-it-began" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">Where it all began</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   It started with one big question:
