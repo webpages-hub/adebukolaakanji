@@ -47,7 +47,7 @@ const Navigation = () => {
             to="/contact"
             className={cn(
               "hidden md:inline-flex items-center gap-2 text-sm font-medium px-[22px] py-[10px] rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground",
-              location.pathname === "/contact" && "ring-2 ring-accent ring-offset-2"
+              location.pathname === "/contact" && "ring-2 ring-border ring-offset-2"
             )}
           >
             Get in touch <ArrowRight className="w-4 h-4" />
