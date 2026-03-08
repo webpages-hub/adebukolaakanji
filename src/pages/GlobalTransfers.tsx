@@ -143,7 +143,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            We started by asking: <span className="font-bold">where do our users actually send money?</span>
+            Before touching the product, I needed to understand the corridors that actually mattered to our users.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
