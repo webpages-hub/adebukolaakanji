@@ -155,7 +155,7 @@ const Gamification = () => {
 
             {/* Step 2 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-rules" className="mb-20 scroll-mt-28">
                 <StepHeading number={2} title="Defining the Rules of the Game" accentWord="Rules" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
