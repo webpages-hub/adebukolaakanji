@@ -34,7 +34,7 @@ const MultiCurrencyWallet = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground"view</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -69,7 +69,7 @@ const MultiCurrencyWallet = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
-                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-8">
+                <blockquote className="bg-white border-cardorder-accent rounded-r-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
                     "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   </p>
