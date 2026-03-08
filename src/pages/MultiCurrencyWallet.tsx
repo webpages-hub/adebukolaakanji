@@ -34,7 +34,8 @@ const MultiCurrencyWallet = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-foreground""grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">One Month</p>
@@ -68,8 +69,8 @@ const MultiCurrencyWallet = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
-                <blockquote className="bg-white border-cardorder-acccardounded-r-card6 my-8">
-card             <p className="text-lg leading-relaxed">
+                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-8">
+                  <p className="text-lg leading-relaxed">
                     "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   </p>
                 </blockquote>
@@ -81,7 +82,8 @@ card             <p className="text-lg leading-relaxed">
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
                   <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-                  <p className="text-xl leading-relaxed font-semibold" style={{ col text-foregrou text-foregrou text-foreground"let users hold and transact in multiple currencies within a single account?
+                  <p className="text-xl leading-relaxed font-semibold text-foreground">
+                    That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
                   </p>
                 </div>
               </div>
@@ -222,8 +224,8 @@ card             <p className="text-lg leading-relaxed">
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-8">
-    card       <p className="tecard leading-relaxed mb-4">
+              <div className="bg-card rounded-xl p-8">
+                <p className="text-lg leading-relaxed mb-4">
                   Users finally had the flexibility to transact in the currencies they actually lived and earned in.
                 </p>
                 <p className="text-lg leading-relaxed font-semibold">
@@ -238,7 +240,7 @@ card             <p className="text-lg leading-relaxed">
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-white rounded-2xl p-8 md:p-1carddow-lg">
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
                 <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>
