@@ -67,7 +67,7 @@ const GlobalTransfers = () => {
           
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              I still remember the first time I saw it.
+              I still remember the exact moment it clicked.
             </p>
             <p className="text-lg leading-relaxed">
               A customer had tried to send $1000 to the United Arab Emirates from the Democratic Republic of Congo, and it took <span className="font-bold text-primary">five days</span> to get to the receiver.
@@ -87,7 +87,7 @@ const GlobalTransfers = () => {
               That was the moment I knew: <span className="font-bold">the global money transfer system was broken for ordinary users.</span>
             </p>
             <p className="text-lg leading-relaxed">
-              So we decided to fix it, to make international transfers faster, cheaper, and more transparent. And I was leading the product charge.
+              So we decided to fix it. Faster delivery, fairer rates, full transparency. And I was the PM leading the build.
             </p>
           </div>
         </section>
@@ -97,14 +97,14 @@ const GlobalTransfers = () => {
           <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
           
           <p className="text-lg leading-relaxed mb-6">
-            International money transfers sound simple until you're the one building them.
+            International money transfers sound simple. Until you're the one building them.
           </p>
           <p className="text-lg leading-relaxed mb-6">
             The existing rails were slow and expensive. Users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
           </p>
 
           <h3 className="text-2xl font-bold mb-4">The Goal</h3>
-          <p className="text-lg leading-relaxed mb-4">We needed to build a product that could:</p>
+          <p className="text-lg leading-relaxed mb-4">The product had to do four things well:</p>
           <div className="space-y-4">
             <div className="p-5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary">
               <div className="flex items-start gap-3">
@@ -139,11 +139,11 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               1
             </div>
-            <h2 className="text-3xl font-bold">Researching the Global Flows</h2>
+            <h2 className="text-3xl font-bold">Understanding Where Money Actually Moves</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            We started by asking: <span className="font-bold">where do our users actually send money?</span>
+            Before touching the product, I needed to understand the corridors that actually mattered to our users.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
@@ -210,11 +210,11 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               3
             </div>
-            <h2 className="text-3xl font-bold">Setting the Right FX Rates</h2>
+            <h2 className="text-3xl font-bold">Getting the Rates Right</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Global transfers live and die by their rates. If you set them too high, users leave. Too low, and your business bleeds. To solve this, I collaborated with finance and data teams to build a bid-ask rate model:
+            Rates are where users decide whether to trust you. Set them too high and they leave. Too low and the business bleeds. I worked with finance and data to build a model that kept both sides honest:
           </p>
 
           <ul className="space-y-4 mb-6">
@@ -252,11 +252,11 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               4
             </div>
-            <h2 className="text-3xl font-bold">Designing the Experience</h2>
+            <h2 className="text-3xl font-bold">Designing for Clarity, Not Features</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Speed and affordability don't matter if the experience feels confusing. So I worked with designers to create a simple, transparent flow:
+            A fast, cheap transfer that confuses the user is still a bad product. I worked with the designer to strip the flow down to exactly what someone needs to feel confident hitting send:
           </p>
 
           <div className="space-y-3">
@@ -286,11 +286,11 @@ const GlobalTransfers = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
               5
             </div>
-            <h2 className="text-3xl font-bold">Launching and Scaling</h2>
+            <h2 className="text-3xl font-bold">Shipping and Scaling</h2>
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            We rolled out gradually, starting with limited corridors. Then, as adoption grew, we expanded coverage and optimized delivery speed through batch processing and better partner routing.
+            We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage and cut delivery times further through smarter partner routing and batch processing.
           </p>
 
           <div className="p-8 rounded-2xl border border-primary/30 mb-6" style={{ backgroundColor: "#FFFFFF" }}>
@@ -310,9 +310,9 @@ const GlobalTransfers = () => {
               <div className="text-center p-6 rounded-xl bg-background/50">
                 <TrendingUp className="w-10 h-10 mx-auto mb-3 text-accent" />
                 <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                  Millions
+                  Millions in Transfers
                 </div>
-                <div className="text-sm text-muted-foreground">Transaction Value</div>
+                <div className="text-sm text-muted-foreground">Processed in 3 months</div>
               </div>
               
               <div className="text-center p-6 rounded-xl bg-background/50">
@@ -326,8 +326,8 @@ const GlobalTransfers = () => {
           </div>
 
           <div className="text-center space-y-2">
-            <p className="text-lg font-semibold">Users loved it. Agents trusted it.</p>
-            <p className="text-lg font-semibold">And leadership saw it as a blueprint for global expansion.</p>
+            <p className="text-lg font-semibold">Users came back. Agents referred others.</p>
+            <p className="text-lg font-semibold">Leadership used it as the blueprint for every market expansion that followed.</p>
           </div>
         </section>
 
@@ -337,11 +337,11 @@ const GlobalTransfers = () => {
           
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              This project taught me that global payments aren't just a financial problem, they're a trust problem.
+              The biggest lesson had nothing to do with rates or APIs. Global payments are a trust problem first.
             </p>
             
             <p className="text-lg leading-relaxed">
-              Users don't just want cheaper transfers. They want to know exactly what happens between "Send" and "Received."
+              Users don't just want cheaper transfers. They want to know exactly what's happening between "Send" and "Received." The gap between those two words is where trust is won or lost.
             </p>
 
             <div className="p-8 rounded-xl shadow-lg" style={{ backgroundColor: "#FFFFFF" }}>
