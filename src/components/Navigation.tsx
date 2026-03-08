@@ -12,7 +12,6 @@ const Navigation = () => {
     { href: "/about", label: "About" },
     { href: "/case-studies", label: "Works" },
     { href: "/resume", label: "Resume" },
-    { href: "/contact", label: "Contact" },
   ];
 
   const handleLinkClick = () => {
