@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -288,18 +289,8 @@ const MultiCurrencyWallet = () => {
               </div>
             </ScrollReveal>
 
-            {/* CTA Section */}
             <ScrollReveal>
-              <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
-                <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
-                  If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
-                </p>
-                <Link to="/contact">
-                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg">
-                    Let's talk
-                  </Button>
-                </Link>
-              </div>
+              <ContactCard />
             </ScrollReveal>
 
             {/* Navigation */}
