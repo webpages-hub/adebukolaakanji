@@ -12,24 +12,24 @@ const StepHeading = ({ number, title, accentWord, isLast = false }: StepHeadingP
     return (
       <>
         {parts[0]}
-        <em className="text-accent">{accentWord}</em>
+        <span className="text-accent italic">{accentWord}</span>
         {parts[1]}
       </>
     );
   };
 
   return (
-    <div className="flex items-start gap-6 mb-6">
+    <div className="flex items-start gap-4 md:gap-6 mb-6">
       <div
-        className={`w-16 h-16 rounded-full border-[1.5px] border-accent flex items-center justify-center flex-shrink-0 ${
+        className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-[1.5px] border-accent flex items-center justify-center flex-shrink-0 ${
           isLast ? 'bg-foreground' : 'bg-background'
         }`}
       >
-        <span className={`font-serif-display text-[22px] font-bold ${isLast ? 'text-background' : 'text-accent'}`}>
+        <span className={`text-[18px] md:text-[20px] font-bold ${isLast ? 'text-background' : 'text-accent'}`}>
           {String(number).padStart(2, '0')}
         </span>
       </div>
-      <h2 className="font-serif-display text-[34px] font-bold leading-[1.15] tracking-[-0.02em] pt-3">
+      <h2 className="text-2xl md:text-4xl font-bold leading-[1.2] tracking-tight pt-2 md:pt-3">
         {renderTitle()}
       </h2>
     </div>
