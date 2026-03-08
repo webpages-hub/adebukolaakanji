@@ -341,7 +341,7 @@ const GlobalTransfers = () => {
             </p>
             
             <p className="text-lg leading-relaxed">
-              Users don't just want cheaper transfers. They want to know exactly what happens between "Send" and "Received."
+              Users don't just want cheaper transfers. They want to know exactly what's happening between "Send" and "Received." The gap between those two words is where trust is won or lost.
             </p>
 
             <div className="p-8 rounded-xl shadow-lg" style={{ backgroundColor: "#FFFFFF" }}>
