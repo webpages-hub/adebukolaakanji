@@ -94,7 +94,7 @@ const Projects = () => {
                   "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
                 ].map((text, index) => (
                   <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <p className="text-[14px] text-foreground leading-[1.6]">{text}</p>
                   </div>
                 ))}
@@ -196,7 +196,7 @@ const Projects = () => {
                   "How does a merchant check if a payment was successful?"
                 ].map((question, index) => (
                   <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                    <span className="font-serif-display text-[22px] font-bold text-accent">{index + 1}</span>
+                    <span className="text-[22px] font-bold text-accent">{index + 1}</span>
                     <p className="text-[14px] text-foreground">{question}</p>
                   </div>
                 ))}
@@ -223,7 +223,7 @@ const Projects = () => {
               <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
                 <div className="bg-foreground px-5 py-3 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Simplified Agent Journey</span>
+                  <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Simplified Agent Journey</span>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 p-6">
                   {["Sign Up", "Verify", "Accept Payment", "Track Transactions"].map((step, index, array) => (
@@ -273,7 +273,7 @@ const Projects = () => {
                     { week: "Weeks 5–6", title: "Refinement", items: ["Testing & QA", "Bug fixes", "Performance tuning", "Soft launch prep"] }
                   ].map((phase, index) => (
                     <div key={index} className={`p-6 ${index > 0 ? 'md:border-l border-t md:border-t-0 border-border' : ''}`}>
-                      <div className="font-mono-tag text-[10px] text-accent uppercase tracking-[0.1em] mb-1">{phase.week}</div>
+                      <div className="text-[10px] text-accent uppercase tracking-[0.1em] font-semibold mb-1">{phase.week}</div>
                       <h4 className="text-lg font-bold mb-4">{phase.title}</h4>
                       <ul className="space-y-2 text-[13px] text-muted-foreground">
                         {phase.items.map((item, i) => (

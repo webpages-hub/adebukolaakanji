@@ -144,7 +144,7 @@ const Gamification = () => {
                   { title: "Reward logic", desc: "What users got at each stage" }
                 ].map((item, index) => (
                   <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                    <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
                     <div>
                       <span className="font-bold text-[14px]">{item.title}</span>
                       <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
@@ -177,7 +177,7 @@ const Gamification = () => {
               <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
                 <div className="bg-foreground px-5 py-3 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Gamified User Journey</span>
+                  <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Gamified User Journey</span>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 p-6">
                   {["Make Payment", "Earn Points", "Level Up", "Unlock Rewards"].map((step, index, array) => (

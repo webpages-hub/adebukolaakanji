@@ -22,7 +22,7 @@ const DrivingQuestion = ({ label = "THE QUESTION", question, goldEmphasis }: Dri
       <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[120px] text-background/[0.04] font-bold select-none leading-none">
         ?
       </span>
-      <p className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-accent mb-3">
+      <p className="text-[10px] uppercase tracking-[0.1em] text-accent mb-3 font-semibold">
         {label}
       </p>
       <p className="text-[15px] text-background/90 leading-[1.7] font-light relative z-10">

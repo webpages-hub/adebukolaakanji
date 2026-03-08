@@ -162,7 +162,7 @@ const GlobalTransfers = () => {
           <div className="border border-border rounded-md overflow-hidden max-w-[620px]">
             <div className="bg-foreground px-5 py-3 flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Optimized Transaction Flow</span>
+              <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Optimized Transaction Flow</span>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-3 p-6">
               {["Sender", "Partner API", "Recipient"].map((step, index, array) => (
@@ -198,7 +198,7 @@ const GlobalTransfers = () => {
               { label: "The Spread", desc: "Our margin — a delicate balance between user value and revenue" }
             ].map((item, index) => (
               <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                <span className="font-mono-tag text-[10px] text-accent mt-1">{String(index + 1).padStart(2, '0')}</span>
+                <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
                 <div>
                   <span className="font-bold text-[14px]">{item.label}</span>
                   <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
@@ -226,7 +226,7 @@ const GlobalTransfers = () => {
               "Confirm and send"
             ].map((step, index) => (
               <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                <span className="font-serif-display text-[22px] font-bold text-accent">{index + 1}</span>
+                <span className="text-[22px] font-bold text-accent">{index + 1}</span>
                 <p className="text-[14px] text-foreground">{step}</p>
               </div>
             ))}
