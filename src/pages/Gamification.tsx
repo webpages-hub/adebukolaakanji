@@ -127,7 +127,7 @@ const Gamification = () => {
                     Most users said they wanted to <span className="font-bold text-accent">"feel like they were progressing"</span> financially, not just spending.
                   </p>
                   <p className="text-lg leading-relaxed mt-4 font-semibold">
-                    That was the lightbulb moment.
+                    That was the insight everything else was built on.
                   </p>
                 </div>
                 <p className="text-lg leading-relaxed">
