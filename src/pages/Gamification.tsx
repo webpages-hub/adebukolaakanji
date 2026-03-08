@@ -36,7 +36,7 @@ const Gamification = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -77,12 +77,12 @@ const Gamification = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   You pay. You leave. Done.
                 </p>
-                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-8 my-8">
-                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
+                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-8 my-8">
+                  <p className="text-xl leading-relaxed font-semibold text-foreground">
                     But what if making payments could feel rewarding?
                   </p>
                 </blockquote>
-                <div className="bg-white rounded-xl p-6 my-6">
+                <div className="bg-card rounded-xl p-6 my-6">
                   <p className="text-lg leading-relaxed">
                     That question became the brief. Build something inside the product that made coming back feel worth it.
                   </p>
@@ -254,7 +254,7 @@ const Gamification = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-8">
+              <div className="bg-card rounded-xl p-8">
                 <p className="text-lg leading-relaxed font-semibold">
                   Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
                 </p>
@@ -264,15 +264,15 @@ const Gamification = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground">
                   Users don't engage with functionality. They engage with how something makes them feel. This project proved that when you build for that, the numbers follow.
                 </p>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>

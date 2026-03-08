@@ -34,7 +34,7 @@ const MultiCurrencyWallet = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -69,7 +69,7 @@ const MultiCurrencyWallet = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   The first time I heard an agent complain, it sounded simple:
                 </p>
-                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-8">
+                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
                     "I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   </p>
@@ -82,7 +82,7 @@ const MultiCurrencyWallet = () => {
                 </p>
                 <div className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-8 my-8 border border-accent/30 flex items-start gap-4">
                   <Lightbulb className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
+                  <p className="text-xl leading-relaxed font-semibold text-foreground">
                     That's when it clicked: What if we could just let users hold and transact in multiple currencies within a single account?
                   </p>
                 </div>
@@ -224,7 +224,7 @@ const MultiCurrencyWallet = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-8">
+              <div className="bg-card rounded-xl p-8">
                 <p className="text-lg leading-relaxed mb-4">
                   Users finally had the flexibility to transact in the currencies they actually lived and earned in.
                 </p>
@@ -240,27 +240,27 @@ const MultiCurrencyWallet = () => {
             {/* Reflection */}
             <div className="mb-20">
               <h2 className="text-4xl font-bold mb-6">Reflection</h2>
-              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg">
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
+                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   This project taught me how powerful simplicity can be — especially in fintech.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed mb-6 text-foreground">
                   But what users saw was freedom.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed font-semibold mb-6 text-foreground">
                   They didn't see the work. They just saw that it worked.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#1A1A1A" }}>
+                <p className="text-lg md:text-xl leading-relaxed text-foreground">
                   And that's the real magic of product management.
                 </p>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>

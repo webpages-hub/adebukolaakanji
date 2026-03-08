@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A1A" }}>Project Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
@@ -68,8 +68,8 @@ const Projects = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   It started with one big question:
                 </p>
-                <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-6">
-                  <p className="text-xl leading-relaxed font-semibold" style={{ color: "#1A1A1A" }}>
+                <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-6">
+                  <p className="text-xl leading-relaxed font-semibold text-foreground">
                     "Can we make everyday payments simpler for people in the DRC?"
                   </p>
                 </blockquote>
@@ -147,7 +147,7 @@ const Projects = () => {
                   in reviews, and what "trust" meant in this market.
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" }}>Four things came up over and over again:</p>
+                  <p className="font-semibold mb-4 text-foreground">Four things came up over and over again:</p>
                   <ul className="space-y-2">
                     <li>👉 Speed mattered more than fancy features.</li>
                     <li>👉 Downtime killed adoption.</li>
@@ -206,14 +206,14 @@ const Projects = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   We decided on a clean, three-step onboarding process and prioritized clarity over complexity.
                 </p>
-                <div className="bg-white rounded-xl p-6 my-8">
+                <div className="bg-card rounded-xl p-6 my-8">
                   <p className="text-lg leading-relaxed">
                     When we tested it with a few agents, their feedback was short but powerful:
                   </p>
-                  <blockquote className="bg-white border-l-4 border-accent rounded-r-xl p-6 my-4">
-                    <p className="text-2xl font-bold" style={{ color: "#1A1A1A" }}>"This looks easy. I can use this."</p>
+                  <blockquote className="bg-card border-l-4 border-accent rounded-r-xl p-6 my-4">
+                    <p className="text-2xl font-bold text-foreground">"This looks easy. I can use this."</p>
                   </blockquote>
-                  <p className="text-lg leading-relaxed bg-white p-4 rounded-lg mt-4">That was all I needed to hear.</p>
+                  <p className="text-lg leading-relaxed bg-card p-4 rounded-lg mt-4">That was all I needed to hear.</p>
                 </div>
               </div>
               
@@ -360,7 +360,7 @@ const Projects = () => {
               </div>
               
               <div className="grid md:grid-cols-2 gap-8 mt-8">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-card rounded-2xl p-8 shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-accent">
                     <CheckCircle2 className="w-7 h-7 text-accent" />
                     What Worked
@@ -384,7 +384,7 @@ const Projects = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-card rounded-2xl p-8 shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-primary">
                     <Lightbulb className="w-7 h-7 text-primary" />
                     What I'd Improve
@@ -412,7 +412,7 @@ const Projects = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-white border border-foreground/20 text-center">
+            <div className="mb-16 p-8 md:p-12 rounded-2xl bg-card border border-foreground/20 text-center">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 text-foreground">
                 If you care about creating products that truly make life easier for users, I'd love to be part of that journey.
               </p>
