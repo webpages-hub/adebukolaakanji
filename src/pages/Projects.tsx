@@ -196,7 +196,7 @@ const Projects = () => {
                   "How does a merchant check if a payment was successful?"
                 ].map((question, index) => (
                   <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                    <span className="text-[22px] font-bold text-accent">{index + 1}</span>
+                    <span className="ld text-accent">{index + 1}</span>
                     <p className="text-[14px] text-foreground">{question}</p>
                   </div>
                 ))}
@@ -223,7 +223,7 @@ const Projects = () => {
               <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
                 <div className="bg-foreground px-5 py-3 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Simplified Agent Journey</span>
+                  <span className="font-mono-tag text-text-[10px] uppercase tracking-[0.1em] text-background/70 font-semiboldJourney</span>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-3 p-6">
                   {["Sign Up", "Verify", "Accept Payment", "Track Transactions"].map((step, index, array) => (
