@@ -290,7 +290,7 @@ const GlobalTransfers = () => {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            We rolled out gradually, starting with limited corridors. Then, as adoption grew, we expanded coverage and optimized delivery speed through batch processing and better partner routing.
+            We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage and cut delivery times further through smarter partner routing and batch processing.
           </p>
 
           <div className="p-8 rounded-2xl border border-primary/30 mb-6" style={{ backgroundColor: "#FFFFFF" }}>
