@@ -342,7 +342,7 @@ const Projects = () => {
                   {[
                     "Local context trumps global assumptions.",
                     "Speed doesn't have to sacrifice quality.",
-                    "Launch is really just the beginning — not the end."
+                    "Launch is the beginning. Not the end."
                   ].map((learning, index) => (
                     <div key={index} className="bg-card rounded-xl p-6 shadow-md border-t-4 border-accent">
                       <p className="text-lg font-semibold">{learning}</p>
