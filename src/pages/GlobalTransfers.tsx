@@ -11,6 +11,16 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-moment", label: "The Moment" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-rates", label: "Rates", isStep: true, stepNumber: 2 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const GlobalTransfers = () => {
   return (
@@ -46,7 +56,9 @@ const GlobalTransfers = () => {
       {/* Content */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto flex gap-12">
+            <CaseStudyTOC sections={tocSections} />
+            <div className="max-w-4xl flex-1 min-w-0">
           
           {/* Project Meta Cards */}
           <ScrollReveal>
@@ -82,7 +94,7 @@ const GlobalTransfers = () => {
 
         {/* Hook Section */}
         <ScrollReveal>
-          <div className="mb-20 case-study-prose">
+          <div id="the-moment" className="mb-20 case-study-prose scroll-mt-28">
             <h2 className="text-4xl font-bold mb-6">The Moment It Hit Me</h2>
             
             <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -108,7 +120,7 @@ const GlobalTransfers = () => {
 
         {/* Challenge Section */}
         <ScrollReveal>
-          <div className="mb-20 case-study-prose">
+          <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
             <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
             
             <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -142,7 +154,7 @@ const GlobalTransfers = () => {
 
         {/* Step 1: Research */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-research" className="mb-20 scroll-mt-28">
             <StepHeading number={1} title="Understanding Where Money Actually Moves" accentWord="Money" />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -201,7 +213,7 @@ const GlobalTransfers = () => {
 
         {/* Step 2: FX Rates */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-rates" className="mb-20 scroll-mt-28">
             <StepHeading number={2} title="Getting the Rates Right" accentWord="Rates" />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -229,7 +241,7 @@ const GlobalTransfers = () => {
 
         {/* Step 3: Design */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-design" className="mb-20 scroll-mt-28">
             <StepHeading number={3} title="Designing for Clarity, Not Features" accentWord="Clarity" />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -262,7 +274,7 @@ const GlobalTransfers = () => {
 
         {/* Step 4: Launch */}
         <ScrollReveal>
-          <div className="mb-20">
+          <div id="step-launch" className="mb-20 scroll-mt-28">
             <StepHeading number={4} title="Shipping and Scaling" accentWord="Scaling" isLast />
             <div className="case-study-prose">
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -276,6 +288,7 @@ const GlobalTransfers = () => {
             />
           </div>
         </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

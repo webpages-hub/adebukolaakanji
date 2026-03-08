@@ -11,6 +11,16 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-idea", label: "The Idea" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-rules", label: "Rules", isStep: true, stepNumber: 2 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
+  { id: "step-impact", label: "Impact", isStep: true, stepNumber: 4 },
+];
 
 const Gamification = () => {
   return (
@@ -49,7 +59,9 @@ const Gamification = () => {
       {/* Project Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto flex gap-12">
+            <CaseStudyTOC sections={tocSections} />
+            <div className="max-w-4xl flex-1 min-w-0">
             <ScrollReveal>
               <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
                 <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
@@ -83,7 +95,7 @@ const Gamification = () => {
 
             {/* The Idea */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-idea" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Idea</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Let's be honest. Payments can feel boring.
@@ -100,7 +112,7 @@ const Gamification = () => {
 
             {/* The Challenge */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
@@ -117,7 +129,7 @@ const Gamification = () => {
 
             {/* Step 1 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-research" className="mb-20 scroll-mt-28">
                 <StepHeading number={1} title="Uncovering What Drives Users Back" accentWord="Drives" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -143,7 +155,7 @@ const Gamification = () => {
 
             {/* Step 2 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-rules" className="mb-20 scroll-mt-28">
                 <StepHeading number={2} title="Defining the Rules of the Game" accentWord="Rules" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -175,7 +187,7 @@ const Gamification = () => {
 
             {/* Step 3 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-design" className="mb-20 scroll-mt-28">
                 <StepHeading number={3} title="Designing the Experience to Feel Alive" accentWord="Alive" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -213,7 +225,7 @@ const Gamification = () => {
 
             {/* Step 4 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-impact" className="mb-20 scroll-mt-28">
                 <StepHeading number={4} title="Measuring the Impact" accentWord="Impact" isLast />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -227,6 +239,7 @@ const Gamification = () => {
                 />
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

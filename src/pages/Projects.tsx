@@ -11,6 +11,17 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "where-it-began", label: "Where It Began" },
+  { id: "what-i-owned", label: "What I Owned" },
+  { id: "the-challenge", label: "The Challenge" },
+  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
+  { id: "step-design", label: "Design", isStep: true, stepNumber: 2 },
+  { id: "step-build", label: "Build", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const Projects = () => {
   return (
@@ -49,7 +60,9 @@ const Projects = () => {
       {/* Project Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto flex gap-12">
+            <CaseStudyTOC sections={tocSections} />
+            <div className="max-w-4xl flex-1 min-w-0">
             <ScrollReveal>
               <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
                 <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
@@ -80,7 +93,7 @@ const Projects = () => {
 
             {/* Where It Began */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="where-it-began" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">Where it all began</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   It started with one big question:
@@ -94,7 +107,7 @@ const Projects = () => {
 
             {/* Responsibilities */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-owned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-8">What I Owned</h2>
                 <div className="max-w-[620px]">
                   {[
@@ -114,7 +127,7 @@ const Projects = () => {
 
             {/* The Challenge */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Agents and merchants in the DRC were already used to local mobile money systems. But there was a gap.
@@ -131,7 +144,7 @@ const Projects = () => {
 
             {/* Step 1: Research */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-research" className="mb-20 scroll-mt-28">
                 <StepHeading number={1} title="Finding the Story in the Market" accentWord="Story" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -193,7 +206,7 @@ const Projects = () => {
 
             {/* Step 2: Design */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-design" className="mb-20 scroll-mt-28">
                 <StepHeading number={2} title='Designing What "Simple" Should Feel Like' accentWord="Simple" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -259,7 +272,7 @@ const Projects = () => {
 
             {/* Step 3: Engineering */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-build" className="mb-20 scroll-mt-28">
                 <StepHeading number={3} title="Working with Engineers and Moving Fast" accentWord="Moving Fast" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -310,7 +323,7 @@ const Projects = () => {
 
             {/* Step 4: Launch */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-launch" className="mb-20 scroll-mt-28">
                 <StepHeading number={4} title="Launching the MVP" accentWord="MVP" isLast />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -327,6 +340,7 @@ const Projects = () => {
                 />
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

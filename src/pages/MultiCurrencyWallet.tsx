@@ -11,6 +11,15 @@ import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
+import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
+
+const tocSections = [
+  { id: "the-idea", label: "The Idea" },
+  { id: "step-problem", label: "Problem", isStep: true, stepNumber: 1 },
+  { id: "step-system", label: "System", isStep: true, stepNumber: 2 },
+  { id: "step-experience", label: "Experience", isStep: true, stepNumber: 3 },
+  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+];
 
 const MultiCurrencyWallet = () => {
   return (
@@ -36,7 +45,9 @@ const MultiCurrencyWallet = () => {
       {/* Project Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto flex gap-12">
+            <CaseStudyTOC sections={tocSections} />
+            <div className="max-w-4xl flex-1 min-w-0">
             {/* Hero Image */}
             <ScrollReveal>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
@@ -81,7 +92,7 @@ const MultiCurrencyWallet = () => {
 
             {/* The Idea */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-idea" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Idea</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   The first time I heard an agent complain, it sounded simple:
@@ -105,7 +116,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 1 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-problem" className="mb-20 scroll-mt-28">
                 <StepHeading number={1} title="Understanding the Real Problem" accentWord="Real" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -123,7 +134,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 2 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-system" className="mb-20 scroll-mt-28">
                 <StepHeading number={2} title="Designing the Wallet System" accentWord="System" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -155,7 +166,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 3 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-experience" className="mb-20 scroll-mt-28">
                 <StepHeading number={3} title="Mapping the User Experience" accentWord="Experience" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -178,7 +189,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 4 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-launch" className="mb-20 scroll-mt-28">
                 <StepHeading number={4} title="Bringing It to Life" accentWord="Life" isLast />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
@@ -198,6 +209,7 @@ const MultiCurrencyWallet = () => {
                 />
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
