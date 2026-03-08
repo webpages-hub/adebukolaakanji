@@ -162,7 +162,7 @@ const GlobalTransfers = () => {
           <div className="border border-border rounded-md overflow-hidden max-w-[620px]">
             <div className="bg-foreground px-5 py-3 flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span className="font-mono-tag text-[10px] uppercase tracking-[0.1em] text-background/70">Optimized Transaction Flow</span>
+              <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Optimized Transaction Flow</span>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-3 p-6">
               {["Sender", "Partner API", "Recipient"].map((step, index, array) => (
