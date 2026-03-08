@@ -17,7 +17,7 @@ const Projects = () => {
               Building a Local Payments MVP in 6 Weeks
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              My Journey Launching in the DRC
+              What six weeks in a brand new market actually looks like.
             </p>
           </div>
           
@@ -56,7 +56,7 @@ const Projects = () => {
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground mb-2">Goal</p>
                 <p className="text-lg leading-relaxed">
-                  Build and launch a local payments product that promotes interoperability, and enable agents to serve customers better.
+                  Build and launch a local payment product that agents and merchants in the DRC could trust from day one — fast, reliable, and built around how they actually move money.
                 </p>
               </div>
             </div>
@@ -73,36 +73,32 @@ const Projects = () => {
                     "Can we make everyday payments simpler for people in the DRC?"
                   </p>
                 </blockquote>
-                <p className="text-lg leading-relaxed mb-6">
-                  At the time, Nomba had built a solid fintech product in Nigeria, but we wanted to take on new challenges in a new market. A local payments solution that could help agents and merchants serve customers faster and more reliably in the DRC.
-                </p>
                 <p className="text-lg leading-relaxed">
-                  I was the product manager leading this expansion. And from day one, I knew this wasn't going to be about 
-                  building fast, it was about building smart.
+                  Nomba had already built a product that worked in Nigeria. But a new market meant new users, new infrastructure constraints, and new reasons people might not trust you. My job was to figure out what "simple" actually meant here, before we wrote a single line of code.
                 </p>
               </div>
             </div>
 
             {/* Responsibilities */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-8">My Responsibilities</h2>
+              <h2 className="text-4xl font-bold mb-8">What I Owned</h2>
               <div className="grid gap-6">
                 {[
                   {
                     icon: Target,
-                    text: "Conducted market and user research to understand agent pain points, onboarding bottlenecks, and trust drivers."
+                    text: "Ran on-ground market and user research, interviewing agents, merchants, and mobile money operators to understand what trust actually meant in this market."
                   },
                   {
                     icon: Users,
-                    text: "Mapped the agent journey on Figma and collaborated with engineers to design a mobile-first onboarding experience."
+                    text: "Mapped the full agent journey from onboarding to first transaction, then worked with the designer to turn those flows into a mobile-first experience that made sense without training."
                   },
                   {
                     icon: CheckCircle2,
-                    text: "Screened and secured reliable local partners to streamline agent verification and float funding."
+                    text: "Identified and vetted local partners to handle agent verification and float funding, solving two of the biggest blockers to launch."
                   },
                   {
                     icon: TrendingUp,
-                    text: "Launched an MVP within six weeks, leading to rapid agent adoption and consistent transaction growth."
+                    text: "Shipped the MVP in six weeks, onboarding 1,000+ agents and processing millions in local currency transactions within the first two months."
                   }
                 ].map((item, index) => (
                   <div key={index} className="flex gap-4 p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-base">
@@ -127,8 +123,7 @@ const Projects = () => {
                   customers and track transactions easily without juggling multiple accounts or sim cards.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Our task was simple on paper but complex in practice: Design, build, and launch a local payment MVP 
-                  that agents and merchants could trust.
+                  The task was clear. What wasn't clear was whether six weeks was enough to do it right.
                 </p>
               </div>
             </div>
@@ -137,7 +132,7 @@ const Projects = () => {
             <div className="mb-20">
               <div className="flex items-center gap-3 mb-6">
                 <Lightbulb className="w-8 h-8 text-accent" />
-                <h2 className="text-4xl font-bold">Step 1: Finding the Story in the Market</h2>
+                <h2 className="text-4xl font-bold">Step 1: Understanding the Market Before Assuming Anything</h2>
               </div>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
@@ -152,7 +147,7 @@ const Projects = () => {
                   in reviews, and what "trust" meant in this market.
                 </p>
                 <div className="bg-accent/10 border-l-4 border-accent rounded-r-xl p-6 my-8">
-                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" }}>What stood out was eye-opening:</p>
+                  <p className="font-semibold mb-4" style={{ color: "#1A1A1A" }}>Four things came up over and over again:</p>
                   <ul className="space-y-2">
                     <li>👉 Speed mattered more than fancy features.</li>
                     <li>👉 Downtime killed adoption.</li>
@@ -255,7 +250,7 @@ const Projects = () => {
               <h2 className="text-4xl font-bold mb-6">Step 3: Working with Engineers (and Moving Fast)</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  With design ready, execution became everything.
+                  Design locked. Now the question was whether we could build it without scope creeping our way past the deadline.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   I held two-week sprints and daily check-ins with engineers, mostly to unblock decisions quickly.
@@ -300,13 +295,13 @@ const Projects = () => {
 
             {/* Step 4: Launch */}
             <div className="mb-20">
-              <h2 className="text-4xl font-bold mb-6">Step 4: Launching the MVP</h2>
+              <h2 className="text-4xl font-bold mb-6">Step 4: Shipping It</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
                   We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  Within two months, it was clear: It worked.
+                  Within two months, the answer was clear. It worked.
                 </p>
                 <div className="bg-accent/10 rounded-xl p-8 my-8">
                   <p className="text-lg leading-relaxed mb-4">
@@ -341,13 +336,13 @@ const Projects = () => {
               <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
               <div className="prose prose-lg max-w-none mb-8">
                 <p className="text-lg leading-relaxed mb-6">
-                  This project changed how I think about building products.
+                  Six weeks sounds short. But constraints have a way of making you ruthlessly clear about what actually matters.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 my-8">
                   {[
                     "Local context trumps global assumptions.",
                     "Speed doesn't have to sacrifice quality.",
-                    "Launch is really just the beginning — not the end."
+                    "Launch is the beginning. Not the end."
                   ].map((learning, index) => (
                     <div key={index} className="bg-card rounded-xl p-6 shadow-md border-t-4 border-accent">
                       <p className="text-lg font-semibold">{learning}</p>
@@ -355,7 +350,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <p className="text-lg leading-relaxed mb-6">
-                  The six-week sprint wasn't just a timeline. It was a test of clarity, focus, and belief.
+                  The six-week sprint forced every decision to earn its place.
                 </p>
                 <p className="text-lg leading-relaxed">
                   If I were to do it again, I'd involve agents even earlier in usability testing and integrate 
