@@ -249,8 +249,8 @@ const Gamification = () => {
                 </div>
                 <div className="bg-card rounded-2xl p-8 shadow-elegant text-center border-t-4 border-accent">
                   <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-accent mb-2">+</div>
-                  <p className="text-muted-foreground">Repeat Usage</p>
+                  <div className="text-4xl font-bold text-accent mb-2">Measurable</div>
+                  <p className="text-muted-foreground">Repeat Usage Growth</p>
                 </div>
               </div>
 
