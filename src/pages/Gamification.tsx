@@ -256,7 +256,7 @@ const Gamification = () => {
 
               <div className="bg-white rounded-xl p-8">
                 <p className="text-lg leading-relaxed font-semibold">
-                  We saw a spike in repeat usage. Proof that people were coming back, not because they had to… but because they wanted to.
+                  Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own.
                 </p>
               </div>
             </div>
