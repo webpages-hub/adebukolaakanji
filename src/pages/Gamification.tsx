@@ -95,7 +95,7 @@ const Gamification = () => {
 
             {/* The Idea */}
             <ScrollReveal>
-              <div className="mb-20 case-study-prose">
+              <div id="the-idea" className="mb-20 case-study-prose scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">The Idea</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
                   Let's be honest. Payments can feel boring.
