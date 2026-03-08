@@ -134,7 +134,7 @@ const MultiCurrencyWallet = () => {
 
             {/* Step 2 */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="step-system" className="mb-20 scroll-mt-28">
                 <StepHeading number={2} title="Designing the Wallet System" accentWord="System" />
                 <div className="case-study-prose">
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
