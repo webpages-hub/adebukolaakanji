@@ -256,7 +256,7 @@ const Projects = () => {
               </div>
 
               <DrivingQuestion 
-                question='Every week had one question: "What\'s the minimum we can launch that still delivers value?"'
+                question={"Every week had one question: \"What's the minimum we can launch that still delivers value?\""}
                 goldEmphasis="minimum we can launch"
               />
 
