@@ -107,7 +107,7 @@ const Projects = () => {
 
             {/* Responsibilities */}
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-owned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-8">What I Owned</h2>
                 <div className="max-w-[620px]">
                   {[
