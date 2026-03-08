@@ -15,14 +15,14 @@ const About = () => {
               <div className="grid grid-cols-2 gap-3 w-full max-w-[420px]">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <img
-                    src={aboutPhoto1}
+                    src={aboutPhoto1
                     alt="Adebukola Akanji"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden mt-8">
                   <img
-                    src={heroPhoto}
+                    src={haboutPhoto2
                     alt="Adebukola working"
                     className="w-full h-full object-cover"
                   />
