@@ -71,7 +71,7 @@ const CaseStudies = () => {
                 Case Studies
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Explore my journey building products that solve real problems and drive meaningful impact.
+                Every case study here started with a real user problem and a team trying to figure out the right answer. Here's what we learned.
               </p>
             </div>
 
