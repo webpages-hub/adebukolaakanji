@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
