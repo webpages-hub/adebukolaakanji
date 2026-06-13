@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import { ArrowRight } from "lucide-react";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import FeaturedWork from "@/components/FeaturedWork";
@@ -26,6 +27,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Adebukola Akanji — Product Manager Building Fintech & Payments" description="Portfolio of Adebukola Akanji, a Product Manager building fintech and payments products that scale globally and deliver measurable growth." path="/" />
       <Navigation />
       
       {/* Hero Section */}

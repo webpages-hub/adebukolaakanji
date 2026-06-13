@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft, Lightbulb } from "lucide-react";
@@ -26,6 +27,7 @@ const tocSections = [
 const GlobalTransfers = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Global Transfers Case Study — Adebukola Akanji" description="How I built a cross-border transfer product that delivered money home in under an hour and grew to $600K in revenue within seven months." path="/global-transfers" />
       <Navigation />
       
       {/* Hero Section */}

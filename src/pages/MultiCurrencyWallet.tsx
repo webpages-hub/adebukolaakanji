@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
@@ -25,6 +26,7 @@ const tocSections = [
 const MultiCurrencyWallet = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Multi-Currency Wallet Case Study — Adebukola Akanji" description="How I designed a multi-currency wallet that made managing money across currencies effortless and grew daily active usage by 20%." path="/multi-currency-wallet" />
       <Navigation />
       
       {/* Hero Section */}

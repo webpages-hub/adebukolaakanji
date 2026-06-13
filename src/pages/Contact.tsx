@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Contact — Adebukola Akanji" description="Get in touch with Adebukola Akanji about product roles, collaborations, and consulting." path="/contact" />
       <Navigation />
       
       <section className="pt-32 pb-20">
