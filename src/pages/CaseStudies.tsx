@@ -43,6 +43,13 @@ const caseStudies: CaseStudy[] = [
     href: "/multi-currency-wallet",
     category: ["live"],
   },
+  {
+    name: "PM Log",
+    description: "A side project I am driving to help aspiring and junior product managers build their skills and get better at being product managers.",
+    tags: ["PRODUCT MANAGEMENT", "SKILL BUILDING", "MENTORSHIP"],
+    href: "https://pmlog.vercel.app/",
+    category: ["vibe"],
+  },
 ];
 
 const tabs: { label: string; value: Category }[] = [
