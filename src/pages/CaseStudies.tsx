@@ -121,12 +121,23 @@ const CaseStudies = () => {
                     ))}
                   </div>
                   <div className="flex justify-start md:justify-end">
-                    <Link
-                      to={cs.href}
-                      className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
-                    >
-                      View Case Study <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {cs.href.startsWith("http") ? (
+                      <a
+                        href={cs.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                      >
+                        Visit Project <ArrowRight className="w-4 h-4" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={cs.href}
+                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                      >
+                        View Case Study <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
