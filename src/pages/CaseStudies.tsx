@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -68,6 +69,7 @@ const CaseStudies = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Case Studies — Adebukola Akanji" description="Fintech and payments case studies from Adebukola Akanji: market entry, cross-border transfers, retention, and multi-currency wallets." path="/case-studies" />
       <Navigation />
       
       <section className="pt-32 pb-20">

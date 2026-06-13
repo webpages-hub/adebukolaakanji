@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Mail, Phone, Linkedin, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ const Resume = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Resume — Adebukola Akanji" description="Resume and experience of Adebukola Akanji, Product Manager in fintech and global payments." path="/resume" />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-24 pb-16">

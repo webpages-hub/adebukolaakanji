@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Users, Target, Lightbulb, Clock, TrendingUp, Zap, Eye, Code, BarChart3, Brain, Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
@@ -27,6 +28,7 @@ const tocSections = [
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="DRC Payments Case Study — Adebukola Akanji" description="How I launched a locally compliant payment product in the DRC in six weeks and drove rapid adoption across a brand new market." path="/projects" />
       <Navigation />
       
       {/* Hero Section */}

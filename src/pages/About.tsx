@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import aboutPhoto1 from "@/assets/about-photo-1.jpg";
 import aboutPhoto2 from "@/assets/about-photo-2.jpg";
@@ -6,6 +7,7 @@ import aboutPhoto2 from "@/assets/about-photo-2.jpg";
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="About — Adebukola Akanji" description="Get to know Adebukola Akanji, a Product Manager leading fintech expansions across global markets." path="/about" />
       <Navigation />
       <main className="container mx-auto px-6 pt-32 pb-16">
         <div className="max-w-6xl mx-auto">

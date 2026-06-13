@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
 import { Target, Trophy, Users, TrendingUp, Zap, CheckCircle2, BarChart3, Sparkles, Star, Award, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
@@ -26,6 +27,7 @@ const tocSections = [
 const Gamification = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Gamification Case Study — Adebukola Akanji" description="How a custom badge and rewards system tied to real product behavior lifted user retention by 10%." path="/gamification" />
       <Navigation />
       
       {/* Hero Section */}
