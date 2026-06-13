@@ -43,6 +43,13 @@ const caseStudies: CaseStudy[] = [
     href: "/multi-currency-wallet",
     category: ["live"],
   },
+  {
+    name: "PM Log",
+    description: "A side project I am driving to help aspiring and junior product managers build their skills and get better at being product managers.",
+    tags: ["PRODUCT MANAGEMENT", "SKILL BUILDING", "MENTORSHIP"],
+    href: "https://pmlog.vercel.app/",
+    category: ["vibe"],
+  },
 ];
 
 const tabs: { label: string; value: Category }[] = [
@@ -114,12 +121,23 @@ const CaseStudies = () => {
                     ))}
                   </div>
                   <div className="flex justify-start md:justify-end">
-                    <Link
-                      to={cs.href}
-                      className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
-                    >
-                      View Case Study <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {cs.href.startsWith("http") ? (
+                      <a
+                        href={cs.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                      >
+                        Visit Project <ArrowRight className="w-4 h-4" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={cs.href}
+                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                      >
+                        View Case Study <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
