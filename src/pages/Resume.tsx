@@ -83,14 +83,15 @@ const Resume = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground italic mb-4">
-              A fintech with $58.5M in funding, providing payment solutions to 1M+ users across multiple markets.
+              A B2B fintech with $58.5M in funding, providing payment infrastructure and solutions to 1M+ businesses across multiple markets.
             </p>
             <ul className="space-y-2 text-muted-foreground">
               {[
-                "Drove international expansion into six markets (UK, Canada, France, Belgium, Germany, and DRC) within six weeks, leveraging user research and product localization to achieve rapid go-to-market readiness.",
-                "Led market entry into the Democratic Republic of Congo, localizing the product for regulatory and cultural fit within six weeks, resulting in rapid user adoption and strong transaction growth.",
-                "Launched a cross-border payment product that generated $600K in fee revenue within eight months, driving early adoption in high-value remittance corridors.",
-                "Built and scaled a multi-currency wallet, increasing daily active usage by 20% and boosting cross-currency transactions by 10%.",
+                "Served as the founding PM for Nomba's global business expansion, taking a product from zero to live across six markets in under six weeks: UK, Canada, France, Belgium, Germany, and DRC.",
+                "Scaled the expansion product to process over $1M in total payment volume across four currency corridors within twelve months of launch.",
+                "Built the DRC payments infrastructure from scratch, launching a cross-border corridor that generated $600K in fee revenue within eight months.",
+                "Owned end-to-end product strategy, roadmap, and delivery for Nomba's Global Payouts and Collections API product, collaborating with engineering on system design and validating API workflows.",
+                "Built and scaled a multi-currency wallet, increasing daily active usage by 20% and cross-currency transactions by 10% within the first months of launch.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
@@ -117,9 +118,9 @@ const Resume = () => {
             </p>
             <ul className="space-y-2 text-muted-foreground">
               {[
-                "Developed a go-to-market strategy for Canada, aligning product compliance, user behavior insights, and partnerships to position Payfi for global expansion.",
-                "Implemented data-driven decision frameworks through A/B testing, cohort analysis, and user feedback loops that improved product outcomes by 25%.",
-                "Launched a gamification and rewards system, improving user retention by 10% and increasing BNPL customer engagement.",
+                "Developed the go-to-market strategy for Canada expansion, aligning product, compliance, and partnership workstreams to prepare for market entry.",
+                "Reduced bug rates and improved conversion through data-driven decision frameworks, improving product outcomes by 25%.",
+                "Launched a gamification and rewards feature that increased user retention by 10%.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
@@ -146,9 +147,9 @@ const Resume = () => {
             </p>
             <ul className="space-y-2 text-muted-foreground">
               {[
-                "Managed 5+ media projects, improving on-time delivery by 30% and reducing costs by 20% through efficient project management and process improvements.",
-                "Launched multi-channel campaigns that increased audience engagement by 40% through data-backed optimization.",
-                "Introduced a project management system that improved team efficiency by 35%.",
+                "Managed end-to-end delivery of five concurrent media products, improving on-time delivery by 30% and reducing project costs by 20%.",
+                "Led a cross-functional team of 15+ designers, editors, and marketing specialists to launch a multi-channel content product that increased audience engagement by 40%.",
+                "Introduced a structured product management framework across the team, improving delivery efficiency by 25% and reducing tracking errors by 35%.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
