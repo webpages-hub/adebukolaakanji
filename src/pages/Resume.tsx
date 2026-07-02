@@ -91,7 +91,6 @@ const Resume = () => {
                 "Led market entry into the Democratic Republic of Congo, localizing the product for regulatory and cultural fit within six weeks, resulting in rapid user adoption and strong transaction growth.",
                 "Launched a cross-border payment product that generated $600K in fee revenue within eight months, driving early adoption in high-value remittance corridors.",
                 "Built and scaled a multi-currency wallet, increasing daily active usage by 20% and boosting cross-currency transactions by 10%.",
-                "Designed a rewards-based agent acquisition model, improving onboarding efficiency by 15% and agent engagement by 25%, strengthening network growth in emerging markets.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
