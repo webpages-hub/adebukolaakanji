@@ -144,8 +144,8 @@ const GlobalTransfers = () => {
             </div>
 
             {/* Results */}
-            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mx-6">
+            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mr-6">
                 <DarkStatsSection
                   introText="We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage — and the numbers followed."
                   stats={[

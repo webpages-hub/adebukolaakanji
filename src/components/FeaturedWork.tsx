@@ -64,7 +64,7 @@ const FeaturedWork = () => {
               >
                 {/* Image */}
                 <div className="w-full md:w-1/2">
-                  <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+                  <div className={`overflow-hidden aspect-[4/3] ${project.name === "Global Expansion" ? "" : "rounded-2xl"}`}>
                     <img
                       src={project.image}
                       alt={project.name}

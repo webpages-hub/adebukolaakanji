@@ -113,21 +113,23 @@ const CaseStudies = () => {
               {filtered.map((cs) => (
                 <div
                   key={cs.name}
-                  className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr_1fr] gap-6 items-center py-6 md:py-8"
+                  className="grid grid-cols-1 md:grid-cols-[25fr_55fr_20fr] gap-6 items-center py-6 md:py-8"
                 >
                   <div className="font-bold text-lg">{cs.name}</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {cs.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {cs.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {cs.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {cs.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs text-muted-foreground uppercase tracking-wide"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div className="flex justify-start md:justify-end">
                     {cs.href.startsWith("http") ? (
@@ -135,14 +137,14 @@ const CaseStudies = () => {
                         href={cs.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline transition-base"
                       >
                         Visit Project <ArrowRight className="w-4 h-4" />
                       </a>
                     ) : (
                       <Link
                         to={cs.href}
-                        className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline transition-base"
                       >
                         View Case Study <ArrowRight className="w-4 h-4" />
                       </Link>

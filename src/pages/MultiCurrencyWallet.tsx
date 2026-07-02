@@ -143,8 +143,8 @@ const MultiCurrencyWallet = () => {
             </div>
 
             {/* Results */}
-            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mx-6">
+            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mr-6">
                 <DarkStatsSection
                   introText="Users finally had the flexibility to transact in the currencies they actually lived and earned in. What I loved most was hearing users say, 'I don't have to think twice anymore.'"
                   stats={[

@@ -145,8 +145,8 @@ const Gamification = () => {
             </div>
 
             {/* Results */}
-            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mx-6">
+            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mr-6">
                 <DarkStatsSection
                   introText="Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own."
                   stats={[

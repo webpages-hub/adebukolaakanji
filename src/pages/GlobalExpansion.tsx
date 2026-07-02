@@ -155,8 +155,8 @@ const GlobalExpansion = () => {
             </div>
 
             {/* Results */}
-            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mx-6">
+            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mr-6">
                 <DarkStatsSection
                   introText="A product built for six markets, used in nine. The infrastructure was complex. The experience was not."
                   stats={[

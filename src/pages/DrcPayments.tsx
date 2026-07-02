@@ -137,8 +137,8 @@ const DrcPayments = () => {
             </div>
 
             {/* Results */}
-            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mx-6">
+            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mr-6">
                 <DarkStatsSection
                   introText="We rolled out the MVP quietly, onboarding a small batch of agents to test the system in real conditions. Within two months, it was clear: It worked."
                   stats={[
