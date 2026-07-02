@@ -25,10 +25,10 @@ const tocSections = [
   { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
 ];
 
-const Projects = () => {
+const DrcPayments = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="DRC Payments Case Study — Adebukola Akanji" description="How I launched a locally compliant payment product in the DRC in six weeks and drove rapid adoption across a brand new market." path="/projects" />
+      <SEO title="DRC Payments Case Study — Adebukola Akanji" description="How I launched a locally compliant payment product in the DRC in six weeks and drove rapid adoption across a brand new market." path="/drc-payments" />
       <Navigation />
       
       {/* Hero Section */}
@@ -461,4 +461,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default DrcPayments;

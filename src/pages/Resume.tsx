@@ -61,7 +61,7 @@ const Resume = () => {
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
           <div className="glass-card p-6">
             <p className="text-muted-foreground leading-relaxed">
-              Product Manager with a strong track record in scaling fintech products, cross-border payment growth, and international market expansion. Experienced in leading go-to-market strategies across Africa, Europe, and North America, and aligning products with regulatory and user needs. Adept at driving measurable business growth through data-driven decisions, strategic partnerships, and customer-centric innovation.
+              Product Manager specialising in cross-border payments and emerging markets expansion. Over 4.5 years in fintech, I have taken products from zero to live across six markets, built payment infrastructure that generated $600K in fee revenue within eight months, and scaled a global expansion product to process over $1M in total payment volume. I build financial products that work in the markets businesses find too complex to enter.
             </p>
           </div>
         </section>

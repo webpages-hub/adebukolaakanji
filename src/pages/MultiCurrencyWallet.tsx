@@ -300,7 +300,7 @@ const MultiCurrencyWallet = () => {
                   <span className="sm:hidden">Previous</span>
                 </Button>
               </Link>
-              <Link to="/projects" className="w-full sm:w-auto">
+              <Link to="/drc-payments" className="w-full sm:w-auto">
                 <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                   <span className="hidden sm:inline">Next: DRC Payments</span>
                   <span className="sm:hidden">Next</span>

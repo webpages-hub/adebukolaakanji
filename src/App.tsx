@@ -2,11 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import CaseStudies from "./pages/CaseStudies";
-import Projects from "./pages/Projects";
+import DrcPayments from "./pages/DrcPayments";
+import GlobalExpansion from "./pages/GlobalExpansion";
 import GlobalTransfers from "./pages/GlobalTransfers";
 import Gamification from "./pages/Gamification";
 import MultiCurrencyWallet from "./pages/MultiCurrencyWallet";
@@ -27,7 +28,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/drc-payments" element={<DrcPayments />} />
+          <Route path="/projects" element={<Navigate to="/drc-payments" replace />} />
+          <Route path="/global-expansion" element={<GlobalExpansion />} />
           <Route path="/global-transfers" element={<GlobalTransfers />} />
           <Route path="/gamification" element={<Gamification />} />
           <Route path="/multi-currency-wallet" element={<MultiCurrencyWallet />} />

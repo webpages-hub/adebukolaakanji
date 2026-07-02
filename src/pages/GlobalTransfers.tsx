@@ -27,7 +27,7 @@ const tocSections = [
 const GlobalTransfers = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Global Transfers Case Study — Adebukola Akanji" description="How I built a cross-border transfer product that delivered money home in under an hour and grew to $600K in revenue within seven months." path="/global-transfers" />
+      <SEO title="Global Transfers Case Study — Adebukola Akanji" description="How I built a cross-border transfer product that delivered money home in under an hour and grew to $600K in fee revenue within eight months." path="/global-transfers" />
       <Navigation />
       
       {/* Hero Section */}
@@ -70,7 +70,7 @@ const GlobalTransfers = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
-                  <p className="text-lg font-semibold mb-6">Two Months</p>
+                  <p className="text-lg font-semibold mb-6">Six Weeks</p>
                   
                   <p className="text-muted-foreground mb-2">Role</p>
                   <p className="text-lg font-semibold mb-6">Product Manager</p>
@@ -83,7 +83,7 @@ const GlobalTransfers = () => {
                   <p className="text-lg font-semibold mb-6">Engineering, Design, Partnerships, Operations, Legal and Compliance</p>
                   
                   <p className="text-muted-foreground mb-2">Location</p>
-                  <p className="text-lg font-semibold mb-6">Democratic Republic of Congo (DRC)</p>
+                  <p className="text-lg font-semibold mb-6">UK, Canada, France, Belgium, Germany, DRC</p>
                 </div>
               </div>
               <div className="pt-6 border-t border-border">
@@ -285,9 +285,9 @@ const GlobalTransfers = () => {
               </p>
             </div>
 
-            <ResultCallout 
-              stat="$200K+"
-              description="revenue generated in the first three months, with millions processed in transfers."
+            <ResultCallout
+              stat="$600K+"
+              description="in fee revenue generated within eight months, with millions processed in transfers."
             />
           </div>
         </ScrollReveal>
@@ -300,7 +300,7 @@ const GlobalTransfers = () => {
       <DarkStatsSection
         introText="We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage — and the numbers followed."
         stats={[
-          { number: "$200K+", description: "Revenue generated in the first three months" },
+          { number: "$600K+", description: "In fee revenue generated within eight months" },
           { number: "Millions", description: "In transfers processed across multiple corridors" },
           { number: "<1 hr", description: "Average delivery time, down from days" }
         ]}
@@ -370,7 +370,7 @@ const GlobalTransfers = () => {
 
             {/* Navigation */}
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pb-8 border-b border-border">
-              <Link to="/projects" className="w-full sm:w-auto">
+              <Link to="/drc-payments" className="w-full sm:w-auto">
                 <Button variant="ghost" className="gap-2 w-full sm:w-auto">
                   <ArrowLeft className="w-4 h-4" />
                   <span className="hidden sm:inline">Previous: DRC Payments</span>
