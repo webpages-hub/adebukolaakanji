@@ -61,9 +61,10 @@ const GlobalExpansion = () => {
       {/* Content */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto flex gap-12">
-            <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[12rem_1fr] lg:[grid-template-rows:auto_auto_auto] gap-x-12">
+            <CaseStudyTOC sections={tocSections} className="lg:col-start-1 lg:row-start-1 lg:row-span-full" />
+
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-1">
 
               {/* Project Overview */}
               <ScrollReveal>
@@ -152,26 +153,22 @@ const GlobalExpansion = () => {
               </ScrollReveal>
 
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Results */}
-      <div id="results" className="scroll-mt-28">
-        <DarkStatsSection
-          introText="A product built for six markets, used in nine. The infrastructure was complex. The experience was not."
-          stats={[
-            { number: "$1M+", description: "Total payment volume processed across four currency corridors" },
-            { number: "90%", description: "Onboarding completion rate after tiered approach was introduced" },
-            { number: "9", description: "Countries reached, including 3 with no marketing spend" },
-          ]}
-        />
-      </div>
+            {/* Results */}
+            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mx-6">
+                <DarkStatsSection
+                  introText="A product built for six markets, used in nine. The infrastructure was complex. The experience was not."
+                  stats={[
+                    { number: "$1M+", description: "Total payment volume processed across four currency corridors" },
+                    { number: "90%", description: "Onboarding completion rate after tiered approach was introduced" },
+                    { number: "9", description: "Countries reached, including 3 with no marketing spend" },
+                  ]}
+                />
+              </div>
+            </div>
 
-      {/* What I Learned */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-3">
             <ScrollReveal>
               <div id="what-i-learned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
@@ -225,10 +222,6 @@ const GlobalExpansion = () => {
                     </ul>
                   </div>
                 </div>
-
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
-                  The 11% to 90% onboarding improvement is the moment I'm most proud of on this product. Not because the number is big, but because it came from understanding users well enough to redesign around their reality instead of our compliance checklist.
-                </p>
               </div>
             </ScrollReveal>
 
@@ -253,6 +246,8 @@ const GlobalExpansion = () => {
             <ScrollReveal>
               <ContactCard />
             </ScrollReveal>
+            </div>
+
           </div>
         </div>
       </section>

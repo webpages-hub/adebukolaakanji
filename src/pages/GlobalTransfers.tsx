@@ -2,26 +2,21 @@ import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
-import { Globe, TrendingUp, Clock, DollarSign, Zap, Users, ArrowRight, CheckCircle2, Target, BarChart3, Shield, ArrowLeft, Lightbulb } from "lucide-react";
+import { ArrowRight, CheckCircle2, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import globalTransfersHero from "@/assets/global-transfers-hero.jpg";
 import ContextTag from "@/components/case-study/ContextTag";
-import StepHeading from "@/components/case-study/StepHeading";
 import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
-import DrivingQuestion from "@/components/case-study/DrivingQuestion";
 import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
-import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
 import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 
 const tocSections = [
-  { id: "the-moment", label: "The Moment" },
-  { id: "the-challenge", label: "The Challenge" },
-  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
-  { id: "step-rates", label: "Rates", isStep: true, stepNumber: 2 },
-  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
-  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+  { id: "the-problem", label: "The Problem" },
+  { id: "what-i-did", label: "What I Did" },
+  { id: "results", label: "Results" },
+  { id: "what-i-learned", label: "What I Learned" },
 ];
 
 const GlobalTransfers = () => {
@@ -29,7 +24,7 @@ const GlobalTransfers = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Global Transfers Case Study — Adebukola Akanji" description="How I built a cross-border transfer product that delivered money home in under an hour and grew to $600K in fee revenue within eight months." path="/global-transfers" />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
@@ -46,9 +41,9 @@ const GlobalTransfers = () => {
 
           <ScrollReveal delay={0.15}>
             <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={globalTransfersHero} 
-                alt="Global Transfers User Interface" 
+              <img
+                src={globalTransfersHero}
+                alt="Global Transfers User Interface"
                 className="w-full h-auto"
               />
             </div>
@@ -59,10 +54,11 @@ const GlobalTransfers = () => {
       {/* Content */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto flex gap-12">
-            <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
-          
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[12rem_1fr] lg:[grid-template-rows:auto_auto_auto] gap-x-12">
+            <CaseStudyTOC sections={tocSections} className="lg:col-start-1 lg:row-start-1 lg:row-span-full" />
+
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-1">
+
           {/* Project Meta Cards */}
           <ScrollReveal>
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
@@ -71,7 +67,7 @@ const GlobalTransfers = () => {
                 <div>
                   <p className="text-muted-foreground mb-2">Timeline</p>
                   <p className="text-lg font-semibold mb-6">Six Weeks</p>
-                  
+
                   <p className="text-muted-foreground mb-2">Role</p>
                   <p className="text-lg font-semibold mb-6">Product Manager</p>
 
@@ -81,7 +77,7 @@ const GlobalTransfers = () => {
                 <div>
                   <p className="text-muted-foreground mb-2">Team</p>
                   <p className="text-lg font-semibold mb-6">Engineering, Design, Partnerships, Operations, Legal and Compliance</p>
-                  
+
                   <p className="text-muted-foreground mb-2">Location</p>
                   <p className="text-lg font-semibold mb-6">UK, Canada, France, Belgium, Germany, DRC</p>
                 </div>
@@ -95,223 +91,75 @@ const GlobalTransfers = () => {
             </div>
           </ScrollReveal>
 
-        {/* Hook Section */}
-        <ScrollReveal>
-          <div id="the-moment" className="mb-20 case-study-prose scroll-mt-28">
-            <h2 className="text-4xl font-bold mb-6">The Moment It Hit Me</h2>
-            
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-              I still remember the exact moment it clicked.
-            </p>
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-              A customer had tried to send $1000 to the United Arab Emirates from the Democratic Republic of Congo, and it took <span className="font-bold text-foreground">five days</span> to get to the receiver.
-            </p>
-            
-            <UserVoiceQuote 
-              quote="Five whole days. And when it finally landed, the receiver got less than expected. Fees. Exchange losses. Delays."
-              attribution="Customer pain point"
-            />
-
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-              That was the moment I knew: <span className="font-bold text-foreground">the global money transfer system was broken for ordinary users.</span>
-            </p>
-            <p className="text-[15px] leading-[1.75] text-muted-foreground">
-              So we decided to fix it. Faster delivery, fairer rates, full transparency. And I was the PM leading the build.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Challenge Section */}
-        <ScrollReveal>
-          <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
-            <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
-            
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-              International money transfers sound simple. Until you're the one building them.
-            </p>
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-              The existing rails were slow and expensive. Users waited days, sometimes a week. Partners took high fees. Currency spreads were unpredictable.
-            </p>
-
-            <h3 className="text-2xl font-bold mb-4">The Goal</h3>
-            <p className="text-[15px] leading-[1.75] text-muted-foreground mb-4">The product had to do four things well:</p>
-          </div>
-        </ScrollReveal>
-
-        {/* Insight Grid for goals */}
-        <ScrollReveal>
-          <div className="grid grid-cols-2 max-w-[620px] mb-20">
-            {[
-              "Move money across borders within minutes, not days",
-              "Offer competitive exchange rates without losing margin",
-              "Stay compliant while integrating licensed global partners",
-              "Scale seamlessly once adoption began"
-            ].map((goal, index) => (
-              <div key={index} className="flex items-start gap-3 p-5 border border-border">
-                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-1.5" />
-                <p className="text-[14px] text-foreground leading-[1.5]">{goal}</p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-
-        {/* Step 1: Research */}
-        <ScrollReveal>
-          <div id="step-research" className="mb-20 scroll-mt-28">
-            <StepHeading number={1} title="Understanding Where Money Actually Moves" accentWord="Money" />
-            <div className="case-study-prose">
+          {/* The Problem */}
+          <ScrollReveal>
+            <div id="the-problem" className="mb-20 scroll-mt-28 bg-card rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl font-bold mb-6">The Problem</h2>
               <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                Before touching the product, I needed to understand the corridors that actually mattered to our users.
+                A customer tried to send $1,000 from the DRC to the UAE. It took five days and arrived short. The existing rails were slow, expensive, and unpredictable. Users waited days, sometimes a week, and currency spreads were never transparent upfront.
               </p>
+              <UserVoiceQuote
+                quote="Five whole days. And when it finally landed, the receiver got less than expected. Fees. Exchange losses. Delays."
+                attribution="Customer pain point"
+              />
             </div>
+          </ScrollReveal>
 
-            <div className="grid md:grid-cols-3 gap-4 mb-6 max-w-[620px]">
-              {[
-                { emoji: "🌍 → 🇪🇺", title: "Africa → Europe", desc: "UK and France" },
-                { emoji: "🌍 → 🇨🇳", title: "Africa → Asia", desc: "Trade settlements" },
-                { emoji: "💱", title: "Top Pairs", desc: "USD/CNY, USD/NGN, EUR/USD" }
-              ].map((item, index) => (
-                <div key={index} className="p-5 border border-border rounded-md">
-                  <div className="text-2xl font-bold mb-2">{item.emoji}</div>
-                  <div className="font-semibold mb-1 text-[14px]">{item.title}</div>
-                  <div className="text-[13px] text-muted-foreground">{item.desc}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="case-study-prose">
-              <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                I dug into currency behaviors, volatility patterns, and average delivery times. Then I benchmarked competitors like Wise, Remitly, and Sendwave.
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Transaction Flow */}
-        <ScrollReveal>
-          <div className="mb-20">
-            <div className="border border-border rounded-md overflow-hidden max-w-[620px]">
-              <div className="bg-foreground px-5 py-3 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-accent" />
-                <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Optimized Transaction Flow</span>
-              </div>
-              <div className="flex flex-col md:flex-row items-center gap-3 p-6">
-                {["Sender", "Partner API", "Recipient"].map((step, index, array) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className={`${index === 1 ? 'bg-accent text-accent-foreground' : 'bg-[hsl(43_100%_95%)] border border-[hsl(43_100%_85%)]'} rounded-full px-4 py-2`}>
-                      <span className="text-[13px] font-medium">{step}</span>
-                    </div>
-                    {index < array.length - 1 && (
-                      <span className="text-accent hidden md:block">→</span>
-                    )}
+          {/* What I Did */}
+          <ScrollReveal>
+            <div id="what-i-did" className="mb-20 scroll-mt-28 bg-[#FDF5F0] rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl font-bold mb-8">What I Did</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  {
+                    number: "01",
+                    title: "Mapped where money actually moves",
+                    desc: "I researched the highest-value corridors and understood what users needed to feel confident hitting send. Speed and transparency were the two non-negotiables."
+                  },
+                  {
+                    number: "02",
+                    title: "Negotiated competitive rates",
+                    desc: "I worked with partners to offer competitive exchange rates while protecting business margin. Balancing user trust with profitability was the hardest part of this product."
+                  },
+                  {
+                    number: "03",
+                    title: "Designed for clarity not features",
+                    desc: "I stripped the flow to four steps: choose country, enter amount, see fees and rate instantly, confirm and send. We added a real-time rate refresh timer so users always felt in control."
+                  },
+                  {
+                    number: "04",
+                    title: "Launched and expanded methodically",
+                    desc: "We started with a handful of corridors, watched closely, then expanded coverage and cut delivery times further through smarter partner routing and batch processing."
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="bg-background border border-border rounded-xl p-6">
+                    <span className="text-xs font-semibold text-accent mb-3 block">{item.number}</span>
+                    <h3 className="text-[15px] font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="px-6 pb-4 text-center text-[13px] text-muted-foreground">
-                Average delivery: <span className="font-bold text-foreground">Under 1 hour</span>
+            </div>
+          </ScrollReveal>
+            </div>
+
+            {/* Results */}
+            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mx-6">
+                <DarkStatsSection
+                  introText="We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage — and the numbers followed."
+                  stats={[
+                    { number: "$600K+", description: "In fee revenue generated within eight months" },
+                    { number: "Millions", description: "In transfers processed across multiple corridors" },
+                    { number: "<1 hr", description: "Average delivery time, down from days" }
+                  ]}
+                />
               </div>
             </div>
-          </div>
-        </ScrollReveal>
 
-        {/* Step 2: FX Rates */}
-        <ScrollReveal>
-          <div id="step-rates" className="mb-20 scroll-mt-28">
-            <StepHeading number={2} title="Getting the Rates Right" accentWord="Rates" />
-            <div className="case-study-prose">
-              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                Rates are where users decide whether to trust you. Set them too high and they leave. Too low and the business bleeds. I worked with finance and data to build a model that kept both sides honest.
-              </p>
-            </div>
-
-            <div className="max-w-[620px] space-y-0">
-              {[
-                { label: "Bid Rate", desc: "The price users buy foreign currency at" },
-                { label: "Ask Rate", desc: "The rate we get from our partner or liquidity provider" },
-                { label: "The Spread", desc: "Our margin — a delicate balance between user value and revenue" }
-              ].map((item, index) => (
-                <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                  <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <span className="font-bold text-[14px]">{item.label}</span>
-                    <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Step 3: Design */}
-        <ScrollReveal>
-          <div id="step-design" className="mb-20 scroll-mt-28">
-            <StepHeading number={3} title="Designing for Clarity, Not Features" accentWord="Clarity" />
-            <div className="case-study-prose">
-              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                A fast, cheap transfer that confuses the user is still a bad product. I worked with the designer to strip the flow down to exactly what someone needs to feel confident hitting send.
-              </p>
-            </div>
-
-            {/* Numbered list box */}
-            <div className="border border-border rounded-md overflow-hidden max-w-[620px] my-8">
-              {[
-                "Choose country and currency",
-                "Enter amount",
-                "Instantly see delivery time, fees, and exchange rate",
-                "Confirm and send"
-              ].map((step, index) => (
-                <div key={index} className={`flex items-baseline gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                  <span className="text-[22px] font-bold text-accent">{index + 1}</span>
-                  <p className="text-[14px] text-foreground">{step}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="case-study-prose">
-              <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                We added a real-time rate refresh timer so users always felt in control.
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Step 4: Launch */}
-        <ScrollReveal>
-          <div id="step-launch" className="mb-20 scroll-mt-28">
-            <StepHeading number={4} title="Shipping and Scaling" accentWord="Scaling" isLast />
-            <div className="case-study-prose">
-              <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage and cut delivery times further through smarter partner routing and batch processing.
-              </p>
-            </div>
-
-            <ResultCallout
-              stat="$600K+"
-              description="in fee revenue generated within eight months, with millions processed in transfers."
-            />
-          </div>
-        </ScrollReveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dark Stats Section */}
-      <DarkStatsSection
-        introText="We started with a handful of corridors and watched closely. As adoption picked up, we expanded coverage — and the numbers followed."
-        stats={[
-          { number: "$600K+", description: "In fee revenue generated within eight months" },
-          { number: "Millions", description: "In transfers processed across multiple corridors" },
-          { number: "<1 hr", description: "Average delivery time, down from days" }
-        ]}
-      />
-
-      {/* What I Learned */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-3">
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-learned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
                   The biggest lesson had nothing to do with rates or APIs. Global payments are a trust problem first.
@@ -389,6 +237,8 @@ const GlobalTransfers = () => {
             <ScrollReveal>
               <ContactCard />
             </ScrollReveal>
+            </div>
+
           </div>
         </div>
       </section>

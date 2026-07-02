@@ -2,26 +2,21 @@ import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
-import { Target, Trophy, Users, TrendingUp, Zap, CheckCircle2, BarChart3, Sparkles, Star, Award, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
+import { CheckCircle2, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import gamificationHero from "@/assets/gamification-hero.jpg";
 import ContextTag from "@/components/case-study/ContextTag";
-import StepHeading from "@/components/case-study/StepHeading";
 import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
-import DrivingQuestion from "@/components/case-study/DrivingQuestion";
 import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
-import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
 import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 
 const tocSections = [
-  { id: "the-idea", label: "The Idea" },
-  { id: "the-challenge", label: "The Challenge" },
-  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
-  { id: "step-rules", label: "Rules", isStep: true, stepNumber: 2 },
-  { id: "step-design", label: "Design", isStep: true, stepNumber: 3 },
-  { id: "step-impact", label: "Impact", isStep: true, stepNumber: 4 },
+  { id: "the-problem", label: "The Problem" },
+  { id: "what-i-did", label: "What I Did" },
+  { id: "results", label: "Results" },
+  { id: "what-i-learned", label: "What I Learned" },
 ];
 
 const Gamification = () => {
@@ -29,7 +24,7 @@ const Gamification = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Gamification Case Study — Adebukola Akanji" description="How a custom badge and rewards system tied to real product behavior lifted user retention by 10%." path="/gamification" />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
@@ -46,12 +41,12 @@ const Gamification = () => {
               </p>
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={0.15}>
             <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={gamificationHero} 
-                alt="Gamification Project Hero" 
+              <img
+                src={gamificationHero}
+                alt="Gamification Project Hero"
                 className="w-full h-auto"
               />
             </div>
@@ -62,9 +57,10 @@ const Gamification = () => {
       {/* Project Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto flex gap-12">
-            <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[12rem_1fr] lg:[grid-template-rows:auto_auto_auto] gap-x-12">
+            <CaseStudyTOC sections={tocSections} className="lg:col-start-1 lg:row-start-1 lg:row-span-full" />
+
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-1">
             <ScrollReveal>
               <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
                 <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
@@ -72,7 +68,7 @@ const Gamification = () => {
                   <div>
                     <p className="text-muted-foreground mb-2">Timeline</p>
                     <p className="text-lg font-semibold mb-6">One Month</p>
-                    
+
                     <p className="text-muted-foreground mb-2">Role</p>
                     <p className="text-lg font-semibold mb-6">Product Manager</p>
 
@@ -82,7 +78,7 @@ const Gamification = () => {
                   <div>
                     <p className="text-muted-foreground mb-2">Team</p>
                     <p className="text-lg font-semibold mb-6">Engineering, Design</p>
-                    
+
                     <p className="text-muted-foreground mb-2">Location</p>
                     <p className="text-lg font-semibold mb-6">Nigeria</p>
                   </div>
@@ -96,173 +92,75 @@ const Gamification = () => {
               </div>
             </ScrollReveal>
 
-            {/* The Idea */}
+            {/* The Problem */}
             <ScrollReveal>
-              <div id="the-idea" className="mb-20 case-study-prose scroll-mt-28">
-                <h2 className="text-4xl font-bold mb-6">The Idea</h2>
+              <div id="the-problem" className="mb-20 scroll-mt-28 bg-card rounded-2xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-6">The Problem</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  Let's be honest. Payments can feel boring.
+                  Users on the BNPL product transacted once or twice then drifted away. Discounts alone were not fixing it. The data showed returning users declining steadily and no clear reason for them to come back on their own.
                 </p>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  You pay. You leave. Done.
-                </p>
-                <UserVoiceQuote quote="But what if making payments could feel rewarding?" />
-                <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                  That question became the brief. Build something inside the product that made coming back feel worth it.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* The Challenge */}
-            <ScrollReveal>
-              <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
-                <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  The data was clear. Returning users on the BNPL product were declining steadily, and discounts alone weren't going to fix it.
-                </p>
-                <DrivingQuestion 
-                  question="People would use BNPL once or twice, then drift away. No loyalty, no stickiness. How do we keep them coming back without relying solely on discounts or cashback?"
-                  goldEmphasis="keep them coming back"
-                />
-                <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                  That's when I started asking whether the product itself could be the reason people came back.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 1 */}
-            <ScrollReveal>
-              <div id="step-research" className="mb-20 scroll-mt-28">
-                <StepHeading number={1} title="Uncovering What Drives Users Back" accentWord="Drives" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Before designing anything, I ran user interviews. I needed to understand what would actually motivate someone to come back. Status? Savings? A sense of progress?
-                  </p>
-                </div>
-                
-                <UserVoiceQuote 
+                <UserVoiceQuote
                   quote="I want to feel like I'm progressing financially, not just spending."
                   attribution="User interview insight"
                 />
-
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    That was the insight everything else was built on.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    So we designed a rewards system built around progress and achievement. Not discounts, not cashback. The feeling of moving forward. Each level had its own theme and personality.
-                  </p>
-                </div>
               </div>
             </ScrollReveal>
 
-            {/* Step 2 */}
+            {/* What I Did */}
             <ScrollReveal>
-              <div id="step-rules" className="mb-20 scroll-mt-28">
-                <StepHeading number={2} title="Defining the Rules of the Game" accentWord="Rules" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    I worked on defining the entire structure of the gamification system:
-                  </p>
-                </div>
-
-                <div className="max-w-[620px]">
+              <div id="what-i-did" className="mb-20 scroll-mt-28 bg-[#FDF5F0] rounded-2xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-8">What I Did</h2>
+                <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    { title: "Level names and criteria", desc: "Designed tier progression with meaningful milestones" },
-                    { title: "Progress metrics", desc: "How users earned points, unlocked levels, and maintained streaks" },
-                    { title: "Reward logic", desc: "What users got at each stage" }
+                    {
+                      number: "01",
+                      title: "Ran user interviews to find the right lever",
+                      desc: "I spoke to users to understand what would motivate them to return. The insight was consistent: users wanted to feel financial progress, not just spend money."
+                    },
+                    {
+                      number: "02",
+                      title: "Designed a progress and achievement system",
+                      desc: "I built badges, levels, and rewards tied directly to how users actually used the product. Not generic incentives. Milestones that meant something."
+                    },
+                    {
+                      number: "03",
+                      title: "Made the experience feel alive",
+                      desc: "I worked closely with the designer to turn the flows into something users felt when they opened the app. The goal was simple: open the app, feel something."
+                    },
+                    {
+                      number: "04",
+                      title: "Launched and measured intrinsic motivation",
+                      desc: "I tracked repeat usage and engagement rates to confirm the system was driving users back on their own terms, not because of discounts or push notifications."
+                    },
                   ].map((item, index) => (
-                    <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                      <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
-                      <div>
-                        <span className="font-bold text-[14px]">{item.title}</span>
-                        <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
-                      </div>
+                    <div key={index} className="bg-background border border-border rounded-xl p-6">
+                      <span className="text-xs font-semibold text-accent mb-3 block">{item.number}</span>
+                      <h3 className="text-[15px] font-bold text-foreground mb-2">{item.title}</h3>
+                      <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
                     </div>
                   ))}
                 </div>
-
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
-                  Every rule had to balance fun with fairness, and make sense financially.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 3 */}
-            <ScrollReveal>
-              <div id="step-design" className="mb-20 scroll-mt-28">
-                <StepHeading number={3} title="Designing the Experience to Feel Alive" accentWord="Alive" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Once the rules were set, I jumped into Figma to map the user flow.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    From the moment a user made a BNPL payment to the instant they saw their progress bar rise, every tap had to feel rewarding.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    I worked closely with our designer to turn the flows into something that felt alive. The goal was simple: open the app, feel something.
-                  </p>
-                </div>
-
-                {/* User Flow Visualization */}
-                <div className="border border-border rounded-md overflow-hidden mt-8 max-w-[620px]">
-                  <div className="bg-foreground px-5 py-3 flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-accent" />
-                    <span className="text-[10px] uppercase tracking-[0.1em] text-background/70 font-semibold">Gamified User Journey</span>
-                  </div>
-                  <div className="flex flex-col md:flex-row items-center gap-3 p-6">
-                    {["Make Payment", "Earn Points", "Level Up", "Unlock Rewards"].map((step, index, array) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <div className="bg-[hsl(43_100%_95%)] border border-[hsl(43_100%_85%)] rounded-full px-4 py-2">
-                          <span className="text-[13px] font-medium text-foreground">{step}</span>
-                        </div>
-                        {index < array.length - 1 && (
-                          <span className="text-accent hidden md:block">→</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 4 */}
-            <ScrollReveal>
-              <div id="step-impact" className="mb-20 scroll-mt-28">
-                <StepHeading number={4} title="Measuring the Impact" accentWord="Impact" isLast />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Within three months of launch, the results were clear.
-                  </p>
-                </div>
-                
-                <ResultCallout 
-                  stat="10%"
-                  description="retention increase — repeat usage went up because the product gave users a reason to return on their own."
-                />
               </div>
             </ScrollReveal>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Dark Stats Section */}
-      <DarkStatsSection
-        introText="Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own."
-        stats={[
-          { number: "10%", description: "Retention increase within three months of launch" },
-          { number: "↑", description: "BNPL engagement increased measurably across active users" },
-          { number: "Repeat", description: "Usage growth driven by intrinsic motivation, not incentives" }
-        ]}
-      />
+            {/* Results */}
+            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mx-6">
+                <DarkStatsSection
+                  introText="Repeat usage went up. Not because we pushed users back with notifications or discounts. Because the product gave them a reason to return on their own."
+                  stats={[
+                    { number: "10%", description: "Retention increase within three months of launch" },
+                    { number: "↑", description: "BNPL engagement increased measurably across active users" },
+                    { number: "Repeat", description: "Usage growth driven by intrinsic motivation, not incentives" }
+                  ]}
+                />
+              </div>
+            </div>
 
-      {/* What I Learned */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-3">
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-learned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
                   Users don't engage with functionality. They engage with how something makes them feel.
@@ -342,6 +240,8 @@ const Gamification = () => {
             <ScrollReveal>
               <ContactCard />
             </ScrollReveal>
+            </div>
+
           </div>
         </div>
       </section>

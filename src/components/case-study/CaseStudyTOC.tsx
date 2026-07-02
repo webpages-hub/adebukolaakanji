@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface TOCSection {
   id: string;
@@ -9,9 +10,10 @@ interface TOCSection {
 
 interface CaseStudyTOCProps {
   sections: TOCSection[];
+  className?: string;
 }
 
-const CaseStudyTOC = ({ sections }: CaseStudyTOCProps) => {
+const CaseStudyTOC = ({ sections, className }: CaseStudyTOCProps) => {
   const [activeId, setActiveId] = useState<string>(sections[0]?.id || "");
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const CaseStudyTOC = ({ sections }: CaseStudyTOCProps) => {
   };
 
   return (
-    <div className="hidden lg:block w-48 flex-shrink-0">
+    <div className={cn("hidden lg:block w-48 flex-shrink-0", className)}>
       <div className="sticky top-32">
         <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground font-semibold mb-6">
           On this page

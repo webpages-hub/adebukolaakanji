@@ -2,25 +2,21 @@ import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
-import { Wallet, Globe, Shield, TrendingUp, Zap, CheckCircle2, Users, BarChart3, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
+import { CheckCircle2, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import multicurrencyWalletHero from "@/assets/multicurrency-wallet-hero.jpg";
 import ContextTag from "@/components/case-study/ContextTag";
-import StepHeading from "@/components/case-study/StepHeading";
 import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
-import DrivingQuestion from "@/components/case-study/DrivingQuestion";
 import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
-import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
 import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 
 const tocSections = [
-  { id: "the-idea", label: "The Idea" },
-  { id: "step-problem", label: "Problem", isStep: true, stepNumber: 1 },
-  { id: "step-system", label: "System", isStep: true, stepNumber: 2 },
-  { id: "step-experience", label: "Experience", isStep: true, stepNumber: 3 },
-  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+  { id: "the-problem", label: "The Problem" },
+  { id: "what-i-did", label: "What I Did" },
+  { id: "results", label: "Results" },
+  { id: "what-i-learned", label: "What I Learned" },
 ];
 
 const MultiCurrencyWallet = () => {
@@ -28,7 +24,7 @@ const MultiCurrencyWallet = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Multi-Currency Wallet Case Study — Adebukola Akanji" description="How I designed a multi-currency wallet that made managing money across currencies effortless and grew daily active usage by 20%." path="/multi-currency-wallet" />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
@@ -48,15 +44,16 @@ const MultiCurrencyWallet = () => {
       {/* Project Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto flex gap-12">
-            <CaseStudyTOC sections={tocSections} />
-            <div className="max-w-4xl flex-1 min-w-0 mx-auto">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[12rem_1fr] lg:[grid-template-rows:auto_auto_auto] gap-x-12">
+            <CaseStudyTOC sections={tocSections} className="lg:col-start-1 lg:row-start-1 lg:row-span-full" />
+
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-1">
             {/* Hero Image */}
             <ScrollReveal>
               <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
-                <img 
-                  src={multicurrencyWalletHero} 
-                  alt="Multi-Currency Wallet User Interface" 
+                <img
+                  src={multicurrencyWalletHero}
+                  alt="Multi-Currency Wallet User Interface"
                   className="w-full h-auto"
                 />
               </div>
@@ -69,7 +66,7 @@ const MultiCurrencyWallet = () => {
                   <div>
                     <p className="text-muted-foreground mb-2">Timeline</p>
                     <p className="text-lg font-semibold mb-6">One Month</p>
-                    
+
                     <p className="text-muted-foreground mb-2">Role</p>
                     <p className="text-lg font-semibold mb-6">Product Manager</p>
 
@@ -79,7 +76,7 @@ const MultiCurrencyWallet = () => {
                   <div>
                     <p className="text-muted-foreground mb-2">Team</p>
                     <p className="text-lg font-semibold mb-6">Engineering, Design, Compliance, Support, Operations</p>
-                    
+
                     <p className="text-muted-foreground mb-2">Location</p>
                     <p className="text-lg font-semibold mb-6">United Kingdom, Canada, France, Belgium, Democratic Republic of Congo</p>
                   </div>
@@ -93,146 +90,75 @@ const MultiCurrencyWallet = () => {
               </div>
             </ScrollReveal>
 
-            {/* The Idea */}
+            {/* The Problem */}
             <ScrollReveal>
-              <div id="the-idea" className="mb-20 case-study-prose scroll-mt-28">
-                <h2 className="text-4xl font-bold mb-6">The Idea</h2>
+              <div id="the-problem" className="mb-20 scroll-mt-28 bg-card rounded-2xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-6">The Problem</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  The first time I heard an agent complain, it sounded simple:
+                  Users working across currencies were doing too much manual work to move money. A DRC agent put it plainly: they received dollars, had to convert to CDF, then convert back to USD to send again. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
                 </p>
-                <UserVoiceQuote 
+                <UserVoiceQuote
                   quote="I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
                   attribution="DRC agent"
                 />
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  It sounded like a one-off complaint. It wasn't.
-                </p>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  By the time I'd spoken to ten more agents, the pattern was clear. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
-                </p>
-                <DrivingQuestion 
-                  question="What if we could just let users hold and transact in multiple currencies within a single account?"
-                  goldEmphasis="multiple currencies"
-                />
               </div>
             </ScrollReveal>
 
-            {/* Step 1 */}
+            {/* What I Did */}
             <ScrollReveal>
-              <div id="step-problem" className="mb-20 scroll-mt-28">
-                <StepHeading number={1} title="Understanding the Real Problem" accentWord="Real" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    I started by mapping out how users were currently transacting across currencies. In DRC, it was mostly USD and CDF. In our global expansion, we needed EUR, GBP, CAD, and NGN.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    But adding currencies wasn't a product decision, it was a compliance one. Each currency came with its own KYC tier, regional rules, and regulatory requirements.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    So before touching design or engineering, I mapped out how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever having to think about it.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 2 */}
-            <ScrollReveal>
-              <div id="step-system" className="mb-20 scroll-mt-28">
-                <StepHeading number={2} title="Designing the Wallet System" accentWord="System" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    With the compliance logic mapped, I worked with engineering to define how the system would actually behave for users. Each wallet type had to do three things well:
-                  </p>
-                </div>
-
-                <div className="max-w-[620px]">
+              <div id="what-i-did" className="mb-20 scroll-mt-28 bg-[#FDF5F0] rounded-2xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-8">What I Did</h2>
+                <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    { title: "Be created independently based on user KYC level", desc: "Compliance-first approach to wallet creation" },
-                    { title: "Hold and transfer value seamlessly", desc: "Instant transactions across all supported currencies" },
-                    { title: "Sync in real time with our existing ledger system", desc: "Accurate balance tracking across all wallets" }
+                    {
+                      number: "01",
+                      title: "Mapped the compliance requirements first",
+                      desc: "Before touching design or engineering, I mapped how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever thinking about it."
+                    },
+                    {
+                      number: "02",
+                      title: "Designed the wallet system with engineering",
+                      desc: "Each wallet type needed to be created independently based on KYC level, hold and transfer value seamlessly, and sync in real time with the existing ledger system."
+                    },
+                    {
+                      number: "03",
+                      title: "Made complexity invisible to the user",
+                      desc: "I worked with the designer to make the experience feel effortless. We tested micro-interactions like currency switching and transaction confirmations until the complexity underneath disappeared completely."
+                    },
+                    {
+                      number: "04",
+                      title: "Launched in DRC first then globally",
+                      desc: "I collaborated with compliance and support teams to ensure no regulatory nuances were missed across regions before rolling out to all supported markets."
+                    },
                   ].map((item, index) => (
-                    <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                      <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
-                      <div>
-                        <span className="font-bold text-[14px]">{item.title}</span>
-                        <span className="text-[14px] text-muted-foreground"> — {item.desc}</span>
-                      </div>
+                    <div key={index} className="bg-background border border-border rounded-xl p-6">
+                      <span className="text-xs font-semibold text-accent mb-3 block">{item.number}</span>
+                      <h3 className="text-[15px] font-bold text-foreground mb-2">{item.title}</h3>
+                      <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
                     </div>
                   ))}
                 </div>
-
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
-                  The result was a structure where each currency lived as its own account, but the user only ever saw one wallet.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 3 */}
-            <ScrollReveal>
-              <div id="step-experience" className="mb-20 scroll-mt-28">
-                <StepHeading number={3} title="Mapping the User Experience" accentWord="Experience" />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Next, I moved to the user experience. The goal was to keep it simple; users shouldn't have to think about which currency wallet to use.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    I designed the user flow in Figma, mapping out every interaction: creating a new wallet, funding it, viewing balances, and switching between currencies.
-                  </p>
-                </div>
-
-                <UserVoiceQuote quote="The design had to look effortless but handle complexity underneath." />
-
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    We tested small micro-interactions like currency switching and transaction confirmations to make the experience feel natural and fluid.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Step 4 */}
-            <ScrollReveal>
-              <div id="step-launch" className="mb-20 scroll-mt-28">
-                <StepHeading number={4} title="Bringing It to Life" accentWord="Life" isLast />
-                <div className="case-study-prose">
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Once the designs were finalized, I worked closely with the engineers during development to ensure everything aligned from wallet creation logic to transaction reconciliation.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    I also collaborated with compliance and support teams to make sure we didn't miss any regulatory nuances.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    And in just a few weeks, the multi-currency wallet went live — first in the DRC, then globally.
-                  </p>
-                </div>
-
-                <ResultCallout 
-                  stat="20%"
-                  description="daily active usage increase — users could now hold USD, CDF, EUR, GBP, CAD, and NGN all in one app."
-                />
               </div>
             </ScrollReveal>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Dark Stats Section */}
-      <DarkStatsSection
-        introText="Users finally had the flexibility to transact in the currencies they actually lived and earned in. What I loved most was hearing users say, 'I don't have to think twice anymore.'"
-        stats={[
-          { number: "20%", description: "Daily active usage increase within weeks of launch" },
-          { number: "10%", description: "Cross-currency transaction growth across all supported corridors" },
-          { number: "6", description: "Currencies supported seamlessly in a single wallet" }
-        ]}
-      />
+            {/* Results */}
+            <div id="results" className="lg:col-start-1 lg:col-span-2 lg:row-start-2 scroll-mt-28">
+              <div className="-mx-6">
+                <DarkStatsSection
+                  introText="Users finally had the flexibility to transact in the currencies they actually lived and earned in. What I loved most was hearing users say, 'I don't have to think twice anymore.'"
+                  stats={[
+                    { number: "20%", description: "Daily active usage increase within weeks of launch" },
+                    { number: "10%", description: "Cross-currency transaction growth across all supported corridors" },
+                    { number: "6", description: "Currencies supported seamlessly in a single wallet" }
+                  ]}
+                />
+              </div>
+            </div>
 
-      {/* What I Learned */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-3">
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-learned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
                   This project taught me how powerful simplicity can be — especially in fintech.
@@ -312,6 +238,8 @@ const MultiCurrencyWallet = () => {
             <ScrollReveal>
               <ContactCard />
             </ScrollReveal>
+            </div>
+
           </div>
         </div>
       </section>
