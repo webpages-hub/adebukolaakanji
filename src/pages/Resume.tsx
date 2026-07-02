@@ -22,7 +22,7 @@ const Resume = () => {
       <main className="container mx-auto px-6 pt-24 pb-16">
         {/* Download Button */}
         <div className="flex justify-end mb-6 print:hidden">
-          <Button onClick={handleDownloadPDF} className="gap-2">
+          <Button onClick={handleDownloadPDF} variant="outline" className="gap-2 text-muted-foreground border-border hover:text-foreground">
             <Download className="w-4 h-4" />
             Save as PDF
           </Button>
