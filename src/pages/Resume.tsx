@@ -119,7 +119,7 @@ const Resume = () => {
             <ul className="space-y-2 text-muted-foreground">
               {[
                 "Developed the go-to-market strategy for Canada expansion, aligning product, compliance, and partnership workstreams to prepare for market entry.",
-                "Reduced URL 地址, and 的 bug rates and improved conversion through data-driven decision frameworks, improving product outcomes by 25%.",
+                "Reduced bug rates and improved conversion through data-driven decision frameworks, improving product outcomes by 25%.",
                 "Launched a gamification and rewards feature that increased user retention by 10%.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
