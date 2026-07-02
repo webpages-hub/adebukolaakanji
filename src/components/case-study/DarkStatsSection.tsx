@@ -11,9 +11,9 @@ interface DarkStatsSectionProps {
 
 const DarkStatsSection = ({ heading = "The Result", introText, stats }: DarkStatsSectionProps) => {
   return (
-    <section className="bg-[hsl(0_0%_7%)] text-background -mx-6 px-6 py-16 md:py-20 my-20 rounded-none">
+    <section className="bg-[hsl(0_0%_7%)] text-background px-6 py-16 md:py-20 my-20 rounded-none">
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-[35%_65%] gap-10 md:gap-16">
+        <div className="grid md:grid-cols-[35fr_65fr] gap-10 md:gap-16">
           {/* Left column */}
           <div>
             <h2 className="text-[24px] md:text-[28px] font-bold text-background mb-4">{heading}</h2>

@@ -6,22 +6,17 @@ import { CheckCircle2, Lightbulb, ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import globalExpansionHero from "@/assets/global-expansion-hero.jpg";
 import ContextTag from "@/components/case-study/ContextTag";
-import StepHeading from "@/components/case-study/StepHeading";
 import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
-import DrivingQuestion from "@/components/case-study/DrivingQuestion";
 import DarkStatsSection from "@/components/case-study/DarkStatsSection";
 import TakeawayCards from "@/components/case-study/TakeawayCards";
-import ResultCallout from "@/components/case-study/ResultCallout";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
 import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 
 const tocSections = [
-  { id: "the-insight", label: "The Insight" },
-  { id: "the-challenge", label: "The Challenge" },
-  { id: "step-research", label: "Research", isStep: true, stepNumber: 1 },
-  { id: "step-partnerships", label: "Partnerships", isStep: true, stepNumber: 2 },
-  { id: "step-onboarding", label: "Onboarding", isStep: true, stepNumber: 3 },
-  { id: "step-launch", label: "Launch", isStep: true, stepNumber: 4 },
+  { id: "the-problem", label: "The Problem" },
+  { id: "what-i-did", label: "What I Did" },
+  { id: "results", label: "Results" },
+  { id: "what-i-learned", label: "What I Learned" },
 ];
 
 const GlobalExpansion = () => {
@@ -102,162 +97,57 @@ const GlobalExpansion = () => {
                 </div>
               </ScrollReveal>
 
-              {/* The Insight */}
+              {/* The Problem */}
               <ScrollReveal>
-                <div id="the-insight" className="mb-20 case-study-prose scroll-mt-28">
-                  <h2 className="text-4xl font-bold mb-6">The Insight That Started Everything</h2>
+                <div id="the-problem" className="mb-20 scroll-mt-28 bg-card rounded-2xl p-8 md:p-12">
+                  <h2 className="text-3xl font-bold mb-6">The Problem</h2>
                   <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    When I spoke to users sending money to the DRC, I expected to hear complaints about fees or slow transfers. What I didn't expect was this:
+                    African diaspora users across six countries had one consistent complaint about sending money home: the rates were bad and the experience was worse. For DRC specifically, the problem ran deeper. Users were still finding agents to complete digital transactions for them. Not because they preferred it. Because every digital solution they had tried had let them down.
                   </p>
-
                   <UserVoiceQuote
-                    quote="Most of them were still relying on agents to complete their remittance transactions for them."
+                    quote="Most of them were still relying on agents to help them complete remittance transactions."
                     attribution="User research finding"
                   />
-
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    In 2024. With smartphones in their pockets. They were physically finding agents to move money because every digital solution they had tried had let them down — bad rates, confusing flows, or transfers that simply never arrived.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                    That was the brief. Not just build a remittance product. Build one that was actually worth switching to.
+                  <p className="text-[15px] leading-[1.75] text-muted-foreground mt-6">
+                    The goal was not just to build a remittance product. It was to build one worth switching to — across six markets simultaneously, each with its own language, currency behaviour, and compliance requirements, all in six weeks.
                   </p>
                 </div>
               </ScrollReveal>
 
-              {/* The Challenge */}
+              {/* What I Did */}
               <ScrollReveal>
-                <div id="the-challenge" className="mb-20 case-study-prose scroll-mt-28">
-                  <h2 className="text-4xl font-bold mb-6">The Challenge</h2>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Launching a remittance product in one market is hard. Launching across six simultaneously is a different problem entirely.
-                  </p>
-                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                    Each market came with its own language, its own currency behaviour, and its own compliance requirements. What worked for a user in the UK did not automatically work for a user in Belgium or Canada. And what worked for sending to Nigeria did not automatically work for sending to DRC.
-                  </p>
-
-                  <DrivingQuestion
-                    question="How do you build one product that feels local in six different markets, launches in six weeks, and gives users a reason to stop trusting agents?"
-                    goldEmphasis="feels local in six different markets"
-                  />
-                </div>
-              </ScrollReveal>
-
-              {/* Step 1: Research */}
-              <ScrollReveal>
-                <div id="step-research" className="mb-20 scroll-mt-28">
-                  <StepHeading number={1} title="Understanding the Real Barriers" accentWord="Barriers" />
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      I started with user conversations across the target markets. The goal was not to validate assumptions — it was to find the ones I hadn't made yet.
-                    </p>
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      Three things came up consistently across every market:
-                    </p>
-                  </div>
-
-                  <div className="max-w-[620px]">
+                <div id="what-i-did" className="mb-20 scroll-mt-28 bg-[#FDF5F0] rounded-2xl p-8 md:p-12">
+                  <h2 className="text-3xl font-bold mb-8">What I Did</h2>
+                  <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { title: "Rates were the primary decision driver", desc: "Users compared rates obsessively before every transaction. Existing alternatives were losing on this consistently." },
-                      { title: "DRC remittance was uniquely broken", desc: "Slow transfers, unreliable delivery, and a near-total dependence on human agents to complete digital transactions." },
-                      { title: "Trust had to be earned quickly", desc: "Users had been burned before. A clean experience and fast first transfer mattered more than any marketing." },
+                      {
+                        number: "01",
+                        title: "Researched the real barriers",
+                        desc: "I spoke to users across the target markets and found three consistent blockers: bad rates were the primary decision driver, DRC remittance was uniquely broken, and trust had to be earned through a great first experience."
+                      },
+                      {
+                        number: "02",
+                        title: "Secured three strategic partnerships",
+                        desc: "Before a single line of code was written, I identified and closed partnerships for KYC verification, licensed open banking infrastructure, and EUR and GBP account issuance. All three were in place before launch."
+                      },
+                      {
+                        number: "03",
+                        title: "Fixed a broken onboarding flow",
+                        desc: "The first version asked for too much upfront. Only 11% of users completed account creation. I redesigned onboarding around a tiered compliance approach, collecting only what was needed for the first transaction. Completion went from 11% to 90%."
+                      },
+                      {
+                        number: "04",
+                        title: "Launched across six markets in six weeks",
+                        desc: "With infrastructure in place and onboarding rebuilt, we launched across UK, Canada, France, Belgium, Germany, and DRC. The product reached users in nine countries, three of which we never targeted."
+                      },
                     ].map((item, index) => (
-                      <div key={index} className={`flex gap-4 py-4 border-b border-border ${index === 0 ? 'border-t' : ''}`}>
-                        <span className="text-[10px] text-accent font-semibold mt-1">{String(index + 1).padStart(2, '0')}</span>
-                        <div>
-                          <p className="text-[14px] font-semibold text-foreground mb-1">{item.title}</p>
-                          <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
-                        </div>
+                      <div key={index} className="bg-background border border-border rounded-xl p-6">
+                        <span className="text-xs font-semibold text-accent mb-3 block">{item.number}</span>
+                        <h3 className="text-[15px] font-bold text-foreground mb-2">{item.title}</h3>
+                        <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
                       </div>
                     ))}
                   </div>
-                </div>
-              </ScrollReveal>
-
-              {/* Step 2: Partnerships */}
-              <ScrollReveal>
-                <div id="step-partnerships" className="mb-20 scroll-mt-28">
-                  <StepHeading number={2} title="Building the Infrastructure to Make It Work" accentWord="Infrastructure" />
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      The product vision was clear. The harder question was what infrastructure would make it possible at the speed we needed.
-                    </p>
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      I identified and secured three strategic partnerships before a single line of code was written for the expansion:
-                    </p>
-                  </div>
-
-                  <div className="border border-border rounded-md overflow-hidden max-w-[620px] my-8">
-                    {[
-                      { label: "KYC Verification", desc: "A partner to verify diaspora users compliantly across all six markets without friction." },
-                      { label: "Licensed Open Banking Provider", desc: "A regulated partner to handle the financial infrastructure underlying the product." },
-                      { label: "EUR and GBP Account Issuance", desc: "A partner to issue local currency accounts so users could fund in their own currency seamlessly." },
-                    ].map((item, index, array) => (
-                      <div key={index} className={`flex items-start gap-4 px-6 py-4 ${index > 0 ? 'border-t border-border' : ''}`}>
-                        <span className="text-[22px] font-bold text-accent">{index + 1}</span>
-                        <div>
-                          <p className="text-[14px] font-semibold text-foreground mb-1">{item.label}</p>
-                          <p className="text-[14px] text-muted-foreground">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                      All three were in place before launch. Without them, the product could not have gone live compliantly across six markets in six weeks.
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              {/* Step 3: Onboarding */}
-              <ScrollReveal>
-                <div id="step-onboarding" className="mb-20 scroll-mt-28">
-                  <StepHeading number={3} title="Fixing the Conversion Problem" accentWord="Conversion" />
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      The first version of account creation had a problem. Compliance requirements meant we were asking users for a lot of information upfront. The result was painful:
-                    </p>
-                  </div>
-
-                  <ResultCallout
-                    stat="11%"
-                    description="of users completed account creation in the first version. 89% dropped off before they ever made a transfer."
-                  />
-
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      The compliance requirements hadn't changed. But I realised we didn't have to collect everything at once. I redesigned the onboarding around a tiered approach — collect only what was needed to get users to their first transaction, then layer in additional verification progressively as they unlocked higher limits.
-                    </p>
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground">
-                      The logic was simple: earn trust through a great first experience, then ask for more. Not the other way around.
-                    </p>
-                  </div>
-
-                  <ResultCallout
-                    stat="90%"
-                    description="completion rate after tiered onboarding was introduced — an 8x improvement on the original flow."
-                  />
-                </div>
-              </ScrollReveal>
-
-              {/* Step 4: Launch */}
-              <ScrollReveal>
-                <div id="step-launch" className="mb-20 scroll-mt-28">
-                  <StepHeading number={4} title="Launching Across Six Markets" accentWord="Six Markets" isLast />
-                  <div className="case-study-prose">
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      With the infrastructure in place, the onboarding fixed, and the product localised for language, currency, and compliance across each market, we launched.
-                    </p>
-                    <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                      Six markets. Six weeks from research to live product. And a product that users in nine countries found and used — three of which we had never targeted.
-                    </p>
-                  </div>
-
-                  <ResultCallout
-                    stat="$1M+"
-                    description="in total payment volume processed across four currency corridors within twelve months of launch."
-                  />
                 </div>
               </ScrollReveal>
 
@@ -266,22 +156,24 @@ const GlobalExpansion = () => {
         </div>
       </section>
 
-      {/* Dark Stats Section */}
-      <DarkStatsSection
-        introText="A product built for six markets, used in nine. The infrastructure was complex. The experience was not."
-        stats={[
-          { number: "$1M+", description: "Total payment volume processed across four currency corridors" },
-          { number: "90%", description: "Onboarding completion rate after tiered approach was introduced" },
-          { number: "9", description: "Countries reached, including 3 with no marketing spend" },
-        ]}
-      />
+      {/* Results */}
+      <div id="results" className="scroll-mt-28">
+        <DarkStatsSection
+          introText="A product built for six markets, used in nine. The infrastructure was complex. The experience was not."
+          stats={[
+            { number: "$1M+", description: "Total payment volume processed across four currency corridors" },
+            { number: "90%", description: "Onboarding completion rate after tiered approach was introduced" },
+            { number: "9", description: "Countries reached, including 3 with no marketing spend" },
+          ]}
+        />
+      </div>
 
       {/* What I Learned */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <div className="mb-20">
+              <div id="what-i-learned" className="mb-20 scroll-mt-28">
                 <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
                 <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
                   Launching across multiple markets at once teaches you that the product is rarely the hardest part. The context around it is.

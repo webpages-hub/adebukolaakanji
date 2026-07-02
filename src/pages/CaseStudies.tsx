@@ -113,7 +113,7 @@ const CaseStudies = () => {
               {filtered.map((cs) => (
                 <div
                   key={cs.name}
-                  className="grid grid-cols-1 md:grid-cols-[20%_40%_20%_20%] gap-6 items-center py-6 md:py-8"
+                  className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr_1fr] gap-6 items-center py-6 md:py-8"
                 >
                   <div className="font-bold text-lg">{cs.name}</div>
                   <p className="text-sm text-muted-foreground leading-relaxed">

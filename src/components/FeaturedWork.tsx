@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import drcHero from "@/assets/drc-payments-hero.jpg";
+import globalExpansionHero from "@/assets/global-expansion-hero.jpg";
 import globalHero from "@/assets/global-transfers-hero.jpg";
 import gamificationHero from "@/assets/gamification-hero.jpg";
 import multicurrencyHero from "@/assets/multicurrency-wallet-hero.jpg";
@@ -13,6 +14,14 @@ const projects = [
     tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
     href: "/projects",
     image: drcHero,
+  },
+  {
+    number: "2025",
+    name: "Global Expansion",
+    description: "Six markets. Six weeks. One product built for the African diaspora to send money home at better rates than any alternative. Processed over $1M in total payment volume within twelve months of launch.",
+    tags: ["DIASPORA PAYMENTS", "MARKET EXPANSION", "REMITTANCE"],
+    href: "/global-expansion",
+    image: globalExpansionHero,
   },
   {
     number: "2025",
