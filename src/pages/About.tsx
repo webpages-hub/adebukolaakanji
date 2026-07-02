@@ -42,7 +42,7 @@ const About = () => {
                     Somewhere between a library full of information and building products people use, I found my thing. I didn't take the straight road into product. I studied Library and Information Science, graduated top of my department, and then a single coursework module changed everything. It showed me that understanding how people look for things, and why they fail to find them, is exactly the problem product management exists to solve.
                   </p>
                   <p className="text-base leading-relaxed text-foreground/90 mt-4">
-                    Five years later, I've built payment products that cross borders, led market entry into five countries, and shipped things used by over a million people. The unconventional start turned out to be the whole point.
+                    Five years later, I've built payment products that cross borders, led market entry into six markets, and shipped things used by over a million people. The unconventional start turned out to be the whole point.
                   </p>
                 </div>
 
@@ -52,7 +52,7 @@ const About = () => {
                     I sit at the intersection of user needs, business goals, and what's actually possible to build, then I make the case for the version where all three overlap.
                   </p>
                   <p className="text-base leading-relaxed text-foreground/90 mt-4">
-                    In practice, that's meant going from zero to a live product in the DRC in six weeks, generating $600K in cross-border payment revenue in seven months, and growing daily active usage by 20% on a multi-currency wallet. The through-line in all of it is the same: understand the real problem before touching the solution.
+                    In practice, that's meant going from zero to a live product in the DRC in six weeks, generating $600K in cross-border payment revenue in eight months, and growing daily active usage by 20% on a multi-currency wallet. The through-line in all of it is the same: understand the real problem before touching the solution.
                   </p>
                 </div>
 
