@@ -147,9 +147,9 @@ const Resume = () => {
             </p>
             <ul className="space-y-2 text-muted-foreground">
               {[
-                "Managed 5+ media projects, improving on-time delivery by 30% and reducing costs by 20% through efficient project management and process improvements.",
-                "Launched multi-channel campaigns that increased audience engagement by 40% through data-backed optimization.",
-                "Introduced a project management system that improved team efficiency by 35%.",
+                "Managed end-to-end delivery of five concurrent media products, improving on-time delivery by 30% and reducing project costs by 20%.",
+                "Led a cross-functional team of 15+ designers, editors, and marketing specialists to launch a multi-channel content product that increased audience engagement by 40%.",
+                "Introduced a structured product management framework across the team, improving delivery efficiency by 25% and reducing tracking errors by 35%.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
