@@ -11,9 +11,10 @@ interface TOCSection {
 interface CaseStudyTOCProps {
   sections: TOCSection[];
   className?: string;
+  sticky?: boolean;
 }
 
-const CaseStudyTOC = ({ sections, className }: CaseStudyTOCProps) => {
+const CaseStudyTOC = ({ sections, className, sticky = true }: CaseStudyTOCProps) => {
   const [activeId, setActiveId] = useState<string>(sections[0]?.id || "");
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const CaseStudyTOC = ({ sections, className }: CaseStudyTOCProps) => {
 
   return (
     <div className={cn("hidden lg:block w-48 flex-shrink-0", className)}>
-      <div className="sticky top-32">
+      <div className={sticky ? "sticky top-32" : ""}>
         <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground font-semibold mb-6">
           On this page
         </p>

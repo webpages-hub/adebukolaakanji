@@ -1,20 +1,6 @@
-import { LucideIcon } from "lucide-react";
-
 export interface MetadataItem {
   label: string;
   value: string;
-}
-
-export interface ExecutionCard {
-  number: string;
-  title: string;
-  description: string;
-}
-
-export interface ResultMetric {
-  icon: LucideIcon;
-  value: string;
-  label: string;
 }
 
 export interface TakeawayCard {
@@ -44,25 +30,37 @@ export interface CaseStudyData {
   overview: {
     paragraphs: string[];
   };
+  background: {
+    paragraphs: string[];
+  };
   research: {
+    intro?: string;
     methods: string[];
     findings: string[];
   };
   productStrategy: {
+    intro: string;
+    list: string[];
     paragraphs: string[];
   };
   execution: {
     intro?: string;
-    cards: ExecutionCard[];
-    extra?: string[];
+    listIntro?: string;
+    list: string[];
+    outro?: string;
   };
   results: {
-    metrics: ResultMetric[];
-    extra?: string[];
+    intro?: string;
+    listHeading?: string;
+    list: string[];
+  };
+  challenges: {
+    subheading: string;
+    paragraphs: string[];
   };
   takeaways: {
+    heading: string;
     cards: TakeawayCard[];
-    extra?: string[];
   };
   navigation: {
     prev: CaseStudyNavLink;
