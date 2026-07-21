@@ -46,7 +46,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Multi-Currency Wallet",
-    description: "Managing money across currencies shouldn't feel like a chore. I built a wallet that made it feel effortless, and the 20% jump in daily active usage told us users agreed.",
+    description: "Built Nomba's multi-currency wallet experience, enabling users to hold and manage five currencies seamlessly while increasing daily active usage by 20% and driving 10% growth in cross-currency transactions.",
     tags: ["PRODUCT STRATEGY", "USER EXPERIENCE", "GROWTH"],
     href: "/multi-currency-wallet",
     category: ["live"],

@@ -11,7 +11,6 @@ import ScrollReveal from "@/components/case-study/ScrollReveal";
 const metadata = [
   { label: "Role", value: "Founding Product Manager" },
   { label: "Team", value: "Engineering, Design, Partnerships, Operations, Finance, Data, Legal & Compliance" },
-  { label: "Company", value: "Nomba" },
   { label: "Markets", value: "UK, Canada, France, Belgium, Germany, DRC" },
   { label: "Timeline", value: "6 Weeks" },
 ];

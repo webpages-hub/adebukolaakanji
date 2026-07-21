@@ -2,22 +2,44 @@ import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import multicurrencyWalletHero from "@/assets/multicurrency-wallet-hero.jpg";
 import ContextTag from "@/components/case-study/ContextTag";
-import UserVoiceQuote from "@/components/case-study/UserVoiceQuote";
-import DarkStatsSection from "@/components/case-study/DarkStatsSection";
-import TakeawayCards from "@/components/case-study/TakeawayCards";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
-import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 
-const tocSections = [
-  { id: "the-problem", label: "The Problem" },
-  { id: "what-i-did", label: "What I Did" },
-  { id: "results", label: "Results" },
-  { id: "what-i-learned", label: "What I Learned" },
+const metadata = [
+  { label: "Role", value: "Product Manager" },
+  { label: "Team", value: "Engineering, Design, Operations, Finance, Legal & Compliance" },
+  { label: "Product", value: "Nomba Multi-Currency Wallet" },
+  { label: "Markets", value: "DRC, Diaspora Markets" },
+  { label: "Timeline", value: "1 Month" },
 ];
+
+const Paragraphs = ({ items }: { items: string[] }) => (
+  <>
+    {items.map((p, i) => (
+      <p key={i} className="text-[15px] leading-[1.75] text-muted-foreground mb-4 last:mb-0">
+        {p}
+      </p>
+    ))}
+  </>
+);
+
+const BulletList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-3 mb-4 last:mb-0">
+    {items.map((item, i) => (
+      <li key={i} className="flex gap-3 text-[15px] text-muted-foreground leading-[1.6]">
+        <span className="text-accent mt-1">•</span>
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+);
+
+const SubHeading = ({ children }: { children: string }) => (
+  <h3 className="text-lg font-bold mb-4 text-foreground">{children}</h3>
+);
 
 const MultiCurrencyWallet = () => {
   return (
@@ -33,191 +55,281 @@ const MultiCurrencyWallet = () => {
               <div className="flex justify-center">
                 <ContextTag tags={["Product Management", "Fintech", "Multi-Currency"]} />
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Building a Multi-Currency Wallet for Everyday Transactions
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Building a Multi-Currency Wallet Experience for Global Users
               </h1>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.15}>
+            <div className="max-w-xs sm:max-w-md md:max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-elegant">
+              <img
+                src={multicurrencyWalletHero}
+                alt="Multi-Currency Wallet User Interface"
+                className="w-full h-auto"
+              />
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Project Overview */}
+      {/* Content */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto grid lg:grid-cols-[12rem_1fr] lg:[grid-template-rows:auto_auto_auto] gap-x-12">
-            <CaseStudyTOC sections={tocSections} className="lg:col-start-1 lg:row-start-1 lg:row-span-full" />
-
-            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-1">
-            {/* Hero Image */}
+          <div className="max-w-4xl mx-auto">
+            {/* Metadata Bar */}
             <ScrollReveal>
-              <div className="mb-8 rounded-2xl overflow-hidden shadow-elegant">
-                <img
-                  src={multicurrencyWalletHero}
-                  alt="Multi-Currency Wallet User Interface"
-                  className="w-full h-auto"
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 bg-card rounded-2xl p-6 md:p-8 mb-16 shadow-elegant">
+                {metadata.map((item) => (
+                  <div key={item.label}>
+                    <p className="text-[11px] uppercase tracking-wide text-muted-foreground font-semibold mb-1.5">
+                      {item.label}
+                    </p>
+                    <p className="text-base font-bold text-foreground">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Overview */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Overview</h2>
+                <Paragraphs
+                  items={[
+                    "Users across Nomba's markets needed a simpler way to hold, receive, and spend money across multiple currencies.",
+                    "DRC users frequently used both USD and CDF for daily transactions, while diaspora users needed access to currencies such as EUR, GBP, and CAD. However, existing wallet experiences created friction because users could hold funds in one currency but could not easily use them when they needed another.",
+                    "As Product Manager, I led the development of a multi-currency wallet experience that allowed users to create and manage multiple currency wallets seamlessly.",
+                    "Within one month of launch, the product increased daily active usage by 20% and drove 10% growth in cross-currency transactions across supported corridors.",
+                  ]}
                 />
               </div>
             </ScrollReveal>
 
+            {/* Background & Context */}
             <ScrollReveal>
-              <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant mb-16">
-                <h2 className="text-3xl font-bold mb-8 text-foreground">Project Overview</h2>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Background & Context</h2>
+                <Paragraphs
+                  items={[
+                    "As Nomba expanded across markets, users increasingly needed the ability to manage funds across different currencies.",
+                    "In DRC, users commonly interacted with both USD and CDF. A user could receive USD but still be unable to complete certain transactions if they needed CDF, creating unnecessary friction in their financial experience.",
+                    "Similarly, diaspora users needed access to wallets in their local currencies, including EUR, GBP, and CAD, to receive and manage funds more conveniently.",
+                    "The opportunity was to create a wallet experience that allowed users to hold multiple currencies and move between them seamlessly.",
+                  ]}
+                />
+              </div>
+            </ScrollReveal>
+
+            {/* Problem Statement */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Problem Statement</h2>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8">
+                  Before the multi-currency wallet, users experienced three key challenges:
+                </p>
+
+                <SubHeading>Limited Access to Available Funds</SubHeading>
+                <Paragraphs
+                  items={[
+                    "Users could hold money in one currency but were restricted from using those funds when a transaction required another currency.",
+                    "For example, a DRC user with USD balance might need to wait for a CDF transfer before completing a local transaction.",
+                  ]}
+                />
+
+                <div className="mt-8">
+                  <SubHeading>Fragmented Financial Experience</SubHeading>
+                  <Paragraphs
+                    items={[
+                      "Users had to rely on multiple platforms or manual processes to manage different currencies, creating unnecessary complexity.",
+                    ]}
+                  />
+                </div>
+
+                <div className="mt-8">
+                  <SubHeading>Increasing Market Complexity</SubHeading>
+                  <Paragraphs
+                    items={[
+                      "Supporting multiple markets meant managing different currencies, transaction requirements, and regulatory limits while maintaining a simple user experience.",
+                    ]}
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Research & Discovery */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-8 text-foreground">Research & Discovery</h2>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8">
+                  My goal was to understand how users interacted with different currencies and identify the simplest way to support their needs.
+                </p>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <p className="text-muted-foreground mb-2">Timeline</p>
-                    <p className="text-lg font-semibold mb-6">One Month</p>
-
-                    <p className="text-muted-foreground mb-2">Role</p>
-                    <p className="text-lg font-semibold mb-6">Product Manager</p>
-
-                    <p className="text-muted-foreground mb-2">Company</p>
-                    <p className="text-lg font-semibold mb-6">Nomba</p>
+                    <h3 className="text-xs uppercase tracking-wide font-semibold text-accent mb-4">
+                      Research Methods
+                    </h3>
+                    <BulletList
+                      items={[
+                        "Reviewed transaction patterns across supported markets.",
+                        "Analyzed user behaviour across different currency corridors.",
+                        "Collaborated with Operations and Compliance teams to understand regulatory requirements.",
+                        "Worked with Engineering to identify technical constraints.",
+                      ]}
+                    />
                   </div>
                   <div>
-                    <p className="text-muted-foreground mb-2">Team</p>
-                    <p className="text-lg font-semibold mb-6">Engineering, Design, Compliance, Support, Operations</p>
-
-                    <p className="text-muted-foreground mb-2">Location</p>
-                    <p className="text-lg font-semibold mb-6">United Kingdom, Canada, France, Belgium, Democratic Republic of Congo</p>
+                    <h3 className="text-xs uppercase tracking-wide font-semibold text-accent mb-4">
+                      Key Insights
+                    </h3>
+                    <Paragraphs
+                      items={[
+                        "Users did not care about the complexity behind currency management. They simply wanted access to their money when and where they needed it.",
+                        "The product experience needed to hide the underlying complexity while giving users flexibility across currencies.",
+                      ]}
+                    />
                   </div>
                 </div>
-                <div className="pt-6 border-t border-border">
-                  <p className="text-muted-foreground mb-2">Goal</p>
-                  <p className="text-lg leading-relaxed">
-                    Users and agents working across currencies were doing too much manual work just to move money. The goal was to fix that with one wallet that handled everything.
+              </div>
+            </ScrollReveal>
+
+            {/* Product Strategy */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Product Strategy</h2>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8">
+                  I defined the product approach around three principles:
+                </p>
+
+                <SubHeading>1. Simple Currency Management</SubHeading>
+                <Paragraphs
+                  items={[
+                    "Users should be able to create and access multiple currency wallets without needing to understand the complexity behind currency routing and settlement.",
+                  ]}
+                />
+
+                <div className="mt-8">
+                  <SubHeading>2. Flexible Multi-Currency Support</SubHeading>
+                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-4">The wallet needed to support:</p>
+                  <BulletList
+                    items={[
+                      "USD and CDF for DRC users.",
+                      "EUR, GBP, and CAD for diaspora users.",
+                      "Additional currencies as Nomba expanded into new markets.",
+                    ]}
+                  />
+                </div>
+
+                <div className="mt-8">
+                  <SubHeading>3. Compliance-Ready Architecture</SubHeading>
+                  <Paragraphs
+                    items={[
+                      "Each currency required different transaction limits and KYC requirements.",
+                      "The product needed to handle these requirements in the background without adding unnecessary friction to the user experience.",
+                    ]}
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Execution & Launch */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Execution & Launch</h2>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8">
+                  I worked closely with Engineering, Design, Operations, and Compliance teams to deliver the feature within one month.
+                </p>
+
+                <SubHeading>Product & Design</SubHeading>
+                <Paragraphs
+                  items={[
+                    "I defined the user journeys and requirements to ensure the experience remained simple.",
+                    "Key considerations included:",
+                  ]}
+                />
+                <BulletList
+                  items={[
+                    "How users create and access different wallets.",
+                    "How balances are displayed across currencies.",
+                    "How users move funds between supported currencies.",
+                    "How currency availability changes based on user location.",
+                  ]}
+                />
+                <Paragraphs
+                  items={[
+                    "The goal was for users to experience a seamless wallet experience without seeing the operational complexity behind it.",
+                  ]}
+                />
+
+                <div className="mt-8">
+                  <SubHeading>Compliance & Operations</SubHeading>
+                  <p className="text-[15px] leading-[1.75] text-muted-foreground mb-4">
+                    I collaborated with Compliance to define:
+                  </p>
+                  <BulletList
+                    items={[
+                      "KYC requirements per currency.",
+                      "Transaction limits.",
+                      "Restrictions based on user profiles and markets.",
+                    ]}
+                  />
+                  <Paragraphs
+                    items={[
+                      "These requirements were built into the experience while minimizing additional user friction.",
+                    ]}
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Results & Impact */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Results & Impact</h2>
+                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-4">Following launch:</p>
+                <BulletList
+                  items={[
+                    "Increased daily active usage by 20% within weeks.",
+                    "Increased cross-currency transaction activity by 10% across supported corridors.",
+                    "Enabled wallet creation across five currencies.",
+                    "Improved flexibility for users managing funds across different markets.",
+                  ]}
+                />
+              </div>
+            </ScrollReveal>
+
+            {/* Challenges */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Challenges</h2>
+                <SubHeading>Managing Complexity Without Increasing User Friction</SubHeading>
+                <Paragraphs
+                  items={[
+                    "The biggest challenge was balancing the complexity required to support multiple currencies with the simplicity users expected.",
+                    "Behind the scenes, each currency introduced additional considerations around compliance, limits, settlement, and transaction flows.",
+                    "The product challenge was ensuring users experienced simplicity despite the complexity underneath.",
+                  ]}
+                />
+              </div>
+            </ScrollReveal>
+
+            {/* Lessons Learned */}
+            <ScrollReveal>
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold mb-8 text-foreground">Lessons Learned</h2>
+                <div className="rounded-xl p-6 border border-border">
+                  <h3 className="text-[15px] font-bold text-foreground mb-2">
+                    Complexity Under the Hood, Simplicity on the Surface
+                  </h3>
+                  <p className="text-[14px] text-muted-foreground leading-[1.6] mb-2">
+                    The best financial products hide complexity from users.
+                  </p>
+                  <p className="text-[14px] text-muted-foreground leading-[1.6]">
+                    While multi-currency wallets require significant operational, technical, and regulatory considerations, the user experience should feel effortless.
                   </p>
                 </div>
               </div>
             </ScrollReveal>
-
-            {/* The Problem */}
-            <ScrollReveal>
-              <div id="the-problem" className="mb-20 scroll-mt-28 bg-card rounded-2xl p-8 md:p-12">
-                <h2 className="text-3xl font-bold mb-6">The Problem</h2>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-6">
-                  Users working across currencies were doing too much manual work to move money. A DRC agent put it plainly: they received dollars, had to convert to CDF, then convert back to USD to send again. Every transaction across currencies meant manual steps, delays, and money lost to bad conversion timing.
-                </p>
-                <UserVoiceQuote
-                  quote="I get paid in dollars, but I can't use it directly in the app. I have to convert to CDF, and then back to USD to send again."
-                  attribution="DRC agent"
-                />
-              </div>
-            </ScrollReveal>
-
-            {/* What I Did */}
-            <ScrollReveal>
-              <div id="what-i-did" className="mb-20 scroll-mt-28 bg-[#FDF5F0] rounded-2xl p-8 md:p-12">
-                <h2 className="text-3xl font-bold mb-8">What I Did</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    {
-                      number: "01",
-                      title: "Mapped the compliance requirements first",
-                      desc: "Before touching design or engineering, I mapped how each currency needed to behave: what KYC tier unlocked it, what limits applied, and how conversion logic would work without the user ever thinking about it."
-                    },
-                    {
-                      number: "02",
-                      title: "Designed the wallet system with engineering",
-                      desc: "Each wallet type needed to be created independently based on KYC level, hold and transfer value seamlessly, and sync in real time with the existing ledger system."
-                    },
-                    {
-                      number: "03",
-                      title: "Made complexity invisible to the user",
-                      desc: "I worked with the designer to make the experience feel effortless. We tested micro-interactions like currency switching and transaction confirmations until the complexity underneath disappeared completely."
-                    },
-                    {
-                      number: "04",
-                      title: "Launched in DRC first then globally",
-                      desc: "I collaborated with compliance and support teams to ensure no regulatory nuances were missed across regions before rolling out to all supported markets."
-                    },
-                  ].map((item, index) => (
-                    <div key={index} className="bg-background border border-border rounded-xl p-6">
-                      <span className="text-xs font-semibold text-accent mb-3 block">{item.number}</span>
-                      <h3 className="text-[15px] font-bold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-[14px] text-muted-foreground leading-[1.6]">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
-            </div>
-
-            {/* Results */}
-            <div id="results" className="lg:col-start-2 lg:row-start-2 scroll-mt-28">
-              <div className="-mr-6">
-                <DarkStatsSection
-                  introText="Users finally had the flexibility to transact in the currencies they actually lived and earned in. What I loved most was hearing users say, 'I don't have to think twice anymore.'"
-                  stats={[
-                    { number: "20%", description: "Daily active usage increase within weeks of launch" },
-                    { number: "10%", description: "Cross-currency transaction growth across all supported corridors" },
-                    { number: "6", description: "Currencies supported seamlessly in a single wallet" }
-                  ]}
-                />
-              </div>
-            </div>
-
-            <div className="max-w-4xl min-w-0 mx-auto lg:col-start-2 lg:row-start-3">
-            <ScrollReveal>
-              <div id="what-i-learned" className="mb-20 scroll-mt-28">
-                <h2 className="text-4xl font-bold mb-6">What I Learned</h2>
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mb-8 max-w-[640px]">
-                  This project taught me how powerful simplicity can be — especially in fintech.
-                </p>
-
-                <TakeawayCards cards={[
-                  "Complexity under the hood, simplicity on the surface.",
-                  "Compliance can be designed around, not bolted on.",
-                  "Users don't see the work — they just see that it works."
-                ]} />
-
-                <div className="grid md:grid-cols-2 gap-8 mt-8">
-                  <div className="bg-background rounded-md p-8 border border-border">
-                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-accent">
-                      <CheckCircle2 className="w-6 h-6 text-accent" />
-                      What Worked
-                    </h3>
-                    <ul className="space-y-3">
-                      {[
-                        "Compliance-first design approach",
-                        "Single wallet abstraction for multiple currencies",
-                        "Micro-interaction testing for fluid UX",
-                        "Cross-team collaboration with compliance and support"
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-accent text-sm">✓</span>
-                          <span className="text-[14px]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="bg-background rounded-md p-8 border border-border">
-                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                      <Lightbulb className="w-6 h-6 text-muted-foreground" />
-                      What I'd Improve
-                    </h3>
-                    <ul className="space-y-3">
-                      {[
-                        "Earlier user testing with multi-currency scenarios",
-                        "Built-in conversion rate comparison tool",
-                        "Better onboarding for currency switching",
-                        "Analytics for currency preference patterns"
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-muted-foreground text-sm">→</span>
-                          <span className="text-[14px]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <p className="text-[15px] leading-[1.75] text-muted-foreground mt-8 max-w-[640px]">
-                  Under the hood, the system was complex: compliance mapping, currency logic, multiple regions, and technical integration. But what users saw was freedom. And that's the real magic of product management.
-                </p>
-              </div>
-            </ScrollReveal>
-            </div>
-
           </div>
         </div>
       </section>
