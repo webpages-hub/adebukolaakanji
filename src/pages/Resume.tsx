@@ -49,7 +49,7 @@ const Resume = () => {
             </div>
             <div className="flex items-center gap-2">
               <Linkedin className="w-4 h-4" />
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-base">
+              <a href="https://www.linkedin.com/in/aadebukola/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-base">
                 LinkedIn
               </a>
             </div>

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://adebukolaakanji.lovable.app";
+const SITE_URL = "https://adebukolaakanji.com";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 interface SEOProps {
@@ -14,7 +14,7 @@ interface SEOProps {
 const SEO = ({ title, description, path, image = DEFAULT_IMAGE, type = "website" }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
