@@ -6,19 +6,7 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import ContextTag from "@/components/case-study/ContextTag";
 import ScrollReveal from "@/components/case-study/ScrollReveal";
-import CaseStudyTOC from "@/components/case-study/CaseStudyTOC";
 import { CaseStudyData } from "./types";
-
-const tocSections = [
-  { id: "overview", label: "Overview" },
-  { id: "background-context", label: "Background & Context" },
-  { id: "research-discovery", label: "Research & Discovery" },
-  { id: "product-strategy", label: "Product Strategy" },
-  { id: "execution-launch", label: "Execution & Launch" },
-  { id: "results-impact", label: "Results & Impact" },
-  { id: "challenges", label: "Challenges" },
-  { id: "lessons-learned", label: "Lessons Learned" },
-];
 
 const Paragraphs = ({ items }: { items: string[] }) => (
   <>
@@ -92,8 +80,6 @@ const CaseStudyTemplate = ({ data }: { data: CaseStudyData }) => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto flex gap-12">
-            <CaseStudyTOC sections={tocSections} sticky={false} />
-
             <div className="max-w-4xl flex-1 min-w-0 mx-auto">
               {/* Metadata Bar */}
               <ScrollReveal>
@@ -207,7 +193,7 @@ const CaseStudyTemplate = ({ data }: { data: CaseStudyData }) => {
                   <h2 className="text-3xl font-bold mb-8 text-foreground">{takeaways.heading}</h2>
                   <div className="grid md:grid-cols-2 gap-4">
                     {takeaways.cards.map((card, i) => (
-                      <div key={i} className="bg-[#FDF5F0] rounded-xl p-6">
+                      <div key={i} className="rounded-xl p-6">
                         <span className="text-xs font-bold text-accent mb-3 block">#{i + 1}</span>
                         <h3 className="text-[15px] font-bold text-foreground mb-2">{card.title}</h3>
                         <p className="text-[14px] text-muted-foreground leading-[1.6]">{card.description}</p>
