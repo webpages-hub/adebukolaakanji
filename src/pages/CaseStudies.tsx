@@ -32,7 +32,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Global Transfers",
-    description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, grew it to $600K in fee revenue within eight months, and expanded it across six markets processing over $1M in total payment volume.",
+    description: "Built cross-border payment infrastructure enabling businesses in DRC to make international payments, reducing transaction costs, improving settlement times, and generating $600K+ in revenue within eight months.",
     tags: ["CROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH"],
     href: "/global-transfers",
     category: ["live"],

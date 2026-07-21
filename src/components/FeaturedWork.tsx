@@ -60,7 +60,7 @@ const FeaturedWork = () => {
             {projects.map((project, idx) => (
               <div
                 key={project.name}
-                className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}
+                className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center ${idx === projects.length - 1 ? '' : 'pb-12 border-b border-border md:pb-0 md:border-b-0'}`}
               >
                 {/* Image */}
                 <div className="w-full md:w-1/2">
