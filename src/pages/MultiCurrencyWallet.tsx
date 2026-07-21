@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/case-study/ScrollReveal";
 const metadata = [
   { label: "Role", value: "Product Manager" },
   { label: "Team", value: "Engineering, Design, Operations, Finance, Legal & Compliance" },
-  { label: "Product", value: "Nomba Multi-Currency Wallet" },
+  { label: "Product", value: "Multicurrency wallet" },
   { label: "Markets", value: "DRC, Diaspora Markets" },
   { label: "Timeline", value: "1 Month" },
 ];
