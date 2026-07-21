@@ -23,7 +23,7 @@ const ContactCard = () => {
             </div>
 
             {/* Right: Contact Options */}
-            <div className="flex flex-col gap-4 min-w-[260px]">
+            <div className="flex flex-col gap-4 md:min-w-[260px]">
               <a
                 href="mailto:adebukolaakanji@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-foreground/30 transition-base"

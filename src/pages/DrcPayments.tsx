@@ -212,8 +212,16 @@ const DrcPayments = () => {
                 </p>
               </div>
             </ScrollReveal>
+            </div>
 
-            {/* Navigation */}
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation */}
+      <section className="pb-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pb-8 border-b border-border">
               <Link to="/multi-currency-wallet" className="w-full sm:w-auto">
                 <Button variant="ghost" className="gap-2 w-full sm:w-auto">
@@ -234,8 +242,6 @@ const DrcPayments = () => {
             <ScrollReveal>
               <ContactCard />
             </ScrollReveal>
-            </div>
-
           </div>
         </div>
       </section>
