@@ -18,14 +18,14 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     name: "DRC Payments",
-    description: "Six weeks. That's how long it took to go from zero to a live, locally compliant payment product in the DRC. I conducted on-ground research, shaped the MVP, and drove rapid adoption across a brand new market.",
+    description: "Led Nomba's first international expansion into DRC, building an interoperable payments platform that onboarded 3,000+ agents, merchants, and consumers while processing $100K+ in local payment volume within six weeks.",
     tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
     href: "/drc-payments",
     category: ["live"],
   },
   {
     name: "Global Expansion",
-    description: "Six markets. Six weeks. One product built for the African diaspora to send money home at better rates than any alternative. Processed over $1M in total payment volume within twelve months of launch.",
+    description: "Scaled Nomba's expansion model across six markets by building a cross-border payments product for African diaspora customers, processing $1M+ transaction volume and improving onboarding conversion from 11% to 90%.",
     tags: ["DIASPORA PAYMENTS", "MARKET EXPANSION", "REMITTANCE"],
     href: "/global-expansion",
     category: ["live"],
