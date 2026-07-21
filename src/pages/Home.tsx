@@ -92,10 +92,10 @@ const Home = () => {
 
             <div className="space-y-4">
               {[
-                { title: "Beyond Borders: Secrets to Launching a Product in Africa", url: "https://medium.com/@adebukolaakanji/beyond-borders-secrets-to-launching-a-product-in-africa" },
-                { title: "How do you know if you are building the right product?", url: "https://medium.com/@adebukolaakanji/how-do-you-know-if-you-are-building-the-right-product" },
-                { title: "Data is a Product's Love Language", url: "https://medium.com/@adebukolaakanji/data-is-a-products-love-language" },
-                { title: "You Don't Break Into a New Market. You Learn How to Belong.", url: "https://medium.com/@adebukolaakanji/you-dont-break-into-a-new-market-you-learn-how-to-belong" },
+                { title: "Beyond Borders: Secrets to Launching a Product in Africa", url: "https://medium.com/@adebukolaakanji/beyond-borders-secrets-to-launching-a-product-in-africa-f4ff7f9ea411?sharedUserId=adebukolaakanji" },
+                { title: "How do you know if you are building the right product?", url: "https://www.linkedin.com/posts/aadebukola_creating-a-good-product-strategy-activity-7284871891184480256-pRhp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0ecOQBAlb3BkxqK5O7JT1aEAnyXfOlqTk" },
+                { title: "The Day I Realized Data is a Product's Love Language", url: "https://medium.com/@adebukolaakanji/the-day-i-realized-data-is-a-products-love-language-09062c2ba067?sharedUserId=adebukolaakanji" },
+                { title: "You Don't Break Into a New Market. You Learn How to Belong.", url: "https://medium.com/@adebukolaakanji/you-dont-break-into-a-new-market-you-learn-how-to-belong-8683ce6ad782?sharedUserId=adebukolaakanji" },
               ].map((article) => (
                 <a
                   key={article.title}
