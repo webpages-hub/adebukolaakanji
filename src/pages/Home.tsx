@@ -123,6 +123,7 @@ const Home = () => {
 
       {/* Contact Me Section */}
       <ContactCard />
+      </main>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-6">
