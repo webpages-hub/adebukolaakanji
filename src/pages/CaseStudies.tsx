@@ -62,8 +62,8 @@ const caseStudies: CaseStudy[] = [
 
 const tabs: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
-  { label: "Live Projects", value: "live" },
-  { label: "Vibe Coded Projects", value: "vibe" },
+  { label: "Professional Work", value: "live" },
+  { label: "Side Projects", value: "vibe" },
 ];
 
 const CaseStudies = () => {
@@ -97,10 +97,10 @@ const CaseStudies = () => {
                 <button
                   key={tab.value}
                   onClick={() => setActiveTab(tab.value)}
-                  className={`text-sm font-medium px-5 py-[10px] rounded-full transition-base ${
+                  className={`text-sm font-medium px-5 py-[10px] rounded-full border transition-base ${
                     activeTab === tab.value
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:text-accent"
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "text-foreground bg-muted/60 border-border hover:text-accent hover:border-accent"
                   }`}
                 >
                   {tab.label}
@@ -110,48 +110,53 @@ const CaseStudies = () => {
             
             {/* Rows */}
             <div className="divide-y divide-border">
-              {filtered.map((cs) => (
-                <div
-                  key={cs.name}
-                  className="grid grid-cols-1 md:grid-cols-[25fr_55fr_20fr] gap-6 items-center py-6 md:py-8"
-                >
-                  <div className="font-bold text-lg">{cs.name}</div>
-                  <div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {cs.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {cs.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs text-muted-foreground uppercase tracking-wide"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+              {filtered.map((cs) => {
+                const isExternal = cs.href.startsWith("http");
+                const rowClassName =
+                  "grid grid-cols-1 md:grid-cols-[25fr_55fr_20fr] gap-6 items-center py-6 md:py-8 px-4 -mx-4 rounded-xl transition-base hover:bg-muted/40";
+
+                const rowContent = (
+                  <>
+                    <div className="font-bold text-lg">{cs.name}</div>
+                    <div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {cs.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {cs.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs text-muted-foreground uppercase tracking-wide"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-start md:justify-end">
-                    {cs.href.startsWith("http") ? (
-                      <a
-                        href={cs.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline transition-base"
-                      >
-                        Visit Project <ArrowRight className="w-4 h-4" />
-                      </a>
-                    ) : (
-                      <Link
-                        to={cs.href}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline transition-base"
-                      >
-                        View Case Study <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              ))}
+                    <div className="flex justify-start md:justify-end">
+                      <span className="inline-flex items-center gap-2 text-sm font-medium text-accent group-hover:underline transition-base">
+                        {isExternal ? "Visit Project" : "View Case Study"} <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </>
+                );
+
+                return isExternal ? (
+                  <a
+                    key={cs.name}
+                    href={cs.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group ${rowClassName}`}
+                  >
+                    {rowContent}
+                  </a>
+                ) : (
+                  <Link key={cs.name} to={cs.href} className={`group ${rowClassName}`}>
+                    {rowContent}
+                  </Link>
+                );
+              })}
             </div>
 
             {filtered.length === 0 && (

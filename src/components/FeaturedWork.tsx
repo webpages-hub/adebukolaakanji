@@ -97,7 +97,7 @@ const FeaturedWork = () => {
 
                   <Link
                     to={project.href}
-                    className="group inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border transition-base bg-[#F5A623] border-[#F5A623] text-[#1A1A1A] hover:opacity-90 md:bg-transparent md:border-foreground md:text-foreground md:hover:opacity-100 md:hover:bg-primary md:hover:text-primary-foreground"
+                    className="group inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border transition-base bg-accent border-accent text-accent-foreground hover:opacity-90 md:bg-transparent md:border-foreground md:text-foreground md:hover:opacity-100 md:hover:bg-primary md:hover:text-primary-foreground"
                   >
                     View Case Study <ArrowRight className="w-4 h-4 animate-arrow-bounce" />
                   </Link>

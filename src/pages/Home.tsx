@@ -54,7 +54,7 @@ const Home = () => {
                   </span>
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-                  My name is Bukola. I find the gap between what users need and what they're currently getting, then I build the solution that closes it. I have spent 4.5 years doing that across fintech, payments, and international markets.
+                  My name is Bukola. I find the gap between what users need and what they're currently getting, then I build the solution that closes it. I have spent 5 years doing that across fintech, payments, and international markets.
                 </p>
                 
                 <Link
