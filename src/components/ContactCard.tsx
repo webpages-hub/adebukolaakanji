@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ContactCard = () => {
@@ -34,19 +34,6 @@ const ContactCard = () => {
                 <div>
                   <div className="text-foreground font-semibold text-sm">Email</div>
                   <div className="text-muted-foreground text-xs">adebukolaakanji@gmail.com</div>
-                </div>
-              </a>
-
-              <a
-                href="tel:+2347065197102"
-                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:border-foreground/30 transition-base"
-              >
-                <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-muted-foreground" />
-                </div>
-                <div>
-                  <div className="text-foreground font-semibold text-sm">Phone</div>
-                  <div className="text-muted-foreground text-xs">+234 706 519 7102</div>
                 </div>
               </a>
 

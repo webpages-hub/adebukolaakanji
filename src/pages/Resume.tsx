@@ -19,7 +19,7 @@ const Resume = () => {
       <SEO title="Resume — Adebukola Akanji" description="Resume and experience of Adebukola Akanji, Product Manager in fintech and global payments." path="/resume" />
       <Navigation />
 
-      <main className="container mx-auto px-6 pt-24 pb-16">
+      <main className="w-full px-6 md:px-10 lg:px-16 pt-24 pb-16">
         {/* Page Heading */}
         <h1 className="text-4xl md:text-5xl font-bold mb-2 text-foreground font-heading">Resume</h1>
         <p className="text-sm font-normal text-muted-foreground mb-8">
@@ -28,7 +28,7 @@ const Resume = () => {
 
         {/* Download Button */}
         <div className="flex mb-8 pb-6 border-b border-border print:hidden">
-          <Button onClick={handleDownloadPDF} variant="outline" className="gap-2 w-full justify-center sm:w-auto sm:justify-start text-muted-foreground border-border hover:text-foreground">
+          <Button onClick={handleDownloadPDF} variant="outline" className="gap-2 w-full justify-center sm:w-auto sm:justify-start text-muted-foreground border-border hover:text-foreground md:bg-primary md:text-primary-foreground md:border-primary md:hover:bg-primary/90 md:hover:text-primary-foreground md:shadow-md md:hover:shadow-lg">
             <Download className="w-4 h-4" />
             Save as PDF
           </Button>
@@ -37,12 +37,14 @@ const Resume = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
           <div className="glass-card p-6">
-            <p className="text-muted-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed">
+            <p className="text-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed">
               Fintech PM with 5 years building cross-border payment products across six markets. Launched DRC payments infrastructure from zero, scaled to $1M+ transaction volume, and improved onboarding conversion from 11% to 90%.
             </p>
           </div>
         </section>
 
+        <div className="grid lg:grid-cols-[1fr_280px] gap-8 lg:gap-12 items-start">
+        <div className="min-w-0">
         {/* Professional Experience */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6 text-foreground">Professional Experience</h2>
@@ -175,6 +177,29 @@ const Resume = () => {
             ))}
           </div>
         </section>
+        </div>
+
+        {/* Key Stats Sidebar */}
+        <aside className="lg:sticky lg:top-28">
+          <div className="glass-card p-6">
+            <h3 className="text-xs uppercase tracking-wide font-semibold text-muted-foreground mb-4">
+              At a Glance
+            </h3>
+            <ul className="space-y-3">
+              {[
+                "5 years experience",
+                "6 markets",
+                "$1M+ transaction volume",
+                "Cross-border payments",
+              ].map((item) => (
+                <li key={item} className="text-sm font-medium text-foreground pb-3 border-b border-border last:border-0 last:pb-0">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+        </div>
       </main>
 
       {/* Contact Card */}

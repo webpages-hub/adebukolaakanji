@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -19,7 +19,6 @@ const Contact = () => {
             "@type": "Person",
             name: "Adebukola Akanji",
             email: "adebukolaakanji@gmail.com",
-            telephone: "+2347065197102",
             sameAs: ["https://www.linkedin.com/in/aadebukola/"],
           },
         }}
@@ -32,7 +31,7 @@ const Contact = () => {
             <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6 text-foreground">
               Let's Connect
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+            <p className="text-[17px] sm:text-xl text-muted-foreground mb-12 leading-relaxed">
               I'm always excited to discuss product opportunities, collaborations, or just have a conversation about building great user experiences.
             </p>
 
@@ -50,20 +49,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a 
-                href="tel:+2347065197102" 
-                className="p-6 rounded-xl bg-card shadow-elegant hover:shadow-lg transition-base border border-border hover:border-foreground/30 flex items-center gap-4"
-              >
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-muted-foreground" />
-                </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold mb-1">Phone</div>
-                  <div className="text-muted-foreground">+234 706 519 7102</div>
-                </div>
-              </a>
-
-              <a 
+              <a
                 href="https://www.linkedin.com/in/aadebukola/" 
                 target="_blank"
                 rel="noopener noreferrer"
