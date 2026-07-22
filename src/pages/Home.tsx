@@ -29,7 +29,7 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Adebukola Akanji - Fintech Product Manager" description="Portfolio of Adebukola Akanji, a Product Manager building fintech and payments products that scale globally and deliver measurable growth." path="/" />
       <Navigation />
-      
+      <main>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
@@ -70,6 +70,10 @@ const Home = () => {
                 <img 
                   src={heroPhoto} 
                   alt="Adebukola Akanji - Product Manager" 
+                  width={320}
+                  height={320}
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shadow-elegant"
                 />
               </div>
@@ -119,6 +123,7 @@ const Home = () => {
 
       {/* Contact Me Section */}
       <ContactCard />
+      </main>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-6">

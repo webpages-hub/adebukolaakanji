@@ -6,7 +6,24 @@ import { Mail, Linkedin, Phone } from "lucide-react";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Contact — Adebukola Akanji" description="Get in touch with Adebukola Akanji about product roles, collaborations, and consulting." path="/contact" />
+      <SEO
+        title="Contact — Adebukola Akanji"
+        description="Get in touch with Adebukola Akanji about product roles, collaborations, and consulting."
+        path="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact Adebukola Akanji",
+          url: "https://adebukolaakanji.com/contact",
+          mainEntity: {
+            "@type": "Person",
+            name: "Adebukola Akanji",
+            email: "adebukolaakanji@gmail.com",
+            telephone: "+2347065197102",
+            sameAs: ["https://www.linkedin.com/in/aadebukola/"],
+          },
+        }}
+      />
       <Navigation />
       
       <section className="pt-32 pb-20">
