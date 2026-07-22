@@ -9,10 +9,12 @@ interface SEOProps {
   path: string;
   image?: string;
   type?: "website" | "article";
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const SEO = ({ title, description, path, image = DEFAULT_IMAGE, type = "website" }: SEOProps) => {
+const SEO = ({ title, description, path, image = DEFAULT_IMAGE, type = "website", jsonLd }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
+  const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   return (
     <Helmet defer={false}>
       <title>{title}</title>
@@ -29,6 +31,10 @@ const SEO = ({ title, description, path, image = DEFAULT_IMAGE, type = "website"
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {schemas.map((schema, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+      ))}
     </Helmet>
   );
 };
