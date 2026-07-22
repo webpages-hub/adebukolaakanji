@@ -70,6 +70,10 @@ const Home = () => {
                 <img 
                   src={heroPhoto} 
                   alt="Adebukola Akanji - Product Manager" 
+                  width={320}
+                  height={320}
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shadow-elegant"
                 />
               </div>

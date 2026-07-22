@@ -1,0 +1,19 @@
+# Adebukola Akanji
+
+> Portfolio of Adebukola Akanji, a Fintech Product Manager specialising in cross-border payments and emerging markets expansion across Africa and Europe.
+
+## Pages
+
+- [Home](/): Introduction and featured work.
+- [Case Studies](/case-studies): Fintech and payments case studies.
+- [About](/about): Background, approach, and values.
+- [Resume](/resume): Professional experience and skills.
+- [Contact](/contact): Get in touch.
+
+## Case Studies
+
+- [DRC Payments](/drc-payments): Nomba's first international expansion into DRC.
+- [Global Expansion](/global-expansion): Scaling Nomba across six markets for diaspora customers.
+- [Global Transfers](/global-transfers): Cross-border payment infrastructure for DRC businesses.
+- [Gamification](/gamification): BNPL retention through behavioural incentives.
+- [Multi-Currency Wallet](/multi-currency-wallet): Nomba's multi-currency wallet product.

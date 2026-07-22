@@ -37,7 +37,7 @@ const About = () => {
 
               <div className="space-y-12">
                 <div>
-                  <span className="text-sm italic text-accent mb-2 block">Who I am</span>
+                  <h2 className="text-sm italic text-accent mb-2 block">Who I am</h2>
                   <p className="text-base leading-relaxed text-foreground/90">
                     Somewhere between a library full of information and building products people use, I found my thing. I didn't take the straight road into product. I studied Library and Information Science, graduated top of my department, and then a single coursework module changed everything. It showed me that understanding how people look for things, and why they fail to find them, is exactly the problem product management exists to solve.
                   </p>
@@ -47,7 +47,7 @@ const About = () => {
                 </div>
 
                 <div>
-                  <span className="text-sm italic text-accent mb-2 block">What I do</span>
+                  <h2 className="text-sm italic text-accent mb-2 block">What I do</h2>
                   <p className="text-base leading-relaxed text-foreground/90">
                     I sit at the intersection of user needs, business goals, and what's actually possible to build, then I make the case for the version where all three overlap.
                   </p>
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
 
                 <div>
-                  <span className="text-sm italic text-accent mb-2 block">What gets me going</span>
+                  <h2 className="text-sm italic text-accent mb-2 block">What gets me going</h2>
                   <p className="text-base leading-relaxed text-foreground/90">
                     Honestly? I love when the data says something nobody expected. That moment when a user behavior pattern quietly tells you the whole product assumption was slightly off, and you get to be the person who caught it.
                   </p>
