@@ -39,7 +39,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Gamification",
-    description: "Users weren't sticking around. Rather than spamming them with push notifications, I dug into why, then built a badge and rewards system tied directly to how they actually used the product. Retention went up 10%.",
+    description: "Improved BNPL retention by designing a gamification experience that encouraged repeat usage through behavioural incentives, increasing user retention by 10% within three months of launch.",
     tags: ["RETENTION STRATEGY", "USER ENGAGEMENT", "BEHAVIORAL DESIGN"],
     href: "/gamification",
     category: ["live"],
