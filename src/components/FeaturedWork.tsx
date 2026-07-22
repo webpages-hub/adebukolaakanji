@@ -10,7 +10,7 @@ const projects = [
   {
     number: "2024",
     name: "DRC Payments",
-    description: "Six weeks. That's how long it took to go from zero to a live, locally compliant payment product in the DRC. I conducted on-ground research, shaped the MVP, and drove rapid adoption across a brand new market.",
+    description: "Led Nomba's first international expansion into DRC, building an interoperable payments platform that onboarded 3,000+ agents, merchants, and consumers while processing $100K+ in local payment volume within six weeks.",
     tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
     href: "/projects",
     image: drcHero,
@@ -18,7 +18,7 @@ const projects = [
   {
     number: "2025",
     name: "Global Expansion",
-    description: "Six markets. Six weeks. One product built for the African diaspora to send money home at better rates than any alternative. Processed over $1M in total payment volume within twelve months of launch.",
+    description: "Scaled Nomba's expansion model across six markets by building a cross-border payments product for African diaspora customers, processing $1M+ transaction volume and improving onboarding conversion from 11% to 90%.",
     tags: ["DIASPORA PAYMENTS", "MARKET EXPANSION", "REMITTANCE"],
     href: "/global-expansion",
     image: globalExpansionHero,
@@ -26,7 +26,7 @@ const projects = [
   {
     number: "2025",
     name: "Global Transfers",
-    description: "People sending money home shouldn't have to wait days to know it arrived. I built the product that made it happen in under an hour, and grew it to $600K in revenue within seven months.",
+    description: "Built cross-border payment infrastructure enabling businesses in DRC to make international payments, reducing transaction costs, improving settlement times, and generating $600K+ in revenue within eight months.",
     tags: ["CROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH"],
     href: "/global-transfers",
     image: globalHero,
@@ -34,7 +34,7 @@ const projects = [
   {
     number: "2023",
     name: "Gamification",
-    description: "Users weren't sticking around. Rather than spamming them with push notifications, I dug into why, then built a badge and rewards system tied directly to how they actually used the product. Retention went up 10%.",
+    description: "Improved BNPL retention by designing a gamification experience that encouraged repeat usage through behavioural incentives, increasing user retention by 10% within three months of launch.",
     tags: ["RETENTION STRATEGY", "USER ENGAGEMENT", "BEHAVIORAL DESIGN"],
     href: "/gamification",
     image: gamificationHero,
@@ -42,7 +42,7 @@ const projects = [
   {
     number: "2024",
     name: "Multi-Currency Wallet",
-    description: "Managing money across currencies shouldn't feel like a chore. I built a wallet that made it feel effortless, and the 20% jump in daily active usage told us users agreed.",
+    description: "Built Nomba's multi-currency wallet experience, enabling users to hold and manage five currencies seamlessly while increasing daily active usage by 20% and driving 10% growth in cross-currency transactions.",
     tags: ["PRODUCT STRATEGY", "USER EXPERIENCE", "GROWTH"],
     href: "/multi-currency-wallet",
     image: multicurrencyHero,
