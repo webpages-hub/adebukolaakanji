@@ -20,9 +20,15 @@ const Resume = () => {
       <Navigation />
 
       <main className="container mx-auto px-6 pt-24 pb-16">
+        {/* Page Heading */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 text-foreground font-heading">Resume</h1>
+        <p className="text-sm font-normal text-muted-foreground mb-8">
+          Here's a snapshot of my professional journey so far.
+        </p>
+
         {/* Download Button */}
-        <div className="flex justify-end mb-6 print:hidden">
-          <Button onClick={handleDownloadPDF} variant="outline" className="gap-2 text-muted-foreground border-border hover:text-foreground">
+        <div className="flex mb-8 pb-6 border-b border-border print:hidden">
+          <Button onClick={handleDownloadPDF} variant="outline" className="gap-2 w-full justify-center sm:w-auto sm:justify-start text-muted-foreground border-border hover:text-foreground">
             <Download className="w-4 h-4" />
             Save as PDF
           </Button>
@@ -31,8 +37,8 @@ const Resume = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
           <div className="glass-card p-6">
-            <p className="text-muted-foreground leading-relaxed">
-              Product Manager specialising in cross-border payments, fintech infrastructure, and emerging market expansion. Over 5 years of experience building financial products across complex markets, including launching products across six countries, developing payment infrastructure in the DRC, and scaling solutions that generated millions in transaction volume and revenue. Experienced in product strategy, market expansion, partnerships, and cross-functional execution.
+            <p className="text-muted-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed">
+              Fintech PM with 5 years building cross-border payment products across six markets. Launched DRC payments infrastructure from zero, scaled to $1M+ transaction volume, and improved onboarding conversion from 11% to 90%.
             </p>
           </div>
         </section>
