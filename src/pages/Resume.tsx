@@ -43,7 +43,7 @@ const Resume = () => {
           </div>
         </section>
 
-        <div className="grid lg:grid-cols-[1fr_280px] gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-[1fr_360px] gap-8 lg:gap-12 items-start">
         <div className="min-w-0">
         {/* Professional Experience */}
         <section className="mb-12">
@@ -182,21 +182,26 @@ const Resume = () => {
         {/* Key Stats Sidebar */}
         <aside className="lg:sticky lg:top-28">
           <div className="glass-card p-6">
-            <h3 className="text-xs uppercase tracking-wide font-semibold text-muted-foreground mb-4">
+            <h3 className="text-xs uppercase tracking-wide font-semibold text-muted-foreground mb-3">
               At a Glance
             </h3>
-            <ul className="space-y-3">
+            <p className="text-[13px] font-normal text-muted-foreground text-left mb-6">
+              Cross-border payments · Digital wallets · Market expansion · API products
+            </p>
+            <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                "5 years experience",
-                "6 markets",
-                "$1M+ transaction volume",
-                "Cross-border payments",
-              ].map((item) => (
-                <li key={item} className="text-sm font-medium text-foreground pb-3 border-b border-border last:border-0 last:pb-0">
-                  {item}
-                </li>
+                { value: "$600K+", label: "Fee revenue generated" },
+                { value: "$1M+", label: "Transaction volume processed" },
+                { value: "11% → 90%", label: "Onboarding conversion rate" },
+                { value: "6 markets", label: "Products launched across" },
+                { value: "6 weeks", label: "Zero to first international launch" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-xl font-bold text-foreground">{stat.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </aside>
         </div>
