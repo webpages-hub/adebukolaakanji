@@ -29,7 +29,7 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <SEO title="Adebukola Akanji - Fintech Product Manager" description="Portfolio of Adebukola Akanji, a Product Manager building fintech and payments products that scale globally and deliver measurable growth." path="/" />
       <Navigation />
-      
+      <main>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 gradient-hero overflow-hidden">
         <div className="container mx-auto px-6">
