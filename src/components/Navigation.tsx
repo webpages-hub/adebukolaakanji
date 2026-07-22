@@ -10,9 +10,23 @@ const Navigation = () => {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/case-studies", label: "Works" },
+    { href: "/case-studies", label: "Case Studies" },
     { href: "/resume", label: "Resume" },
   ];
+
+  const caseStudyPaths = [
+    "/drc-payments",
+    "/projects",
+    "/global-expansion",
+    "/global-transfers",
+    "/gamification",
+    "/multi-currency-wallet",
+  ];
+
+  const isLinkActive = (href: string) =>
+    href === "/case-studies"
+      ? location.pathname === href || caseStudyPaths.includes(location.pathname)
+      : location.pathname === href;
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -33,7 +47,7 @@ const Navigation = () => {
                 to={link.href}
                 className={cn(
                   "text-sm font-medium transition-base px-[18px] py-2 rounded-full",
-                  location.pathname === link.href
+                  isLinkActive(link.href)
                     ? "bg-[#EFEFEF] text-foreground"
                     : "text-foreground hover:text-accent"
                 )}
@@ -71,7 +85,7 @@ const Navigation = () => {
                 onClick={handleLinkClick}
                 className={cn(
                   "text-sm font-medium transition-base py-2 px-4 rounded-full",
-                  location.pathname === link.href
+                  isLinkActive(link.href)
                     ? "bg-[#EFEFEF] text-foreground"
                     : "text-foreground hover:text-accent"
                 )}
