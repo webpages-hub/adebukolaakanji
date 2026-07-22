@@ -75,13 +75,15 @@ const FeaturedWork = () => {
 
                 {/* Content */}
                 <div className="w-full md:w-1/2 space-y-4">
-                  <span className="text-sm italic text-muted-foreground">{project.number}</span>
+                  <span className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">{project.number}</span>
 
-                  <div className="flex flex-wrap items-center gap-x-2 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-                    {project.tags.map((tag, i) => (
-                      <span key={tag} className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-semibold tracking-wider text-muted-foreground uppercase bg-muted px-3 py-1 rounded-full"
+                      >
                         {tag}
-                        {i < project.tags.length - 1 && <span className="text-border">|</span>}
                       </span>
                     ))}
                   </div>
@@ -95,7 +97,7 @@ const FeaturedWork = () => {
 
                   <Link
                     to={project.href}
-                    className="group inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border border-foreground text-foreground transition-base hover:bg-primary hover:text-primary-foreground"
+                    className="group inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border transition-base bg-[#F5A623] border-[#F5A623] text-[#1A1A1A] hover:opacity-90 md:bg-transparent md:border-foreground md:text-foreground md:hover:opacity-100 md:hover:bg-primary md:hover:text-primary-foreground"
                   >
                     View Case Study <ArrowRight className="w-4 h-4 animate-arrow-bounce" />
                   </Link>
