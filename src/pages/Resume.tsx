@@ -1,9 +1,8 @@
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
-import { Mail, Phone, Linkedin, MapPin, Download, Globe } from "lucide-react";
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const Resume = () => {
   const handleDownloadPDF = () => {
@@ -28,41 +27,6 @@ const Resume = () => {
             Save as PDF
           </Button>
         </div>
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
-            ADEBUKOLA AKANJI
-          </h1>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Lagos, Nigeria</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:adebukolaakanji@gmail.com" className="hover:text-accent transition-base">
-                adebukolaakanji@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>+2347065197102</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Linkedin className="w-4 h-4" />
-              <a href="https://www.linkedin.com/in/aadebukola/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-base">
-                LinkedIn
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4" />
-              <Link to="/" className="hover:text-accent transition-base">
-                Portfolio
-              </Link>
-            </div>
-          </div>
-        </div>
-
         {/* Professional Summary */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
