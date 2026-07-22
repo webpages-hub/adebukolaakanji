@@ -47,7 +47,25 @@ const CaseStudyTemplate = ({ data }: { data: CaseStudyData }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={seo.title} description={seo.description} path={seo.path} />
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        path={seo.path}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: hero.title,
+          description: seo.description,
+          image: `https://adebukolaakanji.com${seo.path === "/" ? "" : seo.path}`,
+          author: {
+            "@type": "Person",
+            name: "Adebukola Akanji",
+            url: "https://adebukolaakanji.com",
+          },
+          mainEntityOfPage: `https://adebukolaakanji.com${seo.path}`,
+        }}
+      />
       <Navigation />
 
       {/* Hero Section */}
