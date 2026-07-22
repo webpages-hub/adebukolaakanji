@@ -37,7 +37,7 @@ const Resume = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
           <div className="glass-card p-6">
-            <p className="text-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed">
+            <p className="text-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed text-justify">
               Fintech PM with 5 years building cross-border payment products across six markets. Launched DRC payments infrastructure from zero, scaled to $1M+ transaction volume, and improved onboarding conversion from 11% to 90%.
             </p>
           </div>
@@ -61,7 +61,7 @@ const Resume = () => {
                 <p>April 2023 – Present</p>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground italic mb-4">
+            <p className="text-sm text-muted-foreground italic mb-4 text-justify">
               Nomba is a B2B fintech building payment infrastructure and financial solutions for businesses across emerging markets.
             </p>
             <ul className="space-y-2 text-muted-foreground">
@@ -75,7 +75,7 @@ const Resume = () => {
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
-                  <span>{item}</span>
+                  <span className="text-justify">{item}</span>
                 </li>
               ))}
             </ul>
@@ -93,7 +93,7 @@ const Resume = () => {
                 <p>October 2022 – March 2023</p>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground italic mb-4">
+            <p className="text-sm text-muted-foreground italic mb-4 text-justify">
               Payfi was a fintech platform providing digital financial services including buy-now-pay-later solutions and payment products.
             </p>
             <ul className="space-y-2 text-muted-foreground">
@@ -105,7 +105,7 @@ const Resume = () => {
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
-                  <span>{item}</span>
+                  <span className="text-justify">{item}</span>
                 </li>
               ))}
             </ul>
@@ -131,7 +131,7 @@ const Resume = () => {
               ].map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-accent mt-1">•</span>
-                  <span>{item}</span>
+                  <span className="text-justify">{item}</span>
                 </li>
               ))}
             </ul>
@@ -146,14 +146,14 @@ const Resume = () => {
               <h3 className="text-xl font-semibold text-foreground">University of Alberta via Coursera</h3>
               <p className="text-sm font-medium text-foreground">2022</p>
             </div>
-            <p className="text-muted-foreground">Software Product Management</p>
+            <p className="text-muted-foreground text-justify">Software Product Management</p>
           </div>
           <div className="glass-card p-6">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
               <h3 className="text-xl font-semibold text-foreground">University of Ilorin, Nigeria</h3>
               <p className="text-sm font-medium text-foreground">2021</p>
             </div>
-            <p className="text-muted-foreground mb-2">B.Sc. Library and Information Science | First Class Honours (GPA: 4.59/5.0)</p>
+            <p className="text-muted-foreground mb-2 text-justify">B.Sc. Library and Information Science | First Class Honours (GPA: 4.59/5.0)</p>
             <p className="text-sm text-foreground">Award: Best Graduating Student, Department of Library and Information Science</p>
           </div>
         </section>
@@ -172,7 +172,7 @@ const Resume = () => {
             ].map((skill) => (
               <div key={skill.title} className="glass-card p-6">
                 <h3 className="font-semibold text-foreground mb-2">{skill.title}</h3>
-                <p className="text-sm text-muted-foreground">{skill.desc}</p>
+                <p className="text-sm text-muted-foreground text-justify">{skill.desc}</p>
               </div>
             ))}
           </div>
@@ -197,7 +197,15 @@ const Resume = () => {
                 { value: "6 weeks", label: "Zero to first international launch" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-xl font-bold text-foreground">{stat.value}</div>
+                  <div className="text-xl font-bold text-foreground">
+                    {stat.value === "6 weeks" ? (
+                      <>
+                        6<br className="hidden lg:block" /> weeks
+                      </>
+                    ) : (
+                      stat.value
+                    )}
+                  </div>
                   <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
                 </div>
               ))}
