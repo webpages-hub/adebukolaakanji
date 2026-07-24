@@ -7,7 +7,6 @@
 - [Home](/): Introduction and featured work.
 - [Case Studies](/case-studies): Fintech and payments case studies.
 - [About](/about): Background, approach, and values.
-- [Resume](/resume): Professional experience and skills.
 - [Contact](/contact): Get in touch.
 
 ## Case Studies

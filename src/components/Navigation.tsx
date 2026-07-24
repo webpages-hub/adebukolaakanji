@@ -11,7 +11,6 @@ const Navigation = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/resume", label: "Resume" },
   ];
 
   const caseStudyPaths = [

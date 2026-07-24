@@ -14,7 +14,6 @@ import Gamification from "./pages/Gamification";
 import MultiCurrencyWallet from "./pages/MultiCurrencyWallet";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,7 +36,6 @@ const App = () => (
           <Route path="/gamification" element={<Gamification />} />
           <Route path="/multi-currency-wallet" element={<MultiCurrencyWallet />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
