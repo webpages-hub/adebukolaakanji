@@ -72,6 +72,13 @@ const caseStudies: CaseStudy[] = [
     href: "https://github.com/webpages-hub/scholarship-finder",
     category: ["vibe"],
   },
+  {
+    name: "Feedback Analyzer",
+    description: "Analyzes App Store and Google Play reviews to surface what users are complaining about and suggests concrete product improvements.",
+    tags: ["USER FEEDBACK", "AI ANALYSIS", "PRODUCT INSIGHTS"],
+    href: "https://product-feedback-analyzer.vercel.app/",
+    category: ["vibe"],
+  },
 ];
 
 const tabs: { label: string; value: Category }[] = [
