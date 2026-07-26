@@ -53,9 +53,23 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "PM Log",
-    description: "A side project I am driving to help aspiring and junior product managers build their skills and get better at being product managers.",
+    description: "A practice platform for product managers to access real world product scenarios to improve their skills.",
     tags: ["PRODUCT MANAGEMENT", "SKILL BUILDING", "MENTORSHIP"],
     href: "https://pmlog.vercel.app/",
+    category: ["vibe"],
+  },
+  {
+    name: "Job Match Agent",
+    description: "An automated scored, link-verified job search for users across their job search preferences.",
+    tags: ["JOB SEARCH", "AUTOMATION", "AI AGENTS"],
+    href: "https://github.com/webpages-hub/job-match-agent",
+    category: ["vibe"],
+  },
+  {
+    name: "Scholarship Finder",
+    description: "An automated run for finding funded degree programs you are eligible for based on stated eligibility requirements.",
+    tags: ["EDUCATION", "AUTOMATION", "AI AGENTS"],
+    href: "https://github.com/webpages-hub/scholarship-finder",
     category: ["vibe"],
   },
 ];
