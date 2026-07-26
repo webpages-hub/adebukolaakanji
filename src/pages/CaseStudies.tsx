@@ -61,14 +61,14 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Job Match Agent",
     description: "An automated scored, link-verified job search for users across their job search preferences.",
-    tags: ["JOB SEARCH", "AUTOMATION", "AI AGENTS"],
+    tags: ["JOB SEARCH", "AUTOMATION", "GITHUB"],
     href: "https://github.com/webpages-hub/job-match-agent",
     category: ["vibe"],
   },
   {
     name: "Scholarship Finder",
     description: "An automated run for finding funded degree programs you are eligible for based on stated eligibility requirements.",
-    tags: ["EDUCATION", "AUTOMATION", "AI AGENTS"],
+    tags: ["EDUCATION", "AUTOMATION", "GITHUB"],
     href: "https://github.com/webpages-hub/scholarship-finder",
     category: ["vibe"],
   },
