@@ -1,108 +1,97 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Menu, X, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { site } from "@/data/site";
+
+const caseStudyPaths = [
+  "/drc-payments",
+  "/projects",
+  "/global-expansion",
+  "/global-transfers",
+  "/gamification",
+  "/multi-currency-wallet",
+];
+
+const links = [
+  { to: "/case-studies", label: "Case studies", isActive: (path: string) => path === "/case-studies" || caseStudyPaths.includes(path) },
+  { to: "/#process", label: "How I work", isActive: () => false },
+  { to: "/about", label: "About", isActive: (path: string) => path === "/about" },
+];
 
 const Navigation = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/case-studies", label: "Case Studies" },
-  ];
-
-  const caseStudyPaths = [
-    "/drc-payments",
-    "/projects",
-    "/global-expansion",
-    "/global-transfers",
-    "/gamification",
-    "/multi-currency-wallet",
-  ];
-
-  const isLinkActive = (href: string) =>
-    href === "/case-studies"
-      ? location.pathname === href || caseStudyPaths.includes(location.pathname)
-      : location.pathname === href;
-
-  const handleLinkClick = () => {
+  useEffect(() => {
     setIsOpen(false);
-  };
+  }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold font-heading transition-base hover:text-accent">
-            Adebukola Akanji
-          </Link>
-          
-          <div className="hidden md:flex items-center gap-2">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "text-sm font-medium transition-base px-[18px] py-2 rounded-full",
-                  isLinkActive(link.href)
-                    ? "bg-[#EFEFEF] text-foreground"
-                    : "text-foreground hover:text-accent"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+    <header className="border-b border-border bg-background">
+      <div className="mx-auto flex max-w-[1120px] items-center justify-between gap-3 px-5 py-3 sm:px-6 md:py-4">
+        <Link to="/" className="py-2 font-heading text-[17px] font-bold text-foreground no-underline md:text-[19px]">
+          {site.name}
+        </Link>
 
+        <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              aria-current={link.isActive(pathname) ? "page" : undefined}
+              className={cn(
+                "inline-flex h-10 items-center rounded-[10px] px-3 text-sm no-underline transition-colors hover:bg-muted",
+                link.isActive(pathname) ? "bg-muted font-semibold text-foreground" : "font-medium text-[#333333]"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
             to="/contact"
-            className={cn(
-              "hidden md:inline-flex items-center gap-2 text-sm font-medium px-[22px] py-[10px] rounded-[22px] transition-base hover:opacity-90 bg-primary text-primary-foreground",
-              location.pathname === "/contact" && "ring-2 ring-border ring-offset-2"
-            )}
+            className="inline-flex h-10 items-center justify-center rounded-[10px] bg-foreground px-4 text-sm font-medium text-white no-underline transition-opacity hover:opacity-90"
           >
-            Get in touch <ArrowRight className="w-4 h-4" />
+            Get in touch
           </Link>
+        </nav>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 hover:bg-muted rounded-lg transition-base"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {isOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-2 bg-background/95 backdrop-blur-md rounded-xl p-4">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                onClick={handleLinkClick}
-                className={cn(
-                  "text-sm font-medium transition-base py-2 px-4 rounded-full",
-                  isLinkActive(link.href)
-                    ? "bg-[#EFEFEF] text-foreground"
-                    : "text-foreground hover:text-accent"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Link
-              to="/contact"
-              onClick={handleLinkClick}
-              className="inline-flex items-center justify-center gap-2 text-sm font-medium px-[22px] py-[10px] rounded-[22px] mt-2 transition-base hover:opacity-90 bg-primary text-primary-foreground"
-            >
-              Get in touch <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        )}
+        <button
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          className="inline-flex h-11 w-11 flex-none items-center justify-center rounded-[10px] border border-border bg-background text-foreground transition-colors hover:bg-muted md:hidden"
+        >
+          {isOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
+        </button>
       </div>
-    </nav>
+
+      {isOpen && (
+        <nav id="mobile-menu" aria-label="Main" className="flex flex-col gap-1 border-t border-border px-5 pb-5 pt-3 md:hidden">
+          {links.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              aria-current={link.isActive(pathname) ? "page" : undefined}
+              className={cn(
+                "flex h-11 items-center rounded-[10px] px-3 text-base no-underline transition-colors hover:bg-muted",
+                link.isActive(pathname) ? "bg-muted font-semibold text-foreground" : "font-medium text-foreground"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            className="mt-2 flex h-11 items-center justify-center rounded-[10px] bg-foreground text-[15px] font-medium text-white no-underline"
+          >
+            Get in touch
+          </Link>
+        </nav>
+      )}
+    </header>
   );
 };
 

@@ -1,207 +1,27 @@
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
-import ContactCard from "@/components/ContactCard";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import SiteFooter from "@/components/site/SiteFooter";
+import WorkList from "@/components/site/WorkList";
+import SideBuilds from "@/components/site/SideBuilds";
+import CtaBand from "@/components/site/CtaBand";
 
-type Category = "all" | "live" | "vibe";
+const CaseStudies = () => (
+  <div className="min-h-screen bg-background text-[17px] leading-[1.6] text-[#333333]">
+    <SEO
+      title="Case Studies — Adebukola Akanji"
+      description="Fintech and payments case studies from Adebukola Akanji: market entry, cross-border transfers, retention, and multi-currency wallets."
+      path="/case-studies"
+    />
+    <Navigation />
 
-interface CaseStudy {
-  name: string;
-  description: string;
-  tags: string[];
-  href: string;
-  category: Category[];
-}
+    <main>
+      <WorkList asPageTitle />
+      <SideBuilds />
+      <CtaBand />
+    </main>
 
-const caseStudies: CaseStudy[] = [
-  {
-    name: "DRC Payments",
-    description: "Led Nomba's first international expansion into DRC, building an interoperable payments platform that onboarded 3,000+ agents, merchants, and consumers while processing $100K+ in local payment volume within six weeks.",
-    tags: ["MARKET ENTRY", "USER RESEARCH", "MVP LAUNCH"],
-    href: "/drc-payments",
-    category: ["live"],
-  },
-  {
-    name: "Global Expansion",
-    description: "Scaled Nomba's expansion model across six markets by building a cross-border payments product for African diaspora customers, processing $1M+ transaction volume and improving onboarding conversion from 11% to 90%.",
-    tags: ["DIASPORA PAYMENTS", "MARKET EXPANSION", "REMITTANCE"],
-    href: "/global-expansion",
-    category: ["live"],
-  },
-  {
-    name: "Global Transfers",
-    description: "Built cross-border payment infrastructure enabling businesses in DRC to make international payments, reducing transaction costs, improving settlement times, and generating $600K+ in revenue within eight months.",
-    tags: ["CROSS-BORDER PAYMENTS", "GO-TO-MARKET", "REVENUE GROWTH"],
-    href: "/global-transfers",
-    category: ["live"],
-  },
-  {
-    name: "Gamification",
-    description: "Improved BNPL retention by designing a gamification experience that encouraged repeat usage through behavioural incentives, increasing user retention by 10% within three months of launch.",
-    tags: ["RETENTION STRATEGY", "USER ENGAGEMENT", "BEHAVIORAL DESIGN"],
-    href: "/gamification",
-    category: ["live"],
-  },
-  {
-    name: "Multi-Currency Wallet",
-    description: "Built Nomba's multi-currency wallet experience, enabling users to hold and manage five currencies seamlessly while increasing daily active usage by 20% and driving 10% growth in cross-currency transactions.",
-    tags: ["PRODUCT STRATEGY", "USER EXPERIENCE", "GROWTH"],
-    href: "/multi-currency-wallet",
-    category: ["live"],
-  },
-  {
-    name: "PM Log",
-    description: "A practice platform for product managers to access real world product scenarios to improve their skills.",
-    tags: ["PRODUCT MANAGEMENT", "SKILL BUILDING", "MENTORSHIP"],
-    href: "https://pmlog.vercel.app/",
-    category: ["vibe"],
-  },
-  {
-    name: "Job Match Agent",
-    description: "An automated scored, link-verified job search for users across their job search preferences.",
-    tags: ["JOB SEARCH", "AUTOMATION", "GITHUB"],
-    href: "https://github.com/webpages-hub/job-match-agent",
-    category: ["vibe"],
-  },
-  {
-    name: "Scholarship Finder",
-    description: "An automated run for finding funded degree programs you are eligible for based on stated eligibility requirements.",
-    tags: ["EDUCATION", "AUTOMATION", "GITHUB"],
-    href: "https://github.com/webpages-hub/scholarship-finder",
-    category: ["vibe"],
-  },
-  {
-    name: "Feedback Analyzer",
-    description: "Analyzes App Store and Google Play reviews to surface what users are complaining about and suggests concrete product improvements.",
-    tags: ["USER FEEDBACK", "AI ANALYSIS", "PRODUCT INSIGHTS"],
-    href: "https://product-feedback-analyzer.vercel.app/",
-    category: ["vibe"],
-  },
-];
-
-const tabs: { label: string; value: Category }[] = [
-  { label: "All", value: "all" },
-  { label: "Professional Work", value: "live" },
-  { label: "Side Projects", value: "vibe" },
-];
-
-const CaseStudies = () => {
-  const [activeTab, setActiveTab] = useState<Category>("all");
-
-  const filtered =
-    activeTab === "all"
-      ? caseStudies
-      : caseStudies.filter((cs) => cs.category.includes(activeTab));
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO title="Case Studies — Adebukola Akanji" description="Fintech and payments case studies from Adebukola Akanji: market entry, cross-border transfers, retention, and multi-currency wallets." path="/case-studies" />
-      <Navigation />
-      
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Case Studies
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Every case study here started with a real user problem and a team trying to figure out the right answer. Here's what we learned.
-              </p>
-            </div>
-
-            {/* Filter Tabs */}
-            <div className="flex gap-2 mb-10">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.value}
-                  onClick={() => setActiveTab(tab.value)}
-                  className={`text-sm font-medium px-5 py-[10px] rounded-full border transition-base ${
-                    activeTab === tab.value
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "text-foreground bg-muted/60 border-border hover:text-accent hover:border-accent"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            
-            {/* Rows */}
-            <div className="divide-y divide-border">
-              {filtered.map((cs) => {
-                const isExternal = cs.href.startsWith("http");
-                const rowClassName =
-                  "grid grid-cols-1 md:grid-cols-[25fr_55fr_20fr] gap-6 items-center py-6 md:py-8 px-4 -mx-4 rounded-xl transition-base hover:bg-muted/40";
-
-                const rowContent = (
-                  <>
-                    <div className="font-bold text-lg">{cs.name}</div>
-                    <div>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {cs.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {cs.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs text-muted-foreground uppercase tracking-wide"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex justify-start md:justify-end">
-                      <span className="inline-flex items-center gap-2 text-sm font-medium text-accent group-hover:underline transition-base">
-                        {isExternal ? "Visit Project" : "View Case Study"} <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </>
-                );
-
-                return isExternal ? (
-                  <a
-                    key={cs.name}
-                    href={cs.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group ${rowClassName}`}
-                  >
-                    {rowContent}
-                  </a>
-                ) : (
-                  <Link key={cs.name} to={cs.href} className={`group ${rowClassName}`}>
-                    {rowContent}
-                  </Link>
-                );
-              })}
-            </div>
-
-            {filtered.length === 0 && (
-              <p className="text-center text-muted-foreground py-12">
-                No projects in this category yet. Check back soon!
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Card */}
-      <ContactCard />
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-6">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-muted-foreground">
-            Adebukola Akanji. Product Manager, problem-solver, and occasional overthinker about user behavior.
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
-};
+    <SiteFooter divider />
+  </div>
+);
 
 export default CaseStudies;

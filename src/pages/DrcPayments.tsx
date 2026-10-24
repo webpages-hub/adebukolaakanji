@@ -1,6 +1,6 @@
-import CaseStudyTemplate from "@/components/case-study-v2/CaseStudyTemplate";
-import { drcPaymentsData } from "@/data/case-studies/drcPayments";
+import CaseStudyLayout from "@/components/case-study/CaseStudyLayout";
+import { drcPayments } from "@/data/case-studies/drcPayments";
 
-const DrcPayments = () => <CaseStudyTemplate data={drcPaymentsData} />;
+const DrcPayments = () => <CaseStudyLayout data={drcPayments} />;
 
 export default DrcPayments;
