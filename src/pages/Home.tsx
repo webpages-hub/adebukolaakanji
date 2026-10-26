@@ -22,7 +22,7 @@ const Home = () => (
       <section className="mx-auto flex max-w-[1120px] flex-col gap-8 px-5 pb-10 pt-12 sm:px-6 md:flex-row md:items-center md:gap-12 md:pb-16 md:pt-20">
         <div className="min-w-0 md:flex-1">
           <p className="mb-5 inline-flex items-center rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold leading-[1.6] text-foreground">
-            Product Manager · Cross-border payments
+            Product Manager · Business growth and expansion
           </p>
           <h1 className="m-0 max-w-[860px] text-[34px] leading-[1.05] tracking-[-0.02em] text-foreground md:text-[clamp(40px,5vw,60px)]">
             I build payment products that move money across borders.
