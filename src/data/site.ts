@@ -2,6 +2,7 @@ export const site = {
   name: "Adebukola Akanji",
   email: "adebukolaakanji@gmail.com",
   linkedin: "https://www.linkedin.com/in/aadebukola/",
+  medium: "https://medium.com/@adebukolaakanji",
   location: "Lagos, Nigeria",
 };
 
