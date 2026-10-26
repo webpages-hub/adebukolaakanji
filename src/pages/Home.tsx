@@ -29,7 +29,7 @@ const Home = () => (
           </h1>
           <p className="mt-7 max-w-[640px] text-lg text-[#333333] md:text-xl">
             I find the gap between what users need and what they currently get, then build the product that closes it.
-            Five years across fintech, payments and international markets.
+            I have five years of experience across fintech, payments, and international markets.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a

@@ -12,7 +12,7 @@ const experience = [
     text: "Built cross-border payments infrastructure across six markets and owned the Global Payouts and Collections API end to end.",
   },
   {
-    name: "Payfinancials (Techstars-backed)",
+    name: "Payfinancials (Techstars '23)",
     detail: "Product Manager · October 2022 – March 2023",
     text: "Led retention strategy for the BNPL product, including a gamification system that lifted retention by 10%.",
   },
@@ -67,14 +67,18 @@ const About = () => (
           <img
             src={aboutPortrait1}
             alt="Adebukola Akanji"
-            loading="lazy"
+            width={720}
+            height={932}
+            {...{ fetchpriority: "high" }}
             decoding="async"
             className="block aspect-[3/4] w-full rounded-xl object-cover"
           />
           <img
             src={aboutPortrait2}
             alt="Adebukola Akanji smiling"
-            loading="lazy"
+            width={720}
+            height={445}
+            {...{ fetchpriority: "high" }}
             decoding="async"
             className="mt-8 block aspect-[3/4] w-full rounded-xl object-cover"
           />
