@@ -44,7 +44,7 @@ export const processSteps = [
 ];
 
 export const impactHighlights = [
-  { value: "6", label: "markets launched, starting with Nomba's international expansion" },
+  { value: "6", label: "international markets launched" },
   { value: "$40M+", label: "diaspora remittance volume in 12 months" },
   { value: "$600K+", label: "cross-border payments revenue in 8 months" },
   { value: "11% → 90%", label: "onboarding conversion after a progressive KYC redesign" },
