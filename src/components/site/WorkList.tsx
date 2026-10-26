@@ -11,7 +11,7 @@ const WorkList = ({ asPageTitle = false }: WorkListProps) => {
   const Heading = asPageTitle ? "h1" : "h2";
 
   return (
-    <section id="work" className="bg-background pb-16 pt-12 md:pb-24 md:pt-16">
+    <section id="work" className="scroll-mt-16 bg-background pb-16 pt-12 md:pb-24 md:pt-16">
       <div className="mx-auto max-w-[1120px] px-5 sm:px-6">
         <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-10">
           <div>

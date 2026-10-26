@@ -38,7 +38,7 @@ const Resume = () => {
           <h2 className="text-2xl font-bold mb-4 text-foreground">Professional Summary</h2>
           <div className="glass-card p-6">
             <p className="text-foreground text-[15px] leading-[1.5] sm:text-base sm:leading-relaxed text-justify">
-              Fintech PM with 5 years building cross-border payment products across six markets. Launched DRC payments infrastructure from zero, scaled to $1M+ transaction volume, and improved onboarding conversion from 11% to 90%.
+              Fintech PM with 5 years building cross-border payment products across six markets. Launched DRC payments infrastructure from zero, scaled to $40M+ transaction volume, and improved onboarding conversion from 11% to 90%.
             </p>
           </div>
         </section>
@@ -69,7 +69,7 @@ const Resume = () => {
                 "Led product strategy and execution for international payment expansion across six markets (UK, Canada, France, Belgium, Germany, and DRC), taking products from concept to launch within six weeks.",
                 "Built DRC's local payment infrastructure through partnerships with mobile money operators and banks, launching an interoperable platform used by agents, developers, and merchants to process local transactions.",
                 "Led the development and scaling of DRC's cross-border payment infrastructure, partnering with banks, payment providers, compliance, and engineering teams to launch payment capabilities that generated $600K+ in revenue within eight months.",
-                "Expanded payment capabilities across four currency corridors, scaling the global expansion product to process $1M+ in total payment volume within twelve months of launch.",
+                "Expanded payment capabilities across four currency corridors, scaling the global expansion product to process $40M+ in total payment volume within twelve months of launch.",
                 "Owned API payment products supporting external integrations, including authentication, webhooks, transaction status, and settlement flows, maintaining 99% uptime for partner-facing payment services.",
                 "Launched a multi-currency wallet supporting USD and CDF payments within five weeks, increasing daily active users by 20% and cross-currency transactions by 10%.",
               ].map((item, i) => (
@@ -191,7 +191,7 @@ const Resume = () => {
             <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { value: "$600K+", label: "Fee revenue generated" },
-                { value: "$1M+", label: "Transaction volume processed" },
+                { value: "$40M+", label: "Transaction volume processed" },
                 { value: "11% → 90%", label: "Onboarding conversion rate" },
                 { value: "6 markets", label: "Products launched across" },
                 { value: "6 weeks", label: "Zero to first international launch" },

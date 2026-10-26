@@ -2,7 +2,7 @@ import Reveal from "@/components/ui/reveal";
 import { processSteps } from "@/data/site";
 
 const ProcessSteps = () => (
-  <section id="process" className="mx-auto max-w-[1120px] scroll-mt-4 px-5 py-16 sm:px-6 md:py-24">
+  <section id="process" className="mx-auto max-w-[1120px] scroll-mt-16 px-5 py-16 sm:px-6 md:py-24">
     <Reveal>
       <p className="mb-2 font-mono-tag text-[13px] uppercase tracking-[0.06em] text-foreground">How I work</p>
       <h2 className="mb-8 max-w-[640px] font-heading text-[30px] font-bold leading-[1.1] text-foreground md:mb-10 md:text-[40px]">

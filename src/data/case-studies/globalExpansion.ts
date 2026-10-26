@@ -6,7 +6,7 @@ export const globalExpansion: CaseStudyData = {
   seo: {
     title: "Global Expansion Case Study — Adebukola Akanji",
     description:
-      "How I launched a diaspora remittance product across six markets in six weeks, processing over $1M in total payment volume.",
+      "How I launched a diaspora remittance product across six markets in six weeks, processing over $40M in total payment volume.",
   },
   tag: "Nomba · Remittance · 6 markets",
   title: "A diaspora remittance product launched in six markets",
@@ -18,7 +18,7 @@ export const globalExpansion: CaseStudyData = {
     { label: "Corridors", value: "GBP, EUR, CAD → Nigeria and DRC" },
   ],
   impact: [
-    { value: "$1M+", label: "transaction volume in 12 months" },
+    { value: "$40M+", label: "transaction volume in 12 months" },
     { value: "11% → 90%", label: "onboarding conversion" },
     { value: "6", label: "markets live in six weeks" },
     { value: "Minimal", label: "paid acquisition spend" },
@@ -26,9 +26,9 @@ export const globalExpansion: CaseStudyData = {
   glance: {
     problem: "Diaspora senders faced unpredictable rates, and sending to the DRC often meant relying on informal agents.",
     solution: "Rate protection, direct payouts to DRC mobile money and banks, and funding in the sender's local currency.",
-    result: "$1M+ in volume within a year, and onboarding conversion up from 11% to 90% after a data-led redesign.",
+    result: "$40M+ in volume within a year, and onboarding conversion up from 11% to 90% after a data-led redesign.",
   },
-  summary: { company: "Nomba", type: "Remittance", metric: "$1M+", metricLabel: "volume in 12 months" },
+  summary: { company: "Nomba", type: "Remittance", metric: "$40M+", metricLabel: "volume in 12 months" },
   items: [
     {
       kind: "section",
@@ -116,7 +116,7 @@ export const globalExpansion: CaseStudyData = {
           type: "bullets",
           items: [
             "Launched across **six markets in six weeks**",
-            "Processed **$1M+** in transaction volume within 12 months",
+            "Processed **$40M+** in transaction volume within 12 months",
             "Raised onboarding conversion from **11% to 90%**",
             "Gave diaspora customers one platform for sending to Nigeria and the DRC",
           ],

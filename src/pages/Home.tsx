@@ -63,7 +63,7 @@ const Home = () => (
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border shadow-[0_2px_8px_rgba(26,26,26,0.04)] sm:grid-cols-2 lg:grid-cols-4">
           {impactHighlights.map((stat) => (
             <div key={stat.label} className="bg-white p-5 md:p-7">
-              <p className="m-0 font-heading text-[34px] font-bold leading-none text-foreground lg:text-[44px]">{stat.value}</p>
+              <p className="m-0 whitespace-nowrap font-heading text-[32px] font-bold leading-none text-foreground">{stat.value}</p>
               <p className="mt-2.5 text-[15px] text-muted-foreground">{stat.label}</p>
             </div>
           ))}

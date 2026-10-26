@@ -14,13 +14,14 @@ const caseStudyPaths = [
 ];
 
 const links = [
+  { to: "/", label: "Home", isActive: (path: string, hash: string) => path === "/" && hash !== "#process" },
   { to: "/case-studies", label: "Case studies", isActive: (path: string) => path === "/case-studies" || caseStudyPaths.includes(path) },
-  { to: "/#process", label: "How I work", isActive: () => false },
+  { to: "/#process", label: "How I work", isActive: (path: string, hash: string) => path === "/" && hash === "#process" },
   { to: "/about", label: "About", isActive: (path: string) => path === "/about" },
 ];
 
 const Navigation = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Navigation = () => {
   }, [pathname]);
 
   return (
-    <header className="border-b border-border bg-background">
+    <header className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="mx-auto flex max-w-[1120px] items-center justify-between gap-3 px-5 py-3 sm:px-6 md:py-4">
         <Link to="/" className="py-2 font-heading text-[17px] font-bold text-foreground no-underline md:text-[19px]">
           {site.name}
@@ -39,10 +40,10 @@ const Navigation = () => {
             <Link
               key={link.label}
               to={link.to}
-              aria-current={link.isActive(pathname) ? "page" : undefined}
+              aria-current={link.isActive(pathname, hash) ? "page" : undefined}
               className={cn(
                 "inline-flex h-10 items-center rounded-[10px] px-3 text-sm no-underline transition-colors hover:bg-muted",
-                link.isActive(pathname) ? "bg-muted font-semibold text-foreground" : "font-medium text-[#333333]"
+                link.isActive(pathname, hash) ? "bg-muted font-semibold text-foreground" : "font-medium text-[#333333]"
               )}
             >
               {link.label}
@@ -74,10 +75,10 @@ const Navigation = () => {
             <Link
               key={link.label}
               to={link.to}
-              aria-current={link.isActive(pathname) ? "page" : undefined}
+              aria-current={link.isActive(pathname, hash) ? "page" : undefined}
               className={cn(
                 "flex h-11 items-center rounded-[10px] px-3 text-base no-underline transition-colors hover:bg-muted",
-                link.isActive(pathname) ? "bg-muted font-semibold text-foreground" : "font-medium text-foreground"
+                link.isActive(pathname, hash) ? "bg-muted font-semibold text-foreground" : "font-medium text-foreground"
               )}
             >
               {link.label}

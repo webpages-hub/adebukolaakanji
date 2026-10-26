@@ -95,7 +95,7 @@ const CaseStudyLayout = ({ data }: { data: CaseStudyData }) => {
           <div className={`${wrap} grid grid-cols-2 gap-x-4 gap-y-7 py-8 md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] md:gap-8 md:py-12`}>
             {data.impact.map((stat) => (
               <div key={stat.label}>
-                <p className="m-0 font-heading text-[30px] font-bold leading-none text-accent md:text-5xl">{stat.value}</p>
+                <p className="m-0 whitespace-nowrap font-heading text-[26px] font-bold leading-none text-accent sm:text-[32px] md:text-[40px]">{stat.value}</p>
                 <p className="mt-2.5 text-[15px] text-[#B3B3B3]">{stat.label}</p>
               </div>
             ))}
